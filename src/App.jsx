@@ -3,18 +3,13 @@ import Text from "./components/Text"
 import Rectangle from "./components/Rectangle"
 
 function App() {
-
 	return (
 		<>
-
 			<div>
-    
-        <Canvas />
+        		<Canvas />
 				<Rectangle />
 				<Text />
-
 			</div>
-
 		</>
 	)
 }
