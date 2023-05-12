@@ -7,7 +7,6 @@ function App() {
 		<>
 			<div>
         		<Canvas />
-				<Rectangle />
 				<Text />
 			</div>
 		</>

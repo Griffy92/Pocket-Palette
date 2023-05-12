@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { fabric } from 'fabric';
 import Circle from './Circle';
 import Ellipse from './Ellipse';
+import Rectangle from './Rectangle';
 
 const Canvas = () => {
     const [ canvas, setCanvas ] = useState(null);
@@ -24,8 +25,9 @@ const Canvas = () => {
 
     return (
         <>
-            <Circle canvas={canvas} />
-            <Ellipse canvas={canvas} />
+            <Circle canvas={ canvas } />
+            <Ellipse canvas={ canvas } />
+            <Rectangle canvas={ canvas } />
             <canvas id="canvas" />
         </>
     );
