@@ -8,8 +8,8 @@ function App() {
 		<>
 
 			<div>
-    
-        <Canvas />
+
+        		<Canvas />
 				<Rectangle />
 				<Text />
 
