@@ -179,6 +179,14 @@ button:focus-visible {
   transition: 0.5s;
 }
 
+.fontButton {
+  font-weight: 600;
+}
+
+.fontItalics {
+  font-style: italic;
+}
+
 .delete_button {
   background: url('https://cdn-icons-png.flaticon.com/512/3405/3405244.png');
   background-position: center;
