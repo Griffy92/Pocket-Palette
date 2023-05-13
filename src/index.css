@@ -148,11 +148,30 @@ button:focus-visible {
   transition: 0.5s;
 }
 
-.add_colour_select {
-  background: url('https://cdn3.iconfinder.com/data/icons/medical-174/100/healthy-15-512.png');
+/* RILEY EDITS TO RECTANGLE TOOLBAR */
+/* toolbar */
+
+.add_brush_size {
+  background: url('https://cdn-icons-png.flaticon.com/512/4925/4925053.png');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.add_brush_size:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+
+
+
+.add_colour_select {
+  /* background: url('https://cdn3.iconfinder.com/data/icons/medical-174/100/healthy-15-512.png'); */
+  /* background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat; */
+  vertical-align: text-top;
 }
 
 .add_colour_select:hover {
@@ -163,6 +182,83 @@ button:focus-visible {
 .fontButton {
   font-weight: 600;
 }
+
 .fontItalics {
   font-style: italic;
+}
+
+.delete_button {
+  background: url('https://cdn-icons-png.flaticon.com/512/3405/3405244.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.delete_button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.delete_all_button {
+  background: url('https://cdn-icons-png.flaticon.com/512/9899/9899316.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.delete_all_button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.undo_button {
+  background: url('https://cdn-icons-png.flaticon.com/512/44/44426.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.undo_button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.redo_button {
+  background: url('https://cdn-icons-png.flaticon.com/512/44/44650.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.redo_button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.copy_button {
+  background: url('https://cdn-icons-png.flaticon.com/512/748/748035.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.copy_button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.paste_button {
+  background: url('https://cdn-icons-png.flaticon.com/512/54/54702.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.paste_button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.slider-label {
+  margin: 0 auto;
 }

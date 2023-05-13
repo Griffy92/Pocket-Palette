@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { fabric } from 'fabric';
 import Toolbar from './Toolbar';
+import 'fabric-history';
 
 const Canvas = () => {
     const [ canvas, setCanvas ] = useState(null);
@@ -13,6 +14,9 @@ const Canvas = () => {
             width: 600,
             backgroundColor: 'white'
         })
+        if (canvas != null){
+        canvas.historyInit();
+        }
         return newCanvas;
     };
 
@@ -71,6 +75,7 @@ const Canvas = () => {
     // render canvas on load
     useEffect( () => {
         setCanvas(initCanvas());
+        
     }, []);
 
     return (
