@@ -5,9 +5,11 @@ import Ellipse from './Ellipse';
 import Rectangle from './Rectangle';
 import Triangle from './Triangle'
 import FreeDraw from './Free-Draw';
+import ColourSelect from './Colour-Select';
 
 const Canvas = () => {
     const [ canvas, setCanvas ] = useState(null);
+    const [ colour, setColour] = useState("");
 
     // create the canvas object
     const initCanvas = () => { 
@@ -31,7 +33,8 @@ const Canvas = () => {
             <Ellipse canvas={ canvas } />
             <Rectangle canvas={ canvas } />
             <Triangle canvas={ canvas } />
-            <FreeDraw canvas={ canvas } />
+            <FreeDraw canvas={ canvas } colour={ colour }/>
+            <ColourSelect onChange={ setColour }/>
             <canvas id="canvas" />
         </>
     );
