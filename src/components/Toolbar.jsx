@@ -9,10 +9,9 @@ import Text from './Text';
 
 
 const Toolbar = ( props ) => {
-    const [ colour, setColour] = useState("");
-
+    const [ colour, setColour ] = useState("");
     const { canvas } = props;
-    
+
     return (
         <>
             <div>
@@ -23,7 +22,7 @@ const Toolbar = ( props ) => {
                     <Triangle canvas={ canvas } colour={ colour }/> 
                     <FreeDraw canvas={ canvas } colour={ colour }/>
                     <ColourSelect setColour={ setColour } colour={ colour }/>
-                    <Text canvas={canvas} colour={ colour } />
+                    <Text canvas={ canvas } colour={ colour } />
                 </div>
                 <br />
             </div>

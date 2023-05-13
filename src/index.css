@@ -160,7 +160,9 @@ button:focus-visible {
   transition: 0.5s;
 }
 
-
-
-
-
+.fontButton {
+  font-weight: 600;
+}
+.fontItalics {
+  font-style: italic;
+}
