@@ -5,10 +5,12 @@ import Rectangle from './Rectangle';
 import Triangle from './Triangle';
 import FreeDraw from './Free-Draw';
 import ColourSelect from './Colour-Select';
+import Text from './Text';
 import RemoveObject from './Remove-Object';
 import CanvasHistory from './Canvas-History';
 import CopyPaste from './Copy-Paste';
 import BrushCustom from './Brush-Custom';
+
 
 
 const Toolbar = ( props ) => {
@@ -28,6 +30,7 @@ const Toolbar = ( props ) => {
                     <FreeDraw canvas={ canvas } colour={ colour } brushSize={ brushSize }/>
                     <BrushCustom setBrushSize={ setBrushSize } brushSize={ brushSize }/>
                     <ColourSelect setColour={ setColour } colour={ colour } />
+                    <Text canvas={canvas} colour={ colour } />
                     <RemoveObject canvas={ canvas }/>
                     <CanvasHistory canvas={ canvas }/>
                     <CopyPaste canvas={ canvas }/>
