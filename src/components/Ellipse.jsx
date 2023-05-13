@@ -15,10 +15,10 @@ const Ellipse = ( props ) => {
         canvas.add(oval);
         canvas.renderAll();
     };
-
+    
     return (
-        <>
-            <button onClick= { _handleAddOval }>Oval</button>
+        <> 
+            <button className="add_button add_oval"onClick= { _handleAddOval }></button>
         </>
     );
 };
