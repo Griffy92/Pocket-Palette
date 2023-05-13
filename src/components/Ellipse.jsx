@@ -15,9 +15,10 @@ const Ellipse = ( props ) => {
         canvas.add(oval);
         canvas.renderAll();
     };
-
+    
+    // reminder to add button class to ellipses
     return (
-        <>
+        <> 
             <button onClick= { _handleAddOval }>Oval</button>
         </>
     );
