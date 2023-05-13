@@ -4,6 +4,7 @@ import Circle from './Circle';
 import Ellipse from './Ellipse';
 import Rectangle from './Rectangle';
 import Triangle from './Triangle'
+import FreeDraw from './Free-Draw';
 
 const Canvas = () => {
     const [ canvas, setCanvas ] = useState(null);
@@ -30,6 +31,7 @@ const Canvas = () => {
             <Ellipse canvas={ canvas } />
             <Rectangle canvas={ canvas } />
             <Triangle canvas={ canvas } />
+            <FreeDraw canvas={ canvas } />
             <canvas id="canvas" />
         </>
     );
