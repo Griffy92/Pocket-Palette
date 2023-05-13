@@ -9,9 +9,7 @@ const Circle = ( props ) => {
             radius: 50,
             fill: 'red'
         });
-
-        // console.log(circle); // circle needs radius defined
-
+        // console.log(circle); // circle needs radius define
         canvas.add(circle);
         canvas.renderAll();
     };

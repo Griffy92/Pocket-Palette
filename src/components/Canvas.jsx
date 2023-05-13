@@ -3,6 +3,7 @@ import { fabric } from 'fabric';
 import Circle from './Circle';
 import Ellipse from './Ellipse';
 import Rectangle from './Rectangle';
+import Triangle from './Triangle'
 
 const Canvas = () => {
     const [ canvas, setCanvas ] = useState(null);
@@ -28,6 +29,7 @@ const Canvas = () => {
             <Circle canvas={ canvas } />
             <Ellipse canvas={ canvas } />
             <Rectangle canvas={ canvas } />
+            <Triangle canvas={ canvas } />
             <canvas id="canvas" />
         </>
     );
