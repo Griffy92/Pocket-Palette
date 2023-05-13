@@ -1,15 +1,12 @@
 import React from 'react'
 import { FabricJSCanvas, useFabricJSEditor } from 'fabricjs-react'
-// import { useState } from "react";
+import { useState } from "react";
 
-const ColourSelect = ( { setColour } ) => {
-    // const { canvas } = props; // Not sure required
-    // console.log(colour)
-
+const ColourSelect = ( {  setColour } ) => {
+    // const { setColour, colour } = props
     return (
-
         <>
-            <input type="color" id="drawing-color" onChange={setColour} />
+            <input type="color" id="drawing-color" onChange={(e) => setColour(e.target.value)} />
         </>
     )
 };

@@ -1,14 +1,20 @@
 import { fabric } from 'fabric'
 
 const Triangle = ( props ) => {
-
-    const { canvas } = props;
+    const { canvas, colour } = props; // destructuring props
+    
+    // This is a little checker to see if a colour has been passed yet (colour default is "")
+    // if a colour has not been passed, defaults to whatver colour is nominated below 
+    let fillColour = 'blue'
+    if (colour != ""){
+        fillColour = colour 
+    };
 
     const _handleAddTri = () => {
         const tri = new fabric.Triangle({
             width: 20,
             height: 30,
-            fill: 'blue',
+            fill: fillColour,
             left: 50,
             top: 50
         });
