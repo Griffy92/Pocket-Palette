@@ -16,12 +16,12 @@ const Toolbar = ( props ) => {
         <>
             <div>
                 <div className="toolbar">
-                    <Circle canvas={ canvas } />
-                    <Ellipse canvas={ canvas } />
-                    <Rectangle canvas={ canvas } />
-                    <Triangle canvas={ canvas } /> 
+                    <Circle canvas={ canvas } colour={ colour } />
+                    <Ellipse canvas={ canvas } colour={ colour }/>
+                    <Rectangle canvas={ canvas } colour={ colour }/>
+                    <Triangle canvas={ canvas } colour={ colour }/> 
                     <FreeDraw canvas={ canvas } colour={ colour }/>
-                    <ColourSelect onChange={ setColour }/>
+                    <ColourSelect setColour={ setColour } colour={ colour }/>
                 </div>
                 <br />
             </div>
