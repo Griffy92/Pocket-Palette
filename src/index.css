@@ -111,3 +111,19 @@ button:focus-visible {
   opacity: 1;
   transition: 0.5s;
 }
+
+.add_circle {
+  background: url('https://img.icons8.com/?size=512&id=VzU7PPLtpY2i&format=png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.add_circle:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+
+
+

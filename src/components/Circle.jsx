@@ -16,7 +16,7 @@ const Circle = ( props ) => {
 
     return (
         <>
-            <button onClick={ _handleAddCircle }>Circle</button>
+            <button className="add_button add_circle" onClick={ _handleAddCircle }></button>
         </>
     )
 };
