@@ -2,10 +2,13 @@ import React from 'react'
 import { FabricJSCanvas, useFabricJSEditor } from 'fabricjs-react'
 
 const FreeDraw = ( props ) => {
-    const { canvas } = props;
+    console.log(props)
+    const { canvas, colour } = props
     const _handleAddFreeDraw = () => {
+        canvas.freeDrawingBrush.color = colour
         canvas.isDrawingMode = !canvas.isDrawingMode
         console.log("Toggle Drawng Mode")
+        console.log(props.colour)
        
     };
     return (
