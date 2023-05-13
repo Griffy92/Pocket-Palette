@@ -15,6 +15,7 @@ import BrushCustom from './Brush-Custom';
 
 const Toolbar = ( props ) => {
     const [ colour, setColour ] = useState("");
+    const [ brushSize, setBrushSize] = useState(0);
     const { canvas } = props;
 
     return (

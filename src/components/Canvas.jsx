@@ -23,8 +23,6 @@ const Canvas = () => {
     function _handleToggleBold() {
         let activeInstance = canvas.getActiveObject();
         if (activeInstance && activeInstance.type === 'i-text') {
-            console.log(activeInstance.selectionStart);
-            console.log(activeInstance.selectionEnd);
             if (activeInstance.selectionStart !== activeInstance.selectionEnd) {
                 let startIndex = activeInstance.selectionStart;
                 let endIndex = activeInstance.selectionEnd;
@@ -49,8 +47,6 @@ const Canvas = () => {
     function _handleToggleItalic() {
         let activeInstance = canvas.getActiveObject();
         if (activeInstance && activeInstance.type === 'i-text') {
-            console.log(activeInstance.selectionStart);
-            console.log(activeInstance.selectionEnd);
             if (activeInstance.selectionStart !== activeInstance.selectionEnd) {
                 let startIndex = activeInstance.selectionStart;
                 let endIndex = activeInstance.selectionEnd;
