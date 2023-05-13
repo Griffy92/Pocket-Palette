@@ -1,12 +1,9 @@
 import { useState, useEffect } from 'react';
 import { fabric } from 'fabric';
-import FreeDraw from './Free-Draw';
-import ColourSelect from './Colour-Select';
 import Toolbar from './Toolbar';
 
 const Canvas = () => {
     const [ canvas, setCanvas ] = useState(null);
-    const [ colour, setColour] = useState("");
 
     // create the canvas object
     const initCanvas = () => { 
@@ -26,8 +23,6 @@ const Canvas = () => {
 
     return (
         <>
-            <FreeDraw canvas={ canvas } colour={ colour }/>
-            <ColourSelect onChange={ setColour }/>
             <Toolbar canvas={ canvas } />
             <canvas id="canvas" />
         </>

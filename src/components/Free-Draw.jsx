@@ -13,7 +13,7 @@ const FreeDraw = ( props ) => {
     };
     return (
         <>
-            <button onClick= { _handleAddFreeDraw }>Draw!</button>
+            <button className="add_button add_free_draw"onClick= { _handleAddFreeDraw }></button>
         </>
     )
 };
