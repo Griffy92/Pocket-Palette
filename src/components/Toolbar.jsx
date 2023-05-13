@@ -5,6 +5,7 @@ import Rectangle from './Rectangle';
 import Triangle from './Triangle';
 import FreeDraw from './Free-Draw';
 import ColourSelect from './Colour-Select';
+import Text from './Text';
 
 
 const Toolbar = ( props ) => {
@@ -22,6 +23,7 @@ const Toolbar = ( props ) => {
                     <Triangle canvas={ canvas } colour={ colour }/> 
                     <FreeDraw canvas={ canvas } colour={ colour }/>
                     <ColourSelect setColour={ setColour } colour={ colour }/>
+                    <Text canvas={canvas} colour={ colour } />
                 </div>
                 <br />
             </div>
