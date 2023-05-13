@@ -148,11 +148,15 @@ button:focus-visible {
   transition: 0.5s;
 }
 
+/* RILEY EDITS TO RECTANGLE TOOLBAR */
+/* toolbar */
+
 .add_colour_select {
-  background: url('https://cdn3.iconfinder.com/data/icons/medical-174/100/healthy-15-512.png');
-  background-position: center;
+  /* background: url('https://cdn3.iconfinder.com/data/icons/medical-174/100/healthy-15-512.png'); */
+  /* background-position: center;
   background-size: contain;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+  vertical-align: text-top;
 }
 
 .add_colour_select:hover {
@@ -160,7 +164,52 @@ button:focus-visible {
   transition: 0.5s;
 }
 
+.delete_button {
+  background: url('https://cdn-icons-png.flaticon.com/512/3405/3405244.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
+.delete_button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
 
+.delete_all_button {
+  background: url('https://cdn-icons-png.flaticon.com/512/9899/9899316.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.delete_all_button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.undo_button {
+  background: url('https://cdn-icons-png.flaticon.com/512/44/44426.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.undo_button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.redo_button {
+  background: url('https://cdn-icons-png.flaticon.com/512//44/44650.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.redo_button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
 
 
