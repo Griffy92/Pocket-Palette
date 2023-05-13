@@ -1,14 +1,25 @@
 // import shape components
-const Toolbar = () => {
+import Circle from './Circle';
+import Ellipse from './Ellipse';
+import Rectangle from './Rectangle';
+import Triangle from './Triangle';
+
+
+const Toolbar = ( props ) => {
+
+    const { canvas } = props;
+    
     return (
         <>
             <div>
                 <h1>KL toolbar</h1>
                 <div className="toolbar">
-                    <button className="add_button add_rect" onClick={ _handleAddRect }></button>
-                    <button className="add_button add_tri" onClick={ _handleAddTri }></button>
+                    <Circle canvas={ canvas } />
+                    <Ellipse canvas={ canvas } />
+                    <Rectangle canvas={ canvas } />
+                    <Triangle canvas={ canvas } /> 
                 </div>
-                <br></br>
+                <br />
             </div>
         </>
     )

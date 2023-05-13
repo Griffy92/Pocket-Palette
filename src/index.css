@@ -124,6 +124,18 @@ button:focus-visible {
   transition: 0.5s;
 }
 
+.add_oval {
+  background: url('https://static.thenounproject.com/png/1117085-200.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.add_oval:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
 
 
 
