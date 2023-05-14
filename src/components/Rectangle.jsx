@@ -22,7 +22,7 @@ const Rectangle = ( props ) => {
 
     return (
         <>
-            <button className="add_button add_rect" onClick={ _handleAddRect }></button>
+            <button className="add_button add_rect" onClick={ _handleAddRect } title="Add Rectangle"></button>
         </>
     )
 };

@@ -16,8 +16,8 @@ const CanvasHistory = ( props ) => {
 
   return (
     <>
-    <button className="add_button undo_button" onClick={_HandleUndo} ></button>
-    <button className="add_button redo_button" onClick={_HandleRedo}></button>
+    <button className="add_button undo_button" onClick={_HandleUndo} title="Undo"></button>
+    <button className="add_button redo_button" onClick={_HandleRedo} title="Redo"></button>
     </>
   )};
 

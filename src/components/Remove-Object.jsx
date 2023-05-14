@@ -24,8 +24,8 @@ const RemoveObject = ( props ) => {
 
   return (
     <>
-    <button className="add_button delete_button" onClick={_HandleRemoveObject}></button>
-    <button className="add_button delete_all_button" onClick={_HandleRemoveAllObjects}></button>
+      <button className="add_button delete_button" onClick={_HandleRemoveObject} title="Delete"></button>
+      <button className="add_button delete_all_button" onClick={_HandleRemoveAllObjects} title="Reset Canvas"></button>
     </>
   )
 

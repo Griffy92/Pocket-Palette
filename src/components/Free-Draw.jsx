@@ -24,7 +24,7 @@ const FreeDraw = ( props ) => {
     
     return (
         <>
-            <button className="add_button add_free_draw" onClick= { _handleAddFreeDraw }></button>
+            <button className="add_button add_free_draw" onClick= { _handleAddFreeDraw } title="Draw"></button>
         </>
     )
 };

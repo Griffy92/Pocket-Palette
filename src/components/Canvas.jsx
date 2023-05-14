@@ -80,8 +80,8 @@ const Canvas = () => {
     return (
         <>
             <Toolbar canvas={ canvas } />
-            <button className="fontButton" onClick={ _handleToggleBold }>B</button>
-            <button className="fontButton fontItalics" onClick={ _handleToggleItalic }>I</button>
+            <button className="fontButton" onClick={ _handleToggleBold } title="Bold">B</button>
+            <button className="fontButton fontItalics" onClick={ _handleToggleItalic } title="Italics">I</button>
             <canvas id="canvas" />
         </>
     );

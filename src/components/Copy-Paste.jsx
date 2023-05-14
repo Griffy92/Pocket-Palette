@@ -47,8 +47,8 @@ const CopyPaste = ( props ) => {
 
   return (
     <>
-    <button className="add_button copy_button" onClick={_HandleCopy} ></button>
-    <button className="add_button paste_button" onClick={_HandlePaste}></button>
+      <button className="add_button copy_button" onClick={_HandleCopy} title="Copy"></button>
+      <button className="add_button paste_button" onClick={_HandlePaste} title="Paste"></button>
     </>
   )};
 
