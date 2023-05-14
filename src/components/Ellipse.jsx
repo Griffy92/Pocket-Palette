@@ -24,7 +24,7 @@ const Ellipse = ( props ) => {
     
     return (
         <> 
-            <button className="add_button add_oval"onClick= { _handleAddOval }></button>
+            <button className="add_button add_oval" onClick= { _handleAddOval } title="Add Oval"></button>
         </>
     );
 };

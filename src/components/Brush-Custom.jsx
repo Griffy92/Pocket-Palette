@@ -20,7 +20,7 @@ const BrushCustom = ( { setBrushSize } ) => {
 
     return (
         <>
-            <button className="add_button add_brush_size" onClick= { _handleClick }></button>
+            <button className="add_button add_brush_size" onClick= { _handleClick } title="Set Brush Size"></button>
             <Popover
                 sx={{ width: 500 }}
                 id={id}

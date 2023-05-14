@@ -6,7 +6,7 @@ const ColourSelect = ( {  setColour } ) => {
     // const { setColour, colour } = props
     return (
         <>
-            <input type="color" id="color-picker" className="add_button add_colour_select" onChange={(e) => setColour(e.target.value)} />
+            <input type="color" id="color-picker" className="add_button add_colour_select" onChange={(e) => setColour(e.target.value)} title="Set Colour" />
         </>
     )
 };

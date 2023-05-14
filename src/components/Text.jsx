@@ -15,7 +15,7 @@ const Text = ( props ) => {
 
     return (
         <>
-            <button className="fontButton" onClick={ _handleAddText }>T</button>
+            <button className="fontButton" onClick={ _handleAddText } title="Add Text">T</button>
         </>
     );
 }

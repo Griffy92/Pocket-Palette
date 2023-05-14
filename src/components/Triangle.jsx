@@ -23,7 +23,7 @@ const Triangle = ( props ) => {
     
     return (
         <>
-            <button className="add_button add_tri" onClick={ _handleAddTri }></button>
+            <button className="add_button add_tri" onClick={ _handleAddTri } title="Add Triangle"></button>
         </>
     )
 };
