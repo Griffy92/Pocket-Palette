@@ -10,9 +10,9 @@ const Canvas = () => {
     const initCanvas = () => { 
         // first argument in fabric.Canvas is html canvas ID
         const newCanvas = new fabric.Canvas('canvas', {
-            height: window.innerHeight,
-            width: window.innerWidth,
-            backgroundColor: 'white'
+            height: 600,
+            width: 1000,
+            backgroundCsolor: 'white'
         })
 
         // uncomment to get history function to work however you will have to refresh page after saving code.

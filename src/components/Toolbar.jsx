@@ -11,6 +11,7 @@ import CanvasHistory from './Canvas-History';
 import CopyPaste from './Copy-Paste';
 import BrushCustom from './Brush-Custom';
 import Pan from './Pan';
+import Zoom from './Zoom';
 
 
 const Toolbar = ( props ) => {
@@ -34,6 +35,7 @@ const Toolbar = ( props ) => {
                     <CanvasHistory canvas={ canvas }/>
                     <CopyPaste canvas={ canvas }/>
                     <Pan canvas={ canvas } />
+                    <Zoom canvas={canvas} />
                 </div>
                 <br />
             </div>
