@@ -10,8 +10,8 @@ const Canvas = () => {
     const initCanvas = () => { 
         // first argument in fabric.Canvas is html canvas ID
         const newCanvas = new fabric.Canvas('canvas', {
-            height: 600,
-            width: 600,
+            height: window.innerHeight,
+            width: window.innerWidth,
             backgroundColor: 'white'
         })
 
