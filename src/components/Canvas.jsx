@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { fabric } from 'fabric';
-import Toolbar from './Toolbar';
 import 'fabric-history';
+import Toolbar from './Toolbar';
 
 const Canvas = () => {
     const [ canvas, setCanvas ] = useState(null);
@@ -14,9 +14,12 @@ const Canvas = () => {
             width: 600,
             backgroundColor: 'white'
         })
-        if (canvas != null){
-        canvas.historyInit();
-        }
+
+        // commented out - sometimes "Uncaught TypeError: canvas.historyInit is not a function"
+        // if (canvas != null){
+        //     canvas.historyInit();
+        // }
+
         return newCanvas;
     };
 

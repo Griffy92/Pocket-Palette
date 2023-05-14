@@ -262,3 +262,16 @@ button:focus-visible {
 .slider-label {
   margin: 0 auto;
 }
+
+
+.pan_button {
+  background: url('https://img.icons8.com/?size=512&id=56362&format=png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.pan_button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
