@@ -10,7 +10,7 @@ import RemoveObject from './Remove-Object';
 import CanvasHistory from './Canvas-History';
 import CopyPaste from './Copy-Paste';
 import BrushCustom from './Brush-Custom';
-
+import Pan from './Pan';
 
 
 const Toolbar = ( props ) => {
@@ -33,6 +33,7 @@ const Toolbar = ( props ) => {
                     <RemoveObject canvas={ canvas }/>
                     <CanvasHistory canvas={ canvas }/>
                     <CopyPaste canvas={ canvas }/>
+                    <Pan canvas={ canvas } />
                 </div>
                 <br />
             </div>
