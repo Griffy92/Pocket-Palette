@@ -69,8 +69,7 @@ button:focus-visible {
 }
 
 
-/* KAREN EDITS TO RECTANGLE TOOLBAR */
-/* toolbar */
+/* ==================== TOOLBAR =================== */
 
 .toolbar {
   width: 100%;
@@ -90,6 +89,7 @@ button:focus-visible {
   border-color: #535bf2; */
 }
 
+/* Toolbar: Rectangle Button (Rectangle.jsx) */
 .add_rect {
   background: url('https://img.icons8.com/nolan/64/rectangle.png');
   background-position: center;
@@ -101,6 +101,7 @@ button:focus-visible {
   transition: 0.5s;
 }
 
+/* Toolbar : Triangle Button (Triangle.jsx)*/
 .add_tri {
   background: url('https://img.icons8.com/?size=512&id=56321&format=png&color=1A6DFF,C822FF');
   background-position: center;
@@ -112,6 +113,7 @@ button:focus-visible {
   transition: 0.5s;
 }
 
+/* Toolbar : Circle Button (Circle.jsx) */
 .add_circle {
   background: url('https://img.icons8.com/?size=512&id=VzU7PPLtpY2i&format=png');
   background-position: center;
@@ -124,6 +126,7 @@ button:focus-visible {
   transition: 0.5s;
 }
 
+/* Toolbar : Oval Button (Ellipse.jsx) */
 .add_oval {
   background: url('https://static.thenounproject.com/png/1117085-200.png');
   background-position: center;
@@ -136,6 +139,7 @@ button:focus-visible {
   transition: 0.5s;
 }
 
+/* Toolbar : Free Draw (Free-Draw.jsx) */
 .add_free_draw {
   background: url('https://cdn-icons-png.flaticon.com/512/266/266146.png');
   background-position: center;
@@ -148,9 +152,7 @@ button:focus-visible {
   transition: 0.5s;
 }
 
-/* RILEY EDITS TO RECTANGLE TOOLBAR */
-/* toolbar */
-
+/* Toolbar : Brush Size (Brush-Custom.jsx) */
 .add_brush_size {
   background: url('https://cdn-icons-png.flaticon.com/512/4925/4925053.png');
   background-position: center;
@@ -163,9 +165,11 @@ button:focus-visible {
   transition: 0.5s;
 }
 
+.slider-label {
+  margin: 0 auto;
+}
 
-
-
+/* Toolbar : Colour Select (Colour-Select.jsx) */
 .add_colour_select {
   /* background: url('https://cdn3.iconfinder.com/data/icons/medical-174/100/healthy-15-512.png'); */
   /* background-position: center;
@@ -179,14 +183,17 @@ button:focus-visible {
   transition: 0.5s;
 }
 
+/* Toolbar: Text (Text.jsx & Canvas.jsx) */
 .fontButton {
   font-weight: 600;
 }
 
+/* Toolbar: Text (Canvas.jsx) */
 .fontItalics {
   font-style: italic;
 }
 
+/* Toolbar: Delete (Remove-Object.jsx) */
 .delete_button {
   background: url('https://cdn-icons-png.flaticon.com/512/3405/3405244.png');
   background-position: center;
@@ -211,6 +218,7 @@ button:focus-visible {
   transition: 0.5s;
 }
 
+/* Toolbar: Undo/Redo (Canvas-History.jsx) */
 .undo_button {
   background: url('https://cdn-icons-png.flaticon.com/512/44/44426.png');
   background-position: center;
@@ -235,6 +243,7 @@ button:focus-visible {
   transition: 0.5s;
 }
 
+/* Toolbar: Copy/Paste (Copy-Paste.jsx) */
 .copy_button {
   background: url('https://cdn-icons-png.flaticon.com/512/748/748035.png');
   background-position: center;
@@ -259,11 +268,7 @@ button:focus-visible {
   transition: 0.5s;
 }
 
-.slider-label {
-  margin: 0 auto;
-}
-
-
+/* Toolbar Pan Button (Pan.jsx) */
 .pan_button {
   background: url('https://img.icons8.com/?size=512&id=56362&format=png');
   background-position: center;
