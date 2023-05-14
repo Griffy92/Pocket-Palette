@@ -15,10 +15,10 @@ const Canvas = () => {
             backgroundColor: 'white'
         })
 
-        // commented out - sometimes "Uncaught TypeError: canvas.historyInit is not a function"
-        // if (canvas != null){
-        //     canvas.historyInit();
-        // }
+        // uncomment to get history function to work however you will have to refresh page after saving code.
+        if (canvas != null){
+            canvas.historyInit();
+        }
 
         return newCanvas;
     };
