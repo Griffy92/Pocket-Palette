@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Login from './components/Login'
 import Success from './components/Success'
+import Canvas from './components/Paint/Canvas'
+
 function App() {
 	return (
 		<div>

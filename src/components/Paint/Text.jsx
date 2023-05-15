@@ -1,27 +1,25 @@
-import { useState, useEffect } from 'react';
-import { fabric } from 'fabric';
-import 'fabric-history';
-import Toolbar from './Toolbar';
+import { fabric } from "fabric";
 
-const Canvas = () => {
-    const [ canvas, setCanvas ] = useState(null);
+const Text = ( props ) => {
+    const { canvas } = props;
 
-    // create the canvas object
-    const initCanvas = () => { 
-        // first argument in fabric.Canvas is html canvas ID
-        const newCanvas = new fabric.Canvas('canvas', {
-            height: window.innerHeight,
-            width: window.innerWidth,
-            backgroundColor: 'white'
-        })
+    function randomId() {
+        return Math.random().toString(36).substring(2, 10);
+    }
 
-        // uncomment to get history function to work however you will have to refresh page after saving code.
-        if (canvas != null){
-            canvas.historyInit();
-        }
+    function _handleAddText() {
+        const newText = new fabric.IText("Add text", { left: 100, top: 64, id: randomId()});
+        canvas.add(newText);
+        canvas.setActiveObject(newText); // set the new text object as active
+    }  
 
-        return newCanvas;
-    };
+    return (
+        <>
+            <button className="fontButton" onClick={ _handleAddText } title="Add Text">T</button>
+            <button className="fontButton" onClick={ _handleToggleBold } title="Bold">B</button>
+            <button className="fontButton fontItalics" onClick={ _handleToggleItalic } title="Italics">I</button>
+        </>
+    );
 
     function _handleToggleBold() {
         let activeInstance = canvas.getActiveObject();
@@ -47,6 +45,8 @@ const Canvas = () => {
         canvas.renderAll();
     }
 
+
+
     function _handleToggleItalic() {
         let activeInstance = canvas.getActiveObject();
         if (activeInstance && activeInstance.type === 'i-text') {
@@ -68,23 +68,9 @@ const Canvas = () => {
                 }
             }
         }
-        canvas.renderAll();
+        canvas.renderAll(); 
     }
+    
+}
 
-    // render canvas on load
-    useEffect( () => {
-        setCanvas(initCanvas());
-        
-    }, []);
-
-    return (
-        <>
-            <Toolbar canvas={ canvas } />
-            <button className="fontButton" onClick={ _handleToggleBold } title="Bold">B</button>
-            <button className="fontButton fontItalics" onClick={ _handleToggleItalic } title="Italics">I</button>
-            <canvas id="canvas" />
-        </>
-    );
-};
-
-export default Canvas;
+export default Text;
