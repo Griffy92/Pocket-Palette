@@ -8,7 +8,7 @@ const ColourSelect = ( {  canvas, setColour } ) => {
             canvas.getActiveObjects().forEach((obj) => {
             obj.set("fill", tarCol)
             });
-            canvas.discardActiveObject().renderAll()
+            canvas.renderAll()
         }};
 
     // const { setColour, colour } = props

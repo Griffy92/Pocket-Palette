@@ -32,7 +32,7 @@ const Toolbar = ( props ) => {
                     <Ellipse canvas={ canvas } colour={ colour } strokeColour={ strokeColour } strokeSize={ strokeSize } />
                     <Rectangle canvas={ canvas } colour={ colour } strokeColour={ strokeColour } strokeSize={ strokeSize }/>
                     <Triangle canvas={ canvas } colour={ colour } strokeColour={ strokeColour } strokeSize={ strokeSize }/> 
-                    <Stroke setStrokeColour={ setStrokeColour } strokeColour={ strokeColour } setStrokeSize={ setStrokeSize } strokeSize={ strokeSize } />
+                    <Stroke canvas={ canvas } setStrokeColour={ setStrokeColour } strokeColour={ strokeColour } setStrokeSize={ setStrokeSize } strokeSize={ strokeSize } />
                     <FreeDraw canvas={ canvas } colour={ colour } brushSize={ brushSize }/>
                     <BrushCustom setBrushSize={ setBrushSize } brushSize={ brushSize } />
                     <ColourSelect canvas={ canvas } setColour={ setColour } colour={ colour } />

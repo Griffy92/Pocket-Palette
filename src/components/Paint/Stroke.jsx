@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Popover from '@mui/material/Popover';
 import Slider from '@mui/material/Slider';
 
-const Stroke = ( { setStrokeColour, setStrokeSize } ) => {
+const Stroke = ( { canvas, setStrokeColour, setStrokeSize } ) => {
     // const { canvas, colour } = props
     const [ anchor, setAnchor] = useState(null);
 
@@ -16,6 +16,34 @@ const Stroke = ( { setStrokeColour, setStrokeSize } ) => {
 
     const open = Boolean(anchor);
     const id = open ? 'simple-popover' : undefined; //This is the only part of this I don't understand https://mui.com/material-ui/react-popover/
+
+    const setFlCol = (tarFlCol) => {
+        if (canvas != null){
+            canvas.getActiveObjects().forEach((obj) => {
+            obj.set("fill", tarFlCol)
+            console.log(obj, tarFlCol)
+            });
+            canvas.renderAll()
+        }};
+
+
+    const setStrCol = (tarStrCol) => {
+        if (canvas != null){
+            canvas.getActiveObjects().forEach((obj) => {
+            obj.set("stroke", tarStrCol)
+            console.log(obj, tarStrCol)
+            });
+            canvas.renderAll()
+        }};
+
+    const setStrWdth = (tarStrWdth) => {
+        if (canvas != null){
+            canvas.getActiveObjects().forEach((obj) => {
+            obj.set("strokeWidth", tarStrWdth)
+            console.log(obj, tarStrWdth)
+            });
+            canvas.renderAll()
+        }};
 
     return (
         <>
@@ -32,6 +60,9 @@ const Stroke = ( { setStrokeColour, setStrokeSize } ) => {
                     horizontal: 'left',
                 }}
             >
+            <p>Fill Colour</p>
+            <input type="color" id="color-picker" className="add_button add_colour_select" onChange={(e) =>{setFlCol(e.target.value)}} title="Set Stroke Colour" />
+
             <div>
                 <span className="slider-label">Stroke Width</span>
                 <Slider
@@ -45,12 +76,11 @@ const Stroke = ( { setStrokeColour, setStrokeSize } ) => {
                     max={50}
                     width={500}
                     // value={value}
-                    onChange={(e) => setStrokeSize(e.target.value)}
+                    onChange={(e) => {setStrokeSize(e.target.value); setStrWdth(e.target.value)}}
                 />
             </div>
             <p>Stroke Colour </p>
-            <input type="color" id="color-picker" className="add_button add_colour_select" onChange={(e) => setStrokeColour(e.target.value)} title="Set Stroke Colour" />
-
+            <input type="color" id="color-picker" className="add_button add_colour_select" onChange={(e) => {setStrokeColour(e.target.value); setStrCol(e.target.value)}} title="Set Stroke Colour" />
             </Popover>
         </>
     )
