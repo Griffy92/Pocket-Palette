@@ -21,10 +21,18 @@ const FreeDraw = ( props ) => {
         canvas.freeDrawingBrush.width = fillBrushSize
         canvas.isDrawingMode = !canvas.isDrawingMode     
     };
+
+
+    ////////////////////////////////////// This shit does not work - and I honestly cannot fix it.
+    // const _handleAddFreeEraser = () => {
+    //     canvas.freeDrawingBrush = new fabric.EraserBrush(canvas);
+    //     canvas.isDrawingMode = true;
+    // };
     
     return (
         <>
             <button className="add_button add_free_draw" onClick= { _handleAddFreeDraw } title="Draw"></button>
+            {/* <button className="add_button add_free_draw" onClick= { _handleAddFreeEraser } title="Draw"></button> */}
         </>
     )
 };

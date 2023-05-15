@@ -12,7 +12,7 @@ import CopyPaste from './Copy-Paste';
 import BrushCustom from './Brush-Custom';
 import Pan from './Pan';
 import Zoom from './Zoom';
-
+import Layers from './Layers';
 
 const Toolbar = ( props ) => {
     const [ colour, setColour ] = useState("");
@@ -36,6 +36,7 @@ const Toolbar = ( props ) => {
                     <CopyPaste canvas={ canvas }/>
                     <Pan canvas={ canvas } />
                     <Zoom canvas={canvas} />
+                    <Layers canvas={canvas}/>
                 </div>
                 <br />
             </div>
