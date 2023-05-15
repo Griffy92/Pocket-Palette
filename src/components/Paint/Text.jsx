@@ -137,18 +137,49 @@ const Text = ( props ) => {
         canvas.renderAll();
     }
 
+    function _handleToggleShadow() {
+        let activeInstance = canvas.getActiveObject();
+        if (activeInstance && activeInstance.type === 'i-text') {
+            // Create shadow object
+            let presetShadow = new fabric.Shadow({
+                color: 'rgba(0, 0, 0, 0.5)',
+                offsetX: 1,
+                offsetY: 2,
+                blur: 5
+            });
+            if (activeInstance.selectionStart !== activeInstance.selectionEnd) {
+                let startIndex = activeInstance.selectionStart;
+                let endIndex = activeInstance.selectionEnd;
+                let styles = activeInstance.getSelectionStyles(startIndex, endIndex);
+                activeInstance.setSelectionStyles({ shadow: presetShadow });
+            } else {
+                let shadow = activeInstance.shadow;
+                if (shadow) {
+                    activeInstance.set('shadow', null);
+                } else {
+                    activeInstance.set('shadow', presetShadow );
+                }
+            }
+        }
+        canvas.renderAll();
+    }
+
     return (
         <>
             <button className="fontButton" onClick={ _handleAddText } title="Add Text">T</button>
             <button className="fontButton" onClick={ _handleToggleBold } title="Bold">B</button>
             <button className="fontButton fontItalics" onClick={ _handleToggleItalic } title="Italics">I</button>
             <button className="fontButton fontUnderline" onClick={_handleToggleUnderline} title="Underline"><span className="underline">U</span></button>
-            <button className="fontButton fontLineThrough" onClick={ _handleToggleLineThrough } title="Linethrough"><span className="linethrough">S</span></button>      
+            <button className="fontButton fontLineThrough" onClick={ _handleToggleLineThrough } title="Linethrough"><span className="linethrough">L</span></button>
+            <button className="fontButton shadow" onClick={ _handleToggleShadow } title="Shadow">S</button>      
             <input type="number" min="30" max="100" onChange={ _handleFontSizeChange } title="Font Size"/>
-            <select className="fontButton" onChange={_handleFontFamilyChange} title="Font Family">
+            <select className="fontButton" onChange={ _handleFontFamilyChange } title="Font Family">
             <option value="Arial">Arial</option>
-            <option value="Verdana">Verdana</option>
+            <option value="Impact">Impact</option>
+            <option value="Courier New">Courier New</option>
             <option value="Times New Roman">Times New Roman</option>
+            <option value="Cursive">Cursive</option>
+            <option value="Comic Sans MS">Comic Sans MS</option>
             </select>
         </>
     );
