@@ -183,14 +183,22 @@ button:focus-visible {
   transition: 0.5s;
 }
 
-/* Toolbar: Text (Text.jsx & Canvas.jsx) */
+/* Toolbar: Text (Text.jsx) */
 .fontButton {
   font-weight: 600;
 }
 
-/* Toolbar: Text (Canvas.jsx) */
 .fontItalics {
   font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.linethrough {
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /* Toolbar: Delete (Remove-Object.jsx) */
@@ -280,6 +288,8 @@ button:focus-visible {
   opacity: 1;
   transition: 0.5s;
 }
+
+
 
 /* Toolbar Layer Up/Down Button (Layers.jsx) */
 .forward_button {
