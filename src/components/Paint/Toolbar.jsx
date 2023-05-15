@@ -34,8 +34,8 @@ const Toolbar = ( props ) => {
                     <Triangle canvas={ canvas } colour={ colour } strokeColour={ strokeColour } strokeSize={ strokeSize }/> 
                     <Stroke setStrokeColour={ setStrokeColour } strokeColour={ strokeColour } setStrokeSize={ setStrokeSize } strokeSize={ strokeSize } />
                     <FreeDraw canvas={ canvas } colour={ colour } brushSize={ brushSize }/>
-                    <BrushCustom setBrushSize={ setBrushSize } brushSize={ brushSize }/>
-                    <ColourSelect setColour={ setColour } colour={ colour } />
+                    <BrushCustom setBrushSize={ setBrushSize } brushSize={ brushSize } />
+                    <ColourSelect canvas={ canvas } setColour={ setColour } colour={ colour } />
                     <Text canvas={canvas} colour={ colour } />
                     <RemoveObject canvas={ canvas }/>
                     <CanvasHistory canvas={ canvas }/>

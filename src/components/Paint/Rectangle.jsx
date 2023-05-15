@@ -18,6 +18,7 @@ const Rectangle = ( props ) => {
         strokeWidth: strokeSize,
         stroke: strokeColour
         });
+        canvas.isDrawingMode = false
         canvas.add(rect);
         canvas.renderAll();
     }

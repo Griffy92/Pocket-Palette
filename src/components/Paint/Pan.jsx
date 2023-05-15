@@ -51,6 +51,7 @@ const Pan = (props) => {
 
     const _handleTogglePanMode = () => {
         setPanMode(!panMode);
+        canvas.isDrawingMode = false
     };
 
     return (
