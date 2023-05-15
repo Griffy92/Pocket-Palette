@@ -17,6 +17,7 @@ import Stroke from './Stroke';
 import Serialisation from './Serialisation';
 import Deserialisation from './Deserialisation';
 import SVGExport from './SVGExport';
+import CanvasDownload from './CanvasDownload'
 
 const Toolbar = ( props ) => {
     const [ colour, setColour ] = useState("");
@@ -48,6 +49,7 @@ const Toolbar = ( props ) => {
                     <Serialisation canvas={canvas} />
                     <Deserialisation canvas={canvas} /> 
                     <SVGExport canvas={canvas} />
+                    <CanvasDownload canvas={canvas} />
                 </div>
                 <br />
             </div>
