@@ -14,7 +14,9 @@ import Pan from './Pan';
 import Zoom from './Zoom';
 import Layers from './Layers';
 import Stroke from './Stroke';
-
+import Serialisation from './Serialisation';
+import Deserialisation from './Deserialisation';
+import SVGExport from './SVGExport';
 
 const Toolbar = ( props ) => {
     const [ colour, setColour ] = useState("");
@@ -43,7 +45,9 @@ const Toolbar = ( props ) => {
                     <Pan canvas={ canvas } />
                     <Zoom canvas={canvas} />
                     <Layers canvas={canvas}/>
-                    
+                    <Serialisation canvas={canvas} />
+                    <Deserialisation canvas={canvas} /> 
+                    <SVGExport canvas={canvas} />
                 </div>
                 <br />
             </div>

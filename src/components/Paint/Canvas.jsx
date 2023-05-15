@@ -2,8 +2,6 @@ import { useState, useEffect } from 'react';
 import { fabric } from 'fabric';
 import 'fabric-history';
 import Toolbar from './Toolbar';
-import Serialisation from './Serialisation'
-import Deserialisation from './Deserialisation'
 
 const Canvas = () => {
     const [ canvas, setCanvas ] = useState(null);
@@ -20,7 +18,7 @@ const Canvas = () => {
         // uncomment to get history function to work however you will have to refresh page after saving code.
         if (canvas != null){
             canvas.historyInit();
-            
+
         }
 
         return newCanvas;
@@ -35,11 +33,11 @@ const Canvas = () => {
     return (
         <>
             <Toolbar canvas={ canvas } />
-            <Serialisation canvas={ canvas } />
-            <Deserialisation canvas={ canvas } />
             <canvas id="canvas" />
         </>
     );
 };
+
+{/* <Deserialisation canvas={ canvas } /> */}
 
 export default Canvas;
