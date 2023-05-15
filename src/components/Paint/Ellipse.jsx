@@ -20,6 +20,7 @@ const Ellipse = ( props ) => {
         });
 
         // console.log(oval) // needs ry & rx defined
+        canvas.isDrawingMode = false
         canvas.add(oval);
         canvas.renderAll();
     };

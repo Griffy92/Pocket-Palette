@@ -1,9 +1,7 @@
-
 import { createClient } from "@supabase/supabase-js"
-
 import { useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
-import Canvas from "./Canvas"
+import Canvas from "./Paint/Canvas"
 
 const supabase = createClient (
     "https://yilvmajrrjkkeljiduxi.supabase.co",
