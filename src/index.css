@@ -280,3 +280,41 @@ button:focus-visible {
   opacity: 1;
   transition: 0.5s;
 }
+
+/* Toolbar Layer Up/Down Button (Layers.jsx) */
+.forward_button {
+  background: url('https://cdn-icons-png.flaticon.com/512/3524/3524388.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.forward_button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.backward_button {
+  background: url('https://cdn-icons-png.flaticon.com/128/43/43625.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.backward_button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+/* Stroke Customisation Button (Stroke.jsx) */
+.add_stroke_custom {
+  background: url('https://cdn-icons-png.flaticon.com/512/101/101324.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.add_stroke_custom:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
