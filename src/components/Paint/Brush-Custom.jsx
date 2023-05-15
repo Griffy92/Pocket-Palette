@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Popover from '@mui/material/Popover';
 import Slider from '@mui/material/Slider';
 
-const BrushCustom = ( { setBrushSize } ) => {
+const BrushCustom = ( { canvas, setBrushSize } ) => {
     // const { canvas, colour } = props
     const [ anchor, setAnchor] = useState(null);
 
@@ -17,6 +17,15 @@ const BrushCustom = ( { setBrushSize } ) => {
 
     const open = Boolean(anchor);
     const id = open ? 'simple-popover' : undefined; //This is the only part of this I don't understand https://mui.com/material-ui/react-popover/
+
+    const setStrCol = (tarStrCol) => {
+        if (canvas != null){
+            canvas.getActiveObjects().forEach((obj) => {
+            obj.set("stroke", tarStrCol)
+            console.log(obj, tarStrCol)
+            });
+            canvas.renderAll()
+        }};
 
     return (
         <>
@@ -33,7 +42,10 @@ const BrushCustom = ( { setBrushSize } ) => {
                     horizontal: 'left',
                 }}
             >
+            <p>Fill Colour</p>
+            <input type="color" id="color-picker" className="add_button add_colour_select" onChange={(e) =>{setStrCol(e.target.value)}} title="Set Stroke Colour" />
             <div>
+
                 <span className="slider-label">Brushsize</span>
                 <Slider
                     sx={{ width: 200,
