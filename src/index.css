@@ -14,22 +14,27 @@
   -webkit-text-size-adjust: 100%;
 }
 
-a {
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
 a:hover {
   color: #535bf2;
-}
+} */
 
-body {
+/* body {
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-}
+} */
 
 h1 {
   font-size: 3.2em;
@@ -183,14 +188,22 @@ button:focus-visible {
   transition: 0.5s;
 }
 
-/* Toolbar: Text (Text.jsx & Canvas.jsx) */
+/* Toolbar: Text (Text.jsx) */
 .fontButton {
   font-weight: 600;
 }
 
-/* Toolbar: Text (Canvas.jsx) */
 .fontItalics {
   font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.linethrough {
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /* Toolbar: Delete (Remove-Object.jsx) */
@@ -277,6 +290,46 @@ button:focus-visible {
 }
 
 .pan_button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+
+
+/* Toolbar Layer Up/Down Button (Layers.jsx) */
+.forward_button {
+  background: url('https://cdn-icons-png.flaticon.com/512/3524/3524388.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.forward_button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.backward_button {
+  background: url('https://cdn-icons-png.flaticon.com/128/43/43625.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.backward_button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+/* Stroke Customisation Button (Stroke.jsx) */
+.add_stroke_custom {
+  background: url('https://cdn-icons-png.flaticon.com/512/101/101324.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.add_stroke_custom:hover {
   opacity: 1;
   transition: 0.5s;
 }

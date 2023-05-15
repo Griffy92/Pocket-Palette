@@ -2,12 +2,11 @@ import { useState } from 'react';
 import Popover from '@mui/material/Popover';
 import Slider from '@mui/material/Slider';
 
-const BrushCustom = ( { canvas, setBrushSize } ) => {
+const Stroke = ( { canvas, setStrokeColour, setStrokeSize } ) => {
     // const { canvas, colour } = props
     const [ anchor, setAnchor] = useState(null);
 
     const _handleClick = (event) => {
-        // canvas.isDrawingMode = false
         setAnchor(event.currentTarget);
     };
 
@@ -18,6 +17,16 @@ const BrushCustom = ( { canvas, setBrushSize } ) => {
     const open = Boolean(anchor);
     const id = open ? 'simple-popover' : undefined; //This is the only part of this I don't understand https://mui.com/material-ui/react-popover/
 
+    const setFlCol = (tarFlCol) => {
+        if (canvas != null){
+            canvas.getActiveObjects().forEach((obj) => {
+            obj.set("fill", tarFlCol)
+            console.log(obj, tarFlCol)
+            });
+            canvas.renderAll()
+        }};
+
+
     const setStrCol = (tarStrCol) => {
         if (canvas != null){
             canvas.getActiveObjects().forEach((obj) => {
@@ -27,9 +36,18 @@ const BrushCustom = ( { canvas, setBrushSize } ) => {
             canvas.renderAll()
         }};
 
+    const setStrWdth = (tarStrWdth) => {
+        if (canvas != null){
+            canvas.getActiveObjects().forEach((obj) => {
+            obj.set("strokeWidth", tarStrWdth)
+            console.log(obj, tarStrWdth)
+            });
+            canvas.renderAll()
+        }};
+
     return (
         <>
-            <button className="add_button add_brush_size" onClick= { _handleClick } title="Set Brush Size"></button>
+            <button className="add_button add_stroke_custom" onClick= { _handleClick } title="Set Brush Size"></button>
             <Popover
                 sx={{ width: 500 }}
                 id={id}
@@ -43,10 +61,10 @@ const BrushCustom = ( { canvas, setBrushSize } ) => {
                 }}
             >
             <p>Fill Colour</p>
-            <input type="color" id="color-picker" className="add_button add_colour_select" onChange={(e) =>{setStrCol(e.target.value)}} title="Set Stroke Colour" />
-            <div>
+            <input type="color" id="color-picker" className="add_button add_colour_select" onChange={(e) =>{setFlCol(e.target.value)}} title="Set Stroke Colour" />
 
-                <span className="slider-label">Brushsize</span>
+            <div>
+                <span className="slider-label">Stroke Width</span>
                 <Slider
                     sx={{ width: 200,
                         my: 2,
@@ -55,15 +73,17 @@ const BrushCustom = ( { canvas, setBrushSize } ) => {
                     valueLabelDisplay="auto"
                     step={1}
                     min={1}
-                    max={100}
+                    max={50}
                     width={500}
                     // value={value}
-                    onChange={(e) => setBrushSize(e.target.value)}
+                    onChange={(e) => {setStrokeSize(e.target.value); setStrWdth(e.target.value)}}
                 />
             </div>
+            <p>Stroke Colour </p>
+            <input type="color" id="color-picker" className="add_button add_colour_select" onChange={(e) => {setStrokeColour(e.target.value); setStrCol(e.target.value)}} title="Set Stroke Colour" />
             </Popover>
         </>
     )
 };
 
-export default BrushCustom;
+export default Stroke;
