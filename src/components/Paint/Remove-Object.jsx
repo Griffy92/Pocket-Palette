@@ -13,7 +13,6 @@ const RemoveObject = ( props ) => {
   }};
 
 ////////// This removes all objects. Doesn't need selection
-
   const _HandleRemoveAllObjects = () => {
     if (canvas != null){
       canvas.getObjects().forEach((obj) => {
@@ -28,7 +27,6 @@ const RemoveObject = ( props ) => {
       <button className="add_button delete_all_button" onClick={_HandleRemoveAllObjects} title="Reset Canvas"></button>
     </>
   )
-
 };
 
 export default RemoveObject;

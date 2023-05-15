@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import Popover from '@mui/material/Popover';
 import Slider from '@mui/material/Slider';
-import Stack from '@mui/material/Stack';
 
 const BrushCustom = ( { setBrushSize } ) => {
     // const { canvas, colour } = props
     const [ anchor, setAnchor] = useState(null);
 
     const _handleClick = (event) => {
+        // canvas.isDrawingMode = false
         setAnchor(event.currentTarget);
     };
 

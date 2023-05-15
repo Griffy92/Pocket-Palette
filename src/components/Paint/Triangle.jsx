@@ -20,6 +20,7 @@ const Triangle = ( props ) => {
             left: 50,
             top: 50
         });
+        canvas.isDrawingMode = false
         canvas.add(tri).renderAll()
         }
     

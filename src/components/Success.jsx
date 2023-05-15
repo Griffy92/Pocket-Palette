@@ -1,6 +1,4 @@
-
 import { createClient } from "@supabase/supabase-js"
-
 import { useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
 import Canvas from "./Paint/Canvas"
