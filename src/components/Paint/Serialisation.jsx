@@ -16,6 +16,6 @@ const Serialisation = ( props ) => {
         </>
     )
 };
-{/* <button onClick={ _saveSVG }>Save SVG</button> */}
+
 export default Serialisation;
 
