@@ -17,6 +17,7 @@ const Pan = (props) => {
             };
 
             const handleMouseMove = (event) => {
+                // block changes the cursor to the hand icon when pan mode active
                 if ( panMode ) {
                     canvas.setCursor('grab');
                     canvas.renderAll();
@@ -25,11 +26,12 @@ const Pan = (props) => {
                     canvas.renderAll();
                 };
 
+                // panning
                 if (mousePressed && panMode) {
                     const mouseEvent = event.e;
                     const delta = new fabric.Point(mouseEvent.movementX, mouseEvent.movementY);
                     canvas.relativePan(delta);
-                    canvas.selection = false;
+                    canvas.selection = false; // disable selection box during pan
                 } else {
                     canvas.selection = true;
                 };
@@ -39,7 +41,7 @@ const Pan = (props) => {
             canvas.on('mouse:up', handleMouseUp);
             canvas.on('mouse:move', handleMouseMove);
 
-            return () => {
+            return () => { // clean up 
                 canvas.off('mouse:down', handleMouseDown);
                 canvas.off('mouse:up', handleMouseUp);
                 canvas.off('mouse:move', handleMouseMove);
