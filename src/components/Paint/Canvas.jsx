@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { fabric } from 'fabric';
 import 'fabric-history';
 import Toolbar from './Toolbar';
+import Serialisation from './Serialisation'
+import Deserialisation from './Deserialisation'
 
 const Canvas = () => {
     const [ canvas, setCanvas ] = useState(null);
@@ -33,7 +35,8 @@ const Canvas = () => {
     return (
         <>
             <Toolbar canvas={ canvas } />
-
+            <Serialisation canvas={ canvas } />
+            <Deserialisation canvas={ canvas } />
             <canvas id="canvas" />
         </>
     );
