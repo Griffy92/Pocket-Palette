@@ -13,20 +13,26 @@ import BrushCustom from './Brush-Custom';
 import Pan from './Pan';
 import Zoom from './Zoom';
 import Layers from './Layers';
+import Stroke from './Stroke';
+
 
 const Toolbar = ( props ) => {
     const [ colour, setColour ] = useState("");
+    const [ strokeColour, setStrokeColour ] = useState("")
     const [ brushSize, setBrushSize] = useState(0);
+    const [ strokeSize, setStrokeSize ] = useState("")
+
     const { canvas } = props;
 
     return (
         <>
             <div>
                 <div className="toolbar">
-                    <Circle canvas={ canvas } colour={ colour } />
-                    <Ellipse canvas={ canvas } colour={ colour }/>
-                    <Rectangle canvas={ canvas } colour={ colour }/>
-                    <Triangle canvas={ canvas } colour={ colour }/> 
+                    <Circle canvas={ canvas } colour={ colour } strokeColour={ strokeColour } strokeSize={ strokeSize } />
+                    <Ellipse canvas={ canvas } colour={ colour } strokeColour={ strokeColour } strokeSize={ strokeSize } />
+                    <Rectangle canvas={ canvas } colour={ colour } strokeColour={ strokeColour } strokeSize={ strokeSize }/>
+                    <Triangle canvas={ canvas } colour={ colour } strokeColour={ strokeColour } strokeSize={ strokeSize }/> 
+                    <Stroke setStrokeColour={ setStrokeColour } strokeColour={ strokeColour } setStrokeSize={ setStrokeSize } strokeSize={ strokeSize } />
                     <FreeDraw canvas={ canvas } colour={ colour } brushSize={ brushSize }/>
                     <BrushCustom setBrushSize={ setBrushSize } brushSize={ brushSize }/>
                     <ColourSelect setColour={ setColour } colour={ colour } />
@@ -37,6 +43,7 @@ const Toolbar = ( props ) => {
                     <Pan canvas={ canvas } />
                     <Zoom canvas={canvas} />
                     <Layers canvas={canvas}/>
+                    
                 </div>
                 <br />
             </div>

@@ -305,3 +305,16 @@ button:focus-visible {
   opacity: 1;
   transition: 0.5s;
 }
+
+/* Stroke Customisation Button (Stroke.jsx) */
+.add_stroke_custom {
+  background: url('https://cdn-icons-png.flaticon.com/512/101/101324.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.add_stroke_custom:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
