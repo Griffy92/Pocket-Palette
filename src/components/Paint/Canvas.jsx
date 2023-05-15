@@ -12,7 +12,7 @@ const Canvas = () => {
         const newCanvas = new fabric.Canvas('canvas', {
             height: 600,
             width: 1000,
-            backgroundCsolor: 'white'
+            backgroundColor: 'white'
         })
 
         // uncomment to get history function to work however you will have to refresh page after saving code.
