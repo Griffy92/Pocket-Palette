@@ -3,8 +3,8 @@ const SVGExport = ( props ) => {
     const { canvas } = props;
 
     const _handleExportSVG = () => {
-        imgSVG = canvas.toSVG();
-        // console.log(imgSVG);
+        const imgSVG = canvas.toSVG();
+        console.log(imgSVG);
         // add export code here
     }
    
