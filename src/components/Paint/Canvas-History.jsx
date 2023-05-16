@@ -14,6 +14,30 @@ const CanvasHistory = ( props ) => {
         canvas.redo();
       }};
 
+  useEffect(() => {
+    window.addEventListener('keyup', e => {
+      if (
+          e.code == 'KeyZ' &&
+          e.ctrlKey  &&
+          canvas != null
+        ) {
+        e.preventDefault
+        _HandleUndo()
+      };
+    });
+
+    window.addEventListener('keyup', e => {
+      if (
+          e.code == 'KeyY' &&
+          e.ctrlKey &&
+          canvas != null
+        ) {
+        e.preventDefault
+        _HandleRedo()
+        };
+    });
+  }); 
+
   return (
     <>
     <button className="add_button undo_button" onClick={_HandleUndo} title="Undo"></button>

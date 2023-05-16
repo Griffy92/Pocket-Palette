@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Popover from '@mui/material/Popover';
 import Slider from '@mui/material/Slider';
+import { Stack } from '@mui/material';
 
 const BrushCustom = ( { canvas, setBrushSize } ) => {
     // const { canvas, colour } = props
@@ -42,10 +43,12 @@ const BrushCustom = ( { canvas, setBrushSize } ) => {
                     horizontal: 'left',
                 }}
             >
+            <Stack 
+                sx={{ p: 2}}>
             <p>Fill Colour</p>
             <input type="color" id="color-picker" className="add_button add_colour_select" onChange={(e) =>{setStrCol(e.target.value)}} title="Set Stroke Colour" />
             <div>
-
+                <br />
                 <span className="slider-label">Brushsize</span>
                 <Slider
                     sx={{ width: 200,
@@ -61,6 +64,7 @@ const BrushCustom = ( { canvas, setBrushSize } ) => {
                     onChange={(e) => setBrushSize(e.target.value)}
                 />
             </div>
+            </Stack>
             </Popover>
         </>
     )
