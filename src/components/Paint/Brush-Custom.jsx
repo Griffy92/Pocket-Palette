@@ -18,13 +18,14 @@ const BrushCustom = ( { canvas, setBrushSize } ) => {
     const id = open ? 'simple-popover' : undefined;
 
     const setStrCol = (tarStrCol) => {
-        if (canvas != null){
+        if (canvas != null) {
             canvas.getActiveObjects().forEach((obj) => {
-            obj.set("stroke", tarStrCol)
-            console.log(obj, tarStrCol)
+                obj.set("stroke", tarStrCol);
+                console.log(obj, tarStrCol);
             });
-            canvas.renderAll()
-        }};
+            canvas.renderAll();
+        }
+    };
 
     return (
         <>
@@ -41,30 +42,30 @@ const BrushCustom = ( { canvas, setBrushSize } ) => {
                     horizontal: 'left',
                 }}
             >
-            <Stack 
-                sx={{ p: 2}}>
-            <p>Fill Colour</p>
-            <input type="color" id="color-picker" className="add_button add_colour_select" onChange={(e) =>{setStrCol(e.target.value)}} title="Set Stroke Colour" />
-            <div>
-                <br />
-                <span className="slider-label">Brushsize</span>
-                <Slider
-                    sx={{ width: 200,
-                        my: 2,
-                        mx: 2 }}
-                    defaultValue={5} 
-                    valueLabelDisplay="auto"
-                    step={1}
-                    min={1}
-                    max={100}
-                    width={500}
-                    onChange={(e) => setBrushSize(e.target.value)}
-                />
-            </div>
-            </Stack>
+                <Stack 
+                    sx={{ p: 2}}>
+                    <p>Fill Colour</p>
+                    <input type="color" id="color-picker" className="add_button add_colour_select" onChange={(e) =>{setStrCol(e.target.value)}} title="Set Stroke Colour" />
+                    <div>
+                        <br />
+                        <span className="slider-label">Brushsize</span>
+                        <Slider
+                            sx={{ width: 200,
+                                my: 2,
+                                mx: 2 }}
+                            defaultValue={5} 
+                            valueLabelDisplay="auto"
+                            step={1}
+                            min={1}
+                            max={100}
+                            width={500}
+                            onChange={(e) => setBrushSize(e.target.value)}
+                        />
+                    </div>
+                </Stack>
             </Popover>
         </>
-    )
+    );
 };
 
 export default BrushCustom;

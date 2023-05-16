@@ -4,7 +4,7 @@ const Grouping = ( props ) => {
     const { canvas } = props;
 
     const _handleGrouping = () => {
-        canvas.getActiveObject().toGroup()
+        canvas.getActiveObject().toGroup();
         canvas.renderAll();
     };
 
@@ -18,7 +18,7 @@ const Grouping = ( props ) => {
             <Button className='add_button group_button' onClick={ _handleGrouping } title="Group Objects"></Button>
             <Button className='add_button ungroup_button' onClick={ _handleUngrouping } title="Ungroup Objects"></Button>
         </>
-    )
+    );
 };
 
 export default Grouping;

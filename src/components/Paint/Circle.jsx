@@ -6,20 +6,21 @@ const Circle = ( props ) => {
     
     // This is a little checker to see if a colour has been passed yet (colour default is "")
     // if a colour has not been passed, defaults to whatver colour is nominated below 
-    let fillColour = 'red'
-    if (colour != ""){
-        fillColour = colour 
-    }
+    let fillColour = 'red';
+
+    if (colour != "") {
+        fillColour = colour;
+    };
 
     const _handleAddCircle = () => {
-        const circle = new fabric.Circle({
+        const circle = new fabric.Circle( {
             radius: 50,
             fill: fillColour,
             strokeWidth: strokeSize,
-            stroke: strokeColour
+            stroke: strokeColour,
         });
         // console.log(circle); // circle needs radius define
-        canvas.isDrawingMode = false
+        canvas.isDrawingMode = false;
         canvas.add(circle);
         canvas.renderAll();
     };
@@ -28,7 +29,7 @@ const Circle = ( props ) => {
         <>
             <Button className="add_button add_circle" onClick={ _handleAddCircle } title="Add Circle"></Button>
         </>
-    )
+    );
 };
 
 export default Circle;
