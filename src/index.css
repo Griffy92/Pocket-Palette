@@ -333,3 +333,8 @@ button:focus-visible {
   opacity: 1;
   transition: 0.5s;
 }
+
+/* Active tool */
+.active_tool_icon {
+  background-color: gray;
+}
