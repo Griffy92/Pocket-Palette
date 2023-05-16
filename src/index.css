@@ -461,3 +461,29 @@ button:focus-visible {
 
 
 /* ==================== PIXEL TOOLBAR =================== */
+
+/* All buttons */
+.iconBtn {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+/*  ==== Undo/Redo Buttons ===  */
+
+/*  Undo Button  */ 
+.undoBtn {
+  color: red;
+}
+.undoBtn:hover {
+  border: 1px solid #888;
+  background-color: #ddd;
+}
+
+/*  ==== BrushTool Buttons ===  */
+
+/*  Paint  */ 
+.paintBtn {
+  background-image: url('/PixelArt/paint-brush.png');
+}

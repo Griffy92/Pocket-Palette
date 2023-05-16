@@ -10,7 +10,7 @@ const UndoRedo = ( props ) => {
 
     return (
         <div> 
-        <button onClick={undo} title="Undo" className="undoBtn">Undo</button>
+        <button onClick={undo} title="Undo" className="undoBtn"></button>
         <button onClick={redo}>Redo</button>
     </div>
     )
