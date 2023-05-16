@@ -17,7 +17,7 @@
     "@supabase/auth-ui-react": "^0.4.2",
     "@supabase/supabase-js": "^2.22.0",
     "axios": "^1.4.0",
-    "dotting": "^1.0.13",
+    "dotting": "^1.1.1",
     "fabric": "^5.3.0",
     "fabric-history": "^1.7.0",
     "fabricjs-react": "^1.2.0",

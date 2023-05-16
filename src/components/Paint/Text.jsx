@@ -2,6 +2,7 @@ import { fabric } from "fabric";
 import { useState } from 'react'
 import { Popover, Stack, Input, Select, MenuItem, TextField, FormControl, InputLabel, Button, ButtonGroup } from '@mui/material';
 
+
 const Text = ( props ) => {
     const { canvas } = props;
 
@@ -19,12 +20,13 @@ const Text = ( props ) => {
 
 
     //////////////////////////// this is the text function //////////////////////////
-        function randomId() {
+    function randomId() {
+
         return Math.random().toString(36).substring(2, 10);
     }
 
     function _handleAddText() {
-        const newText = new fabric.IText("Add text", { left: 100, top: 64, id: randomId()});
+        const newText = new fabric.IText("Add text", { left: 100, top: 64, fontFamily: "Arial", id: randomId()});
         canvas.add(newText);
         canvas.setActiveObject(newText); // set the new text object as active
     }  
