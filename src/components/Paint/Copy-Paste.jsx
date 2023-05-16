@@ -31,7 +31,6 @@ const CopyPaste = ( props ) => {
         clonedObjects.forEachObject(function(obj) {
           canvas.add(obj);
         });
-
         clonedObjects.setCoords();
       } 
       
@@ -50,7 +49,7 @@ const CopyPaste = ( props ) => {
     window.addEventListener('keyup', e => {
       if (
          e.code == 'KeyC' &&
-         e.ctrlKey  &&
+         (e.ctrlKey || e.metaKey ) &&
          canvas != null &&
          canvas.getActiveObject() != null
        ) {
@@ -59,10 +58,10 @@ const CopyPaste = ( props ) => {
       };
     });
 
-    window.addEventListener('keyup', e => {
+    window.addEventListener('keydown', e => {
       if (
           e.code == 'KeyV' &&
-          e.ctrlKey &&
+          (e.ctrlKey || e.metaKey ) &&
           canvas != null &&
           canvas.getActiveObject() != null
 
@@ -76,8 +75,8 @@ const CopyPaste = ( props ) => {
 
   return (
     <>
-      <button className="add_button copy_button" onClick={_HandleCopy} title="Copy"></button>
-      <button className="add_button paste_button" onClick={_HandlePaste} title="Paste"></button>
+      {/* <Button className="add_button copy_button" onClick={_HandleCopy} title="Copy"></Button> */}
+      {/* <Button className="add_button paste_button" onClick={_HandlePaste} title="Paste"></Button> */}
     </>
   )};
 

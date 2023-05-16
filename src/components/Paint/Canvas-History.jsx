@@ -19,7 +19,7 @@ const CanvasHistory = ( props ) => {
     window.addEventListener('keyup', e => {
       if (
           e.code == 'KeyZ' &&
-          e.ctrlKey  &&
+          (e.ctrlKey || e.metaKey ) &&
           canvas != null
         ) {
         e.preventDefault
@@ -30,7 +30,7 @@ const CanvasHistory = ( props ) => {
     window.addEventListener('keyup', e => {
       if (
           e.code == 'KeyY' &&
-          e.ctrlKey &&
+          (e.ctrlKey || e.metaKey ) &&
           canvas != null
         ) {
         e.preventDefault
