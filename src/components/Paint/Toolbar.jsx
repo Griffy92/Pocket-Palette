@@ -56,13 +56,14 @@ const Toolbar = ( props ) => {
                     <ColourSelect canvas={ canvas } setColour={ setColour } colour={ colour } />
                     <Text canvas={canvas} colour={ colour } />
                     <RemoveObject canvas={ canvas }/>
-                    <CanvasHistory canvas={ canvas }/>
                     <Pan canvas={ canvas } />
-                    <Zoom canvas={canvas} />
-                    <Layers canvas={canvas}/>
-                    <Serialisation canvas={canvas} />
-                    <Deserialisation canvas={canvas} />
-                    <ImageUpload canvas={canvas} colour={colour} />
+                    <CanvasHistory canvas={ canvas }/>
+                    <Zoom canvas={ canvas } />
+                    <Layers canvas={ canvas }/>
+                    <Serialisation canvas={ canvas } />
+                    <Deserialisation canvas={ canvas } />
+                    <ImageUpload canvas={ canvas } colour={ colour } />
+                    <CopyPaste canvas={canvas} />
                     <Button className="add_button download_button" onClick= { _handleClick } title="Download"></Button>
                         <Popover
                             sx={{ width: 500 }}
@@ -76,10 +77,10 @@ const Toolbar = ( props ) => {
                                 horizontal: 'left'}}>
                             <Stack sx={{ width: 300, p: 2}}>
                                 <p>Please select your preferred format</p>
-                            <ButtonGroup variant="contained" aria-label="outlined primary button group" fullWidth={true} sx={{my: 2}}>
-                                <SVGExport canvas={canvas} />
-                                <CanvasDownload canvas={canvas} />
-                            </ButtonGroup>
+                                <ButtonGroup variant="contained" aria-label="outlined primary button group" fullWidth={true} sx={{my: 2}}>
+                                    <SVGExport canvas={canvas} />
+                                    <CanvasDownload canvas={canvas} />
+                                </ButtonGroup>
                             </Stack>
                         </Popover>
                     <Grouping canvas={canvas}/>
