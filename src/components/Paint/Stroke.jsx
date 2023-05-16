@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import Popover from '@mui/material/Popover';
-import Slider from '@mui/material/Slider';
-import { Stack } from '@mui/material';
+import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
+
 
 const Stroke = ( { canvas, setStrokeColour, setStrokeSize } ) => {
     // const { canvas, colour } = props
@@ -48,7 +47,7 @@ const Stroke = ( { canvas, setStrokeColour, setStrokeSize } ) => {
 
     return (
         <>
-            <button className="add_button add_stroke_custom" onClick= { _handleClick } title="Set Brush Size"></button>
+            <Button className="add_button add_stroke_custom" onClick= { _handleClick } title="Set Brush Size"></Button>
             <Popover
                 sx={{ width: 500 }}
                 id={id}

@@ -1,4 +1,5 @@
 import { fabric } from 'fabric'
+import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
 
 const Ellipse = ( props ) => {
 
@@ -27,7 +28,7 @@ const Ellipse = ( props ) => {
     
     return (
         <> 
-            <button className="add_button add_oval" onClick= { _handleAddOval } title="Add Oval"></button>
+            <Button className="add_button add_oval" onClick= { _handleAddOval } title="Add Oval"></Button>
         </>
     );
 };

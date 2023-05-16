@@ -1,4 +1,5 @@
 import { fabric } from "fabric";
+import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
 
 const Rectangle = ( props ) => {
     const { canvas, colour, strokeColour, strokeSize } = props; // destructuring props
@@ -25,7 +26,7 @@ const Rectangle = ( props ) => {
 
     return (
         <>
-            <button className="add_button add_rect" onClick={ _handleAddRect } title="Add Rectangle"></button>
+            <Button className="add_button add_rect" onClick={ _handleAddRect } title="Add Rectangle"></Button>
         </>
     )
 };

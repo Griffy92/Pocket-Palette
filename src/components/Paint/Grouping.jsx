@@ -1,3 +1,5 @@
+import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
+
 const Grouping = ( props ) => {
     const { canvas } = props;
 
@@ -13,8 +15,8 @@ const Grouping = ( props ) => {
     
     return (
         <>
-            <button onClick={ _handleGrouping } title="Group Objects">Group</button>
-            <button onClick={ _handleUngrouping } title="Ungroup Objects">Ungroup</button>
+            <Button className='add_button group_button' onClick={ _handleGrouping } title="Group Objects"></Button>
+            <Button className='add_button ungroup_button' onClick={ _handleUngrouping } title="Ungroup Objects"></Button>
         </>
     )
 };

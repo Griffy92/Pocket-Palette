@@ -74,7 +74,7 @@ button:focus-visible {
 }
 
 
-/* ==================== TOOLBAR =================== */
+/* ==================== PAINT TOOLBAR =================== */
 
 .toolbar {
   width: 100%;
@@ -163,9 +163,9 @@ button:focus-visible {
 
 /* Toolbar : Brush Size (Brush-Custom.jsx) */
 .add_brush_size {
-  background: url('https://cdn-icons-png.flaticon.com/512/4925/4925053.png');
+  background: url('https://cdn-icons-png.flaticon.com/128/57/57055.png');
   background-position: center;
-  background-size: contain;
+  background-size: 10px;
   background-repeat: no-repeat;
 }
 
@@ -365,7 +365,7 @@ button:focus-visible {
   background-color: gray;
 }
 
-/* Toolbar Dropdowns */
+/* Toolbar Dropdowns Toolbar.jsx */
 .download_button {
   background: url('https://cdn-icons-png.flaticon.com/512/3031/3031707.png');
   background-position: center;
@@ -374,6 +374,18 @@ button:focus-visible {
 }
 
 .download_button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.upload_button {
+  background: url('https://cdn-icons-png.flaticon.com/512/3031/3031708.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.upload_button:hover {
   opacity: 1;
   transition: 0.5s;
 }
@@ -390,3 +402,62 @@ button:focus-visible {
   opacity: 1;
   transition: 0.5s;
 }
+
+/* Save / Load Buttons - Serialisation/deserialisation.jsx */
+.save_button {
+  background: url('https://cdn-icons-png.flaticon.com/512/9017/9017994.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.save_button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.load_button {
+  background: url('https://cdn-icons-png.flaticon.com/512/9017/9017998.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.load_button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+/* Group / Ungroup Buttons - Grouping.jsx */
+.group_button {
+  background: url('https://cdn-icons-png.flaticon.com/512/9536/9536498.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.group_button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.ungroup_button {
+  background: url('https://cdn-icons-png.flaticon.com/512/9536/9536919.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.ungroup_button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.button_group_toolbar {
+  border-color: red;
+  color: red;
+  background-color: red;
+}
+
+
+/* ==================== PIXEL TOOLBAR =================== */

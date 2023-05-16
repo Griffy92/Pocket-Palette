@@ -1,3 +1,5 @@
+import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
+
 const Deserialisation = ( props ) => {
     const { canvas } = props;
 
@@ -7,10 +9,10 @@ const Deserialisation = ( props ) => {
     const _handleLoad = () => {
         canvas.loadFromJSON( testCanvas );
         canvas.renderAll();
-    }
+    };
 
     return (
-        <button onClick={ _handleLoad }>Load</button>
+        <Button className="add_button load_button" onClick={ _handleLoad } title='Load'></Button>
     )
 };
 

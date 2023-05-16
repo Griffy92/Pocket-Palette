@@ -183,8 +183,9 @@ const Text = ( props ) => {
 
     return (
         <>
-            <button className="fontButton add_text add_button" onClick={ _handleAddText } title="Add Text"></button>
-            <button className="add_button text_options" onClick= { _handleClick } title="DropDown"></button>
+            <ButtonGroup variant="text">
+            <Button className="fontButton add_text add_button" onClick={ _handleAddText } title="Add Text" style={{ borderColor: "grey" }}></Button>
+            <Button className="add_button add_brush_size" onClick= { _handleClick } title="DropDown" sx={{width: 2, p: 1.5}} style={{minWidth: '10px'}}></Button>
                 <Popover
                     sx={{ width: 500 }}
                     id={id}
@@ -198,7 +199,7 @@ const Text = ( props ) => {
                     <Stack sx={{width: 200, p: 2}} spacing={2}>
                         <FormControl  sx={{width: 200}}>
                             <ButtonGroup variant="contained" aria-label="outlined primary button group" fullWidth={true} sx={{mb: 2}}>
-                                <Button className="fontButton" onClick={ _handleToggleBold } title="Bold">B</Button>
+                                <Button className="fontButton" onClick={ _handleToggleBold } title="Bold" >B</Button>
                                 <Button className="fontButton fontItalics" onClick={ _handleToggleItalic } title="Italics">I</Button>
                             </ButtonGroup>
                             <ButtonGroup variant="contained" aria-label="outlined primary button group" fullWidth={true} sx={{mb: 2}}>
@@ -222,6 +223,7 @@ const Text = ( props ) => {
                         </FormControl >
                     </Stack>
                 </Popover>
+            </ButtonGroup>
         </>
     );
     
