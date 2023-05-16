@@ -1,7 +1,9 @@
 import React, { useRef, useCallback } from "react";
-import './Grid.css';
+// import './Grid.css';
 
-import { Dotting, useDotting, useBrush } from "dotting";
+import { Dotting, useDotting } from "dotting";
+import { useBrush } from "dotting";
+
 
 
 // TODO SEPARATE INTO DIFFERENT COMPONENTS AND LINK BACK 
@@ -11,17 +13,25 @@ import { Dotting, useDotting, useBrush } from "dotting";
 const Grid = () => {
     
     {/* CLEAR BUTTON AND CREATING THE BOARD */}
-
     const ref = useRef(null);
     const { clear } = useDotting(ref);
 
     {/* UNDO AND REDO */}
     const { undo, redo } = useDotting(ref);
 
+     {/* DOWNLOAD IMAGE AS PNG */}
+     const { downloadImage } = useDotting(ref);
+  
     
     {/* CHANGE BRUSH TOOL COLOR */}
 
     const { changeBrushColor, changeBrushTool, brushTool, brushColor } = useBrush(ref);
+
+
+    const _handleBrushToolChange = useCallback((selectedTool) => {
+        changeBrushTool(selectedTool);
+      }, [changeBrushTool]);
+
 
 
     const _handleColorChange = useCallback((e) => {
@@ -32,8 +42,7 @@ const Grid = () => {
     const BrushTool = {
     DOT: "DOT",
     ERASER: "ERASER",
-    PAINT_BUCKET: "PAINT_BUCKET",
-    SELECT: "SELECT",
+    PAINT_BUCKET: "PAINT_BUCKET"
     };
     
 
@@ -48,6 +57,7 @@ const Grid = () => {
            isGridVisible
            />
 
+            <button onClick={downloadImage}>Download</button>
             <button onClick={clear}>Clear</button>
 
             {/* UNDO AND REDO BUTTONS */}
@@ -71,28 +81,20 @@ const Grid = () => {
           redo
         </button>
 
+        
 
 
+           {/* CHANGE BRUSH TYPE  */}
+        <div>
+          <button onClick={() => _handleBrushToolChange(BrushTool.DOT)}
+            disabled={brushTool === BrushTool.DOT}> Paint </button>
+          <button onClick={() => _handleBrushToolChange(BrushTool.ERASER)}
+            disabled={brushTool === BrushTool.ERASER}> Eraser </button>
+          <button onClick={() => _handleBrushToolChange(BrushTool.PAINT_BUCKET)}
+            disabled={brushTool === BrushTool.PAINT_BUCKET}> Paint Bucket</button>
+          </div>
 
-           {/* CHANGE BRUSH COLOR  */}
-           <span>Brush Mode</span>
-        <select
-          style={{
-            marginLeft: 15,
-          }}
-          value={BrushTool}
-          onChange={(e) => {
-            changeBrushTool(e.target.value);
-          }}
-        >
-          <option value={BrushTool.DOT}>{BrushTool.DOT}</option>
-          <option value={BrushTool.ERASER}>{BrushTool.ERASER}</option>
-          <option value={BrushTool.PAINT_BUCKET}>
-            {BrushTool.PAINT_BUCKET}
-          </option>
-          <option value={BrushTool.SELECT}>{BrushTool.SELECT}</option>
-        </select>
-
+          {/* CHANGE BRUSH COLOR  */}
         <input
           type="color"
           value={brushColor}

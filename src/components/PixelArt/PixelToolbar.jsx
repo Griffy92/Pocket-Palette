@@ -2,6 +2,7 @@ import { Dotting } from "dotting";
 import React from "react";
 
 import UndoRedo from "./UndoRedo";
+import './PixelCanvas.css'
 
 const PixelToolbar = () => {
  
