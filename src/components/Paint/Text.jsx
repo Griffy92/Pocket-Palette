@@ -1,14 +1,12 @@
 import { fabric } from "fabric";
 
-const Text = ( props ) => {
-    const { canvas } = props;
-
+const Text = ( {canvas} ) => {
     function randomId() {
         return Math.random().toString(36).substring(2, 10);
     }
 
     function _handleAddText() {
-        const newText = new fabric.IText("Add text", { left: 100, top: 64, id: randomId()});
+        const newText = new fabric.IText("Add text", { left: 100, top: 64, fontFamily: "Arial", id: randomId()});
         canvas.add(newText);
         canvas.setActiveObject(newText); // set the new text object as active
     }  
