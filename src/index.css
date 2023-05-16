@@ -74,7 +74,7 @@ button:focus-visible {
 }
 
 
-/* ==================== TOOLBAR =================== */
+/* ==================== PAINT TOOLBAR =================== */
 
 .toolbar {
   width: 100%;
@@ -458,3 +458,6 @@ button:focus-visible {
   color: red;
   background-color: red;
 }
+
+
+/* ==================== PIXEL TOOLBAR =================== */

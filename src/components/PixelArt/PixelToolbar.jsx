@@ -1,16 +1,25 @@
-import { Dotting } from "dotting";
-import React from "react";
+import React, { useState } from "react";
 
-import UndoRedo from "./UndoRedo";
-import './PixelCanvas.css'
+// COMPONENTS
+import Clear from "./PixelToolbar/Clear";
+import UndoRedo from "./PixelToolbar/UndoRedo";
+import Download from "./PixelToolbar/Download";
+import BrushTool from "./PixelToolbar/BrushTool";
+import BrushColor from "./PixelToolbar/BrushColor";
 
-const PixelToolbar = () => {
- 
+const PixelToolbar = ( props ) => {
+    const { canvas } = props;
+    const [color, setColor ] = useState("");
+
     return (
-        <div>
-            <h1>Toolbar goes here</h1>
-            
-        </div>
+        <>
+            {/* All toolbar imports */}
+            <BrushTool canvas={canvas} />
+            <BrushColor canvas={canvas} color={ color } setColour={ setColor } />
+            <Clear canvas={ canvas } />
+            <UndoRedo canvas={ canvas } />
+            <Download canvas={ canvas } />
+        </>
     )
 }
 
