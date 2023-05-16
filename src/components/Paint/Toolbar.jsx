@@ -18,6 +18,7 @@ import Serialisation from './Serialisation';
 import Deserialisation from './Deserialisation';
 import SVGExport from './SVGExport';
 import CanvasDownload from './CanvasDownload'
+import Grouping from './Grouping';
 
 const Toolbar = ( props ) => {
     const [ colour, setColour ] = useState("");
@@ -45,11 +46,12 @@ const Toolbar = ( props ) => {
                     <CopyPaste canvas={ canvas }/>
                     <Pan canvas={ canvas } />
                     <Zoom canvas={canvas} />
-                    <Layers canvas={canvas}/>
+                    <Layers canvas={canvas} />
                     <Serialisation canvas={canvas} />
                     <Deserialisation canvas={canvas} /> 
                     <SVGExport canvas={canvas} />
                     <CanvasDownload canvas={canvas} />
+                    <Grouping canvas={canvas}/>
                 </div>
                 <br />
             </div>

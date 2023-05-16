@@ -4,10 +4,9 @@ const CopyPaste = ( props ) => {
   const { canvas } = props;
   let coppiedItems = []
 
-  const _HandleCopy = () =>{  
+  const _HandleCopy = (ActObj) =>{  
     if (canvas != null){
-
-      canvas.getActiveObject().clone(function(cloned) {
+      ActObj.clone(function(cloned) {
         coppiedItems = cloned;
       });
     }}
@@ -44,6 +43,34 @@ const CopyPaste = ( props ) => {
       canvas.requestRenderAll();
     });
   }};
+
+  useEffect(() => {
+    window.addEventListener('keyup', e => {
+      if (
+         e.code == 'KeyC' &&
+         e.ctrlKey  &&
+         canvas != null &&
+         canvas.getActiveObject() != null
+       ) {
+        e.preventDefault
+        _HandleCopy(canvas.getActiveObject())
+      };
+    });
+
+    window.addEventListener('keyup', e => {
+      if (
+          e.code == 'KeyV' &&
+          e.ctrlKey &&
+          canvas != null &&
+          canvas.getActiveObject() != null
+
+        ) {
+        e.preventDefault
+          _HandlePaste(canvas.getActiveObject())
+        };
+    });
+  }); 
+
 
   return (
     <>
