@@ -74,6 +74,19 @@ const getUser = async () => {
     getMedia();
     }, [userId])
 
+    async function deleteMedia(mediaName) {
+        const { error } = await supabase
+            .storage
+            .from('Works')
+            .remove([ userId + "/" + mediaName])
+        
+        if(error) {
+            alert(error);
+        } else {
+            getMedia();
+        }
+        }
+
     return (
     <div>
     {userId == '' ? <Auth
@@ -94,6 +107,8 @@ const getUser = async () => {
         
             <div key={i}>
             <img src={`https://yilvmajrrjkkeljiduxi.supabase.co/storage/v1/object/public/Works/${userId}/${media.name}`} />
+            <button onClick={() => deleteMedia(media.name)}>Delete Image</button>
+            
             </div>                                                      
         
         )
