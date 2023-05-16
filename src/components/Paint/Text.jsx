@@ -168,7 +168,6 @@ const Text = ( props ) => {
             if (activeInstance.selectionStart !== activeInstance.selectionEnd) {
                 let startIndex = activeInstance.selectionStart;
                 let endIndex = activeInstance.selectionEnd;
-                let styles = activeInstance.getSelectionStyles(startIndex, endIndex);
                 activeInstance.setSelectionStyles({ shadow: presetShadow });
             } else {
                 let shadow = activeInstance.shadow;
