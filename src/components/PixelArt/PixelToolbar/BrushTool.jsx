@@ -22,7 +22,7 @@ const BrushTool = ( props ) => {
     return (
         <>
             {/* BRUSH */}
-            <button onClick={() => _handleBrushToolChange(BrushTool.DOT)} disabled={brushTool === BrushTool.DOT}> Paint </button>
+            <button className="paintBtn iconBtn" onClick={() => _handleBrushToolChange(BrushTool.DOT)} disabled={brushTool === BrushTool.DOT} title=""> Paint </button>
             
             {/* ERASER */}
             <button onClick={() => _handleBrushToolChange(BrushTool.ERASER)} disabled={brushTool === BrushTool.ERASER}> Eraser </button>
