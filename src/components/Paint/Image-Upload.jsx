@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { fabric } from "fabric";
+import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
 
 const ImageUpload = ({ canvas }) => {
     const fileInput = useRef(null);
@@ -21,7 +22,7 @@ const ImageUpload = ({ canvas }) => {
     return (
         <>
             <input type="file" accept="image/*" ref={fileInput} style={{ display: "none" }} onChange={ _handleFileChange }/>
-            <button onClick={() => fileInput.current.click()}>Upload Image</button>
+            <Button className="add_button upload_button" onClick={() => fileInput.current.click()} title='Upload'></Button>
         </>
     );
 };

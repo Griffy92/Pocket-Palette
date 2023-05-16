@@ -1,4 +1,4 @@
-import { Button } from '@mui/material';
+import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
 
 const SVGExport = ( props ) => {
 

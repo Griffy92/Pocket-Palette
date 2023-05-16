@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
 
 const CopyPaste = ( props ) => {
   const { canvas } = props;
@@ -6,6 +7,7 @@ const CopyPaste = ( props ) => {
 
   const _HandleCopy = (ActObj) =>{  
     if (canvas != null){
+      console.log(ActObj)
       ActObj.clone(function(cloned) {
         coppiedItems = cloned;
       });

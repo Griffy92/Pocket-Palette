@@ -1,5 +1,6 @@
 import React from 'react'
-import Popover from '@mui/material/Popover';
+import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
+
 
 const FreeDraw = ( props ) => {
     const { canvas, colour, brushSize } = props
@@ -48,7 +49,7 @@ const FreeDraw = ( props ) => {
 
     return (
         <>
-            <button className={`add_button add_free_draw`} onClick={ _handleAddFreeDraw } title="Draw"></button>
+            <Button className={`add_button add_free_draw`} onClick={ _handleAddFreeDraw } style={{ borderColor: "grey" }} title="Free Draw"></Button>
             {/* <button className="add_button add_free_draw" onClick= { _handleAddFreeEraser } title="Draw"></button> */}
         </>
     )

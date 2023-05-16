@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FabricJSCanvas, useFabricJSEditor } from "fabricjs-react";
+import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
 
 
 const RemoveObject = ( props ) => {
@@ -41,8 +41,7 @@ const RemoveObject = ( props ) => {
 
   return (
     <>
-      <button className="add_button delete_button" onClick={_HandleRemoveObject} title="Delete"></button>
-      <button className="add_button delete_all_button" onClick={_HandleRemoveAllObjects} title="Reset Canvas"></button>
+      <Button className="add_button delete_all_button" onClick={_HandleRemoveAllObjects} title="Reset Canvas"></Button>
 
     </>
   )

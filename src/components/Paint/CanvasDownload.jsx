@@ -1,4 +1,5 @@
-import { Button } from '@mui/material';
+import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
+
 
 const CanvasDownload = ( props ) => {
     const { canvas } = props;
@@ -18,7 +19,7 @@ const CanvasDownload = ( props ) => {
 
     return (
         fileFormat.map( ( format, index )=> {
-            return <Button key={ index } onClick={ () => _handleCanvasDownload( format) }> {format} </Button>
+            return <Button key={ index } onClick={ () => _handleCanvasDownload( format) }> {format}  </Button>
         })
     );
 };
