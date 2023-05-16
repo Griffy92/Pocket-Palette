@@ -322,8 +322,6 @@ button:focus-visible {
   transition: 0.5s;
 }
 
-
-
 /* Toolbar Layer Up/Down Button (Layers.jsx) */
 .forward_button {
   background: url('https://cdn-icons-png.flaticon.com/512/3524/3524388.png');

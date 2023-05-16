@@ -12,7 +12,8 @@ const Canvas = () => {
         const newCanvas = new fabric.Canvas('canvas', {
             backgroundColor: 'white',
             width: window.innerWidth,
-            height: 600
+            height: window.innerHeight - 190, // wait for navbar/toolbar component to deduc height
+            // stopContextMenu: true,
         })
 
         // uncomment to get history function to work however you will have to refresh page after saving code.
