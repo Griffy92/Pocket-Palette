@@ -168,7 +168,7 @@ const Text = ( {canvas} ) => {
             <button className="fontButton" onClick={ _handleToggleBold } title="Bold">B</button>
             <button className="fontButton fontItalics" onClick={ _handleToggleItalic } title="Italics">I</button>
             <button className="fontButton fontUnderline" onClick={_handleToggleUnderline} title="Underline"><span className="underline">U</span></button>
-            <button className="fontButton fontLineThrough" onClick={ _handleToggleLineThrough } title="Linethrough"><span className="linethrough">L</span></button>
+            <button className="fontButton fontLineThrough" onClick={ _handleToggleLineThrough } title="Line-through"><span className="linethrough">L</span></button>
             <button className="fontButton shadow" onClick={ _handleToggleShadow } title="Shadow">S</button>      
             <input type="number" min="30" max="100" onChange={ _handleFontSizeChange } title="Font Size"/>
             <select className="fontButton" onChange={ _handleFontFamilyChange } title="Font Family">
