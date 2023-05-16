@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { FabricJSCanvas, useFabricJSEditor } from "fabricjs-react";
+
 
 const RemoveObject = ( props ) => {
   const { canvas } = props;
@@ -21,10 +23,27 @@ const RemoveObject = ( props ) => {
       canvas.discardActiveObject().renderAll()
     }};
 
+  useEffect(() => {
+      window.addEventListener('keyup', e => {
+        if (
+           e.key == 'Delete' ||
+           e.key == 'Backspace'
+         ) {
+          if (canvas != null){
+            canvas.getActiveObjects().forEach((obj) => {
+              canvas.remove(obj)
+            });
+            canvas.discardActiveObject().renderAll()
+          };
+         };
+        });
+      }); 
+
   return (
     <>
       <button className="add_button delete_button" onClick={_HandleRemoveObject} title="Delete"></button>
       <button className="add_button delete_all_button" onClick={_HandleRemoveAllObjects} title="Reset Canvas"></button>
+
     </>
   )
 };

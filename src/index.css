@@ -157,6 +157,10 @@ button:focus-visible {
   transition: 0.5s;
 }
 
+.add_free_draw:focus {
+  background-color: gray;
+}
+
 /* Toolbar : Brush Size (Brush-Custom.jsx) */
 .add_brush_size {
   background: url('https://cdn-icons-png.flaticon.com/512/4925/4925053.png');
@@ -332,4 +336,9 @@ button:focus-visible {
 .add_stroke_custom:hover {
   opacity: 1;
   transition: 0.5s;
+}
+
+/* Active tool */
+.active_tool_icon {
+  background-color: gray;
 }

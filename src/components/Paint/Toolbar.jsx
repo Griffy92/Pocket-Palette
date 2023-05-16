@@ -19,6 +19,7 @@ import Deserialisation from './Deserialisation';
 import SVGExport from './SVGExport';
 import CanvasDownload from './CanvasDownload'
 import ImageUpload from './Image-Upload';
+import Grouping from './Grouping';
 
 const Toolbar = ( props ) => {
     const [ colour, setColour ] = useState("");
@@ -48,10 +49,12 @@ const Toolbar = ( props ) => {
                     <Zoom canvas={canvas} />
                     <Layers canvas={canvas}/>
                     <ImageUpload canvas={canvas} colour={colour} />
+                    <Layers canvas={canvas} />
                     <Serialisation canvas={canvas} />
                     <Deserialisation canvas={canvas} /> 
                     <SVGExport canvas={canvas} />
                     <CanvasDownload canvas={canvas} />
+                    <Grouping canvas={canvas}/>
                 </div>
                 <br />
             </div>
