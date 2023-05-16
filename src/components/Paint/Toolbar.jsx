@@ -18,7 +18,7 @@ import Stroke from './Stroke';
 import Serialisation from './Serialisation';
 import Deserialisation from './Deserialisation';
 import SVGExport from './SVGExport';
-import CanvasDownload from './CanvasDownload'
+import CanvasDownload from './CanvasDownload';
 import ImageUpload from './Image-Upload';
 import Grouping from './Grouping';
 
@@ -49,21 +49,21 @@ const Toolbar = ( props ) => {
                     <Rectangle canvas={ canvas } colour={ colour } strokeColour={ strokeColour } strokeSize={ strokeSize }/>
                     <Triangle canvas={ canvas } colour={ colour } strokeColour={ strokeColour } strokeSize={ strokeSize }/> 
                     <Stroke canvas={ canvas } setStrokeColour={ setStrokeColour } strokeColour={ strokeColour } setStrokeSize={ setStrokeSize } strokeSize={ strokeSize } />
-                    <FreeDraw canvas={ canvas } colour={ colour } brushSize={ brushSize }/>
-                    <BrushCustom canvas={ canvas } setBrushSize={ setBrushSize } brushSize={ brushSize } />
+                    <ButtonGroup variant="text" >
+                        <FreeDraw canvas={ canvas } colour={ colour } brushSize={ brushSize }  />
+                        <BrushCustom canvas={ canvas } setBrushSize={ setBrushSize } brushSize={ brushSize } />
+                    </ButtonGroup>
                     <ColourSelect canvas={ canvas } setColour={ setColour } colour={ colour } />
-                    <Text canvas={canvas} colour={ colour } />                
+                    <Text canvas={canvas} colour={ colour } />
                     <RemoveObject canvas={ canvas }/>
-                    <CopyPaste canvas={ canvas }/>
                     <CanvasHistory canvas={ canvas }/>
                     <Pan canvas={ canvas } />
                     <Zoom canvas={canvas} />
                     <Layers canvas={canvas}/>
-                    <ImageUpload canvas={canvas} colour={colour} />
-                    <Layers canvas={canvas} />
                     <Serialisation canvas={canvas} />
                     <Deserialisation canvas={canvas} />
-                    <Button className="add_button download_button" onClick= { _handleClick } title="DropDown"></Button>
+                    <ImageUpload canvas={canvas} colour={colour} />
+                    <Button className="add_button download_button" onClick= { _handleClick } title="Download"></Button>
                         <Popover
                             sx={{ width: 500 }}
                             id={id}
@@ -82,7 +82,6 @@ const Toolbar = ( props ) => {
                             </ButtonGroup>
                             </Stack>
                         </Popover>
-                        <CopyPaste canvas={ canvas }/>
                     <Grouping canvas={canvas}/>
                 </div>
                 <br />

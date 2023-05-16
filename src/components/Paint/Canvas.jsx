@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { fabric } from 'fabric';
 import 'fabric-history';
 import Toolbar from './Toolbar';
+import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
+
 
 const Canvas = () => {
     const [ canvas, setCanvas ] = useState(null);

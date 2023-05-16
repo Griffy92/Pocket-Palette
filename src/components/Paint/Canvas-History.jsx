@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
 
 const CanvasHistory = ( props ) => {
   const { canvas } = props;
@@ -40,8 +41,8 @@ const CanvasHistory = ( props ) => {
 
   return (
     <>
-    <button className="add_button undo_button" onClick={_HandleUndo} title="Undo"></button>
-    <button className="add_button redo_button" onClick={_HandleRedo} title="Redo"></button>
+    <Button className="add_button undo_button" onClick={_HandleUndo} title="Undo"></Button>
+    <Button className="add_button redo_button" onClick={_HandleRedo} title="Redo"></Button>
     </>
   )};
 

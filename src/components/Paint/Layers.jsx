@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
 
 const Layers = ( props ) => {
   const { canvas } = props;
@@ -21,8 +22,8 @@ const Layers = ( props ) => {
 
   return (
     <>
-    <button className="add_button forward_button" onClick={_HandleBringForward} title="Forward"></button>
-    <button className="add_button backward_button" onClick={_HandleSendBackward} title="Backwards"></button>
+    <Button className="add_button forward_button" onClick={_HandleBringForward} title="Send Forward"></Button>
+    <Button className="add_button backward_button" onClick={_HandleSendBackward} title="Send Backward"></Button>
     </>
   )};
 
