@@ -18,7 +18,6 @@ const Canvas = () => {
         // uncomment to get history function to work however you will have to refresh page after saving code.
         if (canvas != null){
             canvas.historyInit();
-
         }
 
         return newCanvas;

@@ -45,7 +45,7 @@ const Toolbar = ( props ) => {
                     <CopyPaste canvas={ canvas }/>
                     <Pan canvas={ canvas } />
                     <Zoom canvas={canvas} />
-                    <Layers canvas={canvas}/>
+                    <Layers canvas={canvas} />
                     <Serialisation canvas={canvas} />
                     <Deserialisation canvas={canvas} /> 
                     <SVGExport canvas={canvas} />
