@@ -39,7 +39,7 @@ function Success() {
             <Canvas />
             <button onClick={() => signOutUser()}> Sign Out </button>
             </div>
-
+            
         :
 
             <div>
