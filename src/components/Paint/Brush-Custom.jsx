@@ -1,7 +1,5 @@
 import { useState } from 'react';
-import Popover from '@mui/material/Popover';
-import Slider from '@mui/material/Slider';
-import { Stack } from '@mui/material';
+import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
 
 const BrushCustom = ( { canvas, setBrushSize } ) => {
     // const { canvas, colour } = props
@@ -17,7 +15,7 @@ const BrushCustom = ( { canvas, setBrushSize } ) => {
     };
 
     const open = Boolean(anchor);
-    const id = open ? 'simple-popover' : undefined; //This is the only part of this I don't understand https://mui.com/material-ui/react-popover/
+    const id = open ? 'simple-popover' : undefined;
 
     const setStrCol = (tarStrCol) => {
         if (canvas != null){
@@ -30,7 +28,7 @@ const BrushCustom = ( { canvas, setBrushSize } ) => {
 
     return (
         <>
-            <button className="add_button add_brush_size" onClick= { _handleClick } title="Set Brush Size"></button>
+            <Button variant="text" className="add_button add_brush_size" onClick= { _handleClick } title="Set Brush Size" sx={{width: 2, p: 1.5}} style={{minWidth: '10px'}}></Button>
             <Popover
                 sx={{ width: 500 }}
                 id={id}
@@ -60,7 +58,6 @@ const BrushCustom = ( { canvas, setBrushSize } ) => {
                     min={1}
                     max={100}
                     width={500}
-                    // value={value}
                     onChange={(e) => setBrushSize(e.target.value)}
                 />
             </div>

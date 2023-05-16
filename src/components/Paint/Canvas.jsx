@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { fabric } from 'fabric';
 import 'fabric-history';
 import Toolbar from './Toolbar';
+import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
+
 
 const Canvas = () => {
     const [ canvas, setCanvas ] = useState(null);
@@ -12,7 +14,8 @@ const Canvas = () => {
         const newCanvas = new fabric.Canvas('canvas', {
             backgroundColor: 'white',
             width: window.innerWidth,
-            height: 600
+            height: window.innerHeight - 190, // wait for navbar/toolbar component to deduc height
+            // stopContextMenu: true,
         })
 
         // uncomment to get history function to work however you will have to refresh page after saving code.

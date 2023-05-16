@@ -1,4 +1,6 @@
 import React from 'react'
+import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
+
 // import { FabricJSCanvas, useFabricJSEditor } from 'fabricjs-react'
 // import { useState } from "react";
 

@@ -163,9 +163,9 @@ button:focus-visible {
 
 /* Toolbar : Brush Size (Brush-Custom.jsx) */
 .add_brush_size {
-  background: url('https://cdn-icons-png.flaticon.com/512/4925/4925053.png');
+  background: url('https://cdn-icons-png.flaticon.com/128/57/57055.png');
   background-position: center;
-  background-size: contain;
+  background-size: 10px;
   background-repeat: no-repeat;
 }
 
@@ -192,7 +192,31 @@ button:focus-visible {
   transition: 0.5s;
 }
 
-/* Toolbar: Text (Text.jsx) */
+/* Toolbar: Text (Text.jsx) */ 
+.add_text {
+  background: url('https://cdn-icons-png.flaticon.com/512/2087/2087807.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.add_text:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.text_options {
+  background: url('https://cdn-icons-png.flaticon.com/512/3721/3721901.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.text_options:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
 .fontButton {
   font-weight: 600;
 }
@@ -298,8 +322,6 @@ button:focus-visible {
   transition: 0.5s;
 }
 
-
-
 /* Toolbar Layer Up/Down Button (Layers.jsx) */
 .forward_button {
   background: url('https://cdn-icons-png.flaticon.com/512/3524/3524388.png');
@@ -341,4 +363,98 @@ button:focus-visible {
 /* Active tool */
 .active_tool_icon {
   background-color: gray;
+}
+
+/* Toolbar Dropdowns Toolbar.jsx */
+.download_button {
+  background: url('https://cdn-icons-png.flaticon.com/512/3031/3031707.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.download_button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.upload_button {
+  background: url('https://cdn-icons-png.flaticon.com/512/3031/3031708.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.upload_button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+/* this is currently unused */
+.extra_action_button {
+  background: url('https://cdn-icons-png.flaticon.com/512/561/561184.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.extra_action_button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+/* Save / Load Buttons - Serialisation/deserialisation.jsx */
+.save_button {
+  background: url('https://cdn-icons-png.flaticon.com/512/9017/9017994.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.save_button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.load_button {
+  background: url('https://cdn-icons-png.flaticon.com/512/9017/9017998.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.load_button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+/* Group / Ungroup Buttons - Grouping.jsx */
+.group_button {
+  background: url('https://cdn-icons-png.flaticon.com/512/9536/9536498.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.group_button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.ungroup_button {
+  background: url('https://cdn-icons-png.flaticon.com/512/9536/9536919.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.ungroup_button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.button_group_toolbar {
+  border-color: red;
+  color: red;
+  background-color: red;
 }

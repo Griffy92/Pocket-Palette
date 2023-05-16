@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
 
 const Pan = (props) => {
     const [panMode, setPanMode] = useState(false)
@@ -56,7 +57,7 @@ const Pan = (props) => {
 
     return (
         <>
-            <button className="add_button pan_button" onClick={ _handleTogglePanMode } title="Pan Mode"></button>
+            <Button className="add_button pan_button" onClick={ _handleTogglePanMode } title="Pan Mode"></Button>
         </>
     );
 };

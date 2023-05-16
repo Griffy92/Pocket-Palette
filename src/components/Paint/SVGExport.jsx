@@ -1,3 +1,5 @@
+import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
+
 const SVGExport = ( props ) => {
 
     const { canvas } = props;
@@ -19,7 +21,7 @@ const SVGExport = ( props ) => {
     };
 
     return (
-        <button onClick={ _handleExportSVG }>SVG</button>
+        <Button onClick={ _handleExportSVG }>SVG</Button>
     );
 };
 

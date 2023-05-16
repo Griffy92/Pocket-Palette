@@ -1,3 +1,5 @@
+import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
+
 const Serialisation = ( props ) => {
     const { canvas } = props;
     
@@ -12,7 +14,7 @@ const Serialisation = ( props ) => {
 
     return (
         <>
-            <button onClick={ _handleSave }>Save</button>
+            <Button className="add_button save_button" onClick={ _handleSave } title='Save'></Button>
         </>
     )
 };
