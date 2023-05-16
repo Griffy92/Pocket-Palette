@@ -7,16 +7,14 @@ import { useState, useEffect } from 'react';
 import Grid from './Grid';
 import PixelToolbar from './PixelToolbar';
 
-
-const PixelCanvas = () => {
-
-
+  const PixelCanvas = () => {
     return (
-        <>
-            <Grid />
-            <PixelToolbar />
-        </>
+      <>
+        <Grid />
+        <PixelToolbar />
+      </>
     );
-};
+  };
+  
 
 export default PixelCanvas;
