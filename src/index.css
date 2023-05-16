@@ -192,7 +192,31 @@ button:focus-visible {
   transition: 0.5s;
 }
 
-/* Toolbar: Text (Text.jsx) */
+/* Toolbar: Text (Text.jsx) */ 
+.add_text {
+  background: url('https://cdn-icons-png.flaticon.com/512/2087/2087807.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.add_text:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.text_options {
+  background: url('https://cdn-icons-png.flaticon.com/512/3721/3721901.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.text_options:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
 .fontButton {
   font-weight: 600;
 }
@@ -341,4 +365,30 @@ button:focus-visible {
 /* Active tool */
 .active_tool_icon {
   background-color: gray;
+}
+
+/* Toolbar Dropdowns */
+.download_button {
+  background: url('https://cdn-icons-png.flaticon.com/512/3031/3031707.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.download_button:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+/* this is currently unused */
+.extra_action_button {
+  background: url('https://cdn-icons-png.flaticon.com/512/561/561184.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.extra_action_button:hover {
+  opacity: 1;
+  transition: 0.5s;
 }

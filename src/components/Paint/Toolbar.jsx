@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Popover, Stack, ButtonGroup, Button } from '@mui/material';
 import Circle from './Circle';
 import Ellipse from './Ellipse';
 import Rectangle from './Rectangle';
@@ -26,8 +27,18 @@ const Toolbar = ( props ) => {
     const [ strokeColour, setStrokeColour ] = useState("")
     const [ brushSize, setBrushSize] = useState(0);
     const [ strokeSize, setStrokeSize ] = useState("")
-
     const { canvas } = props;
+
+    const [ anchor, setAnchor] = useState(null);
+
+    const _handleClick = (event) => {
+        setAnchor(event.currentTarget);
+    };
+    const _handleClose = () => {
+        setAnchor(null);
+    };
+    const open = Boolean(anchor);
+    const id = open ? 'simple-popover' : undefined; 
 
     return (
         <>
@@ -41,19 +52,37 @@ const Toolbar = ( props ) => {
                     <FreeDraw canvas={ canvas } colour={ colour } brushSize={ brushSize }/>
                     <BrushCustom canvas={ canvas } setBrushSize={ setBrushSize } brushSize={ brushSize } />
                     <ColourSelect canvas={ canvas } setColour={ setColour } colour={ colour } />
-                    <Text canvas={canvas} colour={ colour } />
+                    <Text canvas={canvas} colour={ colour } />                
                     <RemoveObject canvas={ canvas }/>
-                    <CanvasHistory canvas={ canvas }/>
                     <CopyPaste canvas={ canvas }/>
+                    <CanvasHistory canvas={ canvas }/>
                     <Pan canvas={ canvas } />
                     <Zoom canvas={canvas} />
                     <Layers canvas={canvas}/>
                     <ImageUpload canvas={canvas} colour={colour} />
                     <Layers canvas={canvas} />
                     <Serialisation canvas={canvas} />
-                    <Deserialisation canvas={canvas} /> 
-                    <SVGExport canvas={canvas} />
-                    <CanvasDownload canvas={canvas} />
+                    <Deserialisation canvas={canvas} />
+                    <Button className="add_button download_button" onClick= { _handleClick } title="DropDown"></Button>
+                        <Popover
+                            sx={{ width: 500 }}
+                            id={id}
+                            open={open}
+                            anchorEl={anchor}
+                            style={{ maxWidth: 1000}}
+                            onClose={_handleClose}
+                            anchorOrigin={{
+                                vertical: 'top',
+                                horizontal: 'left'}}>
+                            <Stack sx={{ width: 300, p: 2}}>
+                                <p>Please select your preferred format</p>
+                            <ButtonGroup variant="contained" aria-label="outlined primary button group" fullWidth={true} sx={{my: 2}}>
+                                <SVGExport canvas={canvas} />
+                                <CanvasDownload canvas={canvas} />
+                            </ButtonGroup>
+                            </Stack>
+                        </Popover>
+                        <CopyPaste canvas={ canvas }/>
                     <Grouping canvas={canvas}/>
                 </div>
                 <br />
