@@ -18,6 +18,7 @@ import Serialisation from './Serialisation';
 import Deserialisation from './Deserialisation';
 import SVGExport from './SVGExport';
 import CanvasDownload from './CanvasDownload'
+import ImageUpload from './Image-Upload';
 
 const Toolbar = ( props ) => {
     const [ colour, setColour ] = useState("");
@@ -46,6 +47,7 @@ const Toolbar = ( props ) => {
                     <Pan canvas={ canvas } />
                     <Zoom canvas={canvas} />
                     <Layers canvas={canvas}/>
+                    <ImageUpload canvas={canvas} colour={colour} />
                     <Serialisation canvas={canvas} />
                     <Deserialisation canvas={canvas} /> 
                     <SVGExport canvas={canvas} />
