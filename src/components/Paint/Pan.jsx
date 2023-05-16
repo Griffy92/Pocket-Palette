@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react'
 import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
 
 const Pan = (props) => {
-    const [panMode, setPanMode] = useState(false)
-    const [mousePressed, setMousePressed] = useState(false)
-    const { canvas } = props
+    const [panMode, setPanMode] = useState(false);
+    const [mousePressed, setMousePressed] = useState(false);
+    const { canvas } = props;
 
     useEffect(() => {
 
@@ -52,7 +52,7 @@ const Pan = (props) => {
 
     const _handleTogglePanMode = () => {
         setPanMode(!panMode);
-        canvas.isDrawingMode = false
+        canvas.isDrawingMode = false;
     };
 
     return (

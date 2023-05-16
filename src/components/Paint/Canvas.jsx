@@ -16,12 +16,12 @@ const Canvas = () => {
             width: window.innerWidth,
             height: window.innerHeight - 190, // wait for navbar/toolbar component to deduc height
             // stopContextMenu: true,
-        })
+        });
 
         // uncomment to get history function to work however you will have to refresh page after saving code.
-        if (canvas != null){
+        if (canvas != null) {
             canvas.historyInit();
-        }
+        };
 
         return newCanvas;
     };
@@ -29,7 +29,6 @@ const Canvas = () => {
     // render canvas on load
     useEffect( () => {
         setCanvas(initCanvas());
-        
     }, []);
 
     return (
@@ -39,7 +38,5 @@ const Canvas = () => {
         </>
     );
 };
-
-{/* <Deserialisation canvas={ canvas } /> */}
 
 export default Canvas;

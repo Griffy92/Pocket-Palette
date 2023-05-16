@@ -2,82 +2,85 @@ import React, { useEffect, useState } from "react";
 import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
 
 const CopyPaste = ( props ) => {
-  const { canvas } = props;
-  let coppiedItems = []
+	const { canvas } = props;
+	let coppiedItems = [];
 
-  const _HandleCopy = (ActObj) =>{  
-    if (canvas != null){
-      console.log(ActObj)
-      ActObj.clone(function(cloned) {
-        coppiedItems = cloned;
-      });
-    }}
+	const _HandleCopy = (ActObj) => {  
+		if (canvas != null) {
+			console.log(ActObj);
+			ActObj.clone( function(cloned) {
+				coppiedItems = cloned;
+			});
+		};
+	};
 
 ////////// This removes all objects. Doesn't need selection
-  const _HandlePaste = () => {
-    if (canvas != null){
+	const _HandlePaste = () => {
 
-    coppiedItems.clone(function(clonedObjects) {
-      canvas.discardActiveObject();
-      clonedObjects.set({
-        left: clonedObjects.left + 10,
-        top: clonedObjects.top + 10,
-        evented: true,
-      });
+		if (canvas != null) {
+			
+			coppiedItems.clone(function(clonedObjects) {
 
-      if (clonedObjects.type === 'activeSelection') {
+				canvas.discardActiveObject();
+				clonedObjects.set( {
+					left: clonedObjects.left + 10,
+					top: clonedObjects.top + 10,
+					evented: true,
+				});
 
-        clonedObjects.canvas = canvas;
-        clonedObjects.forEachObject(function(obj) {
-          canvas.add(obj);
-        });
-        clonedObjects.setCoords();
-      } 
-      
-      else {
-        canvas.add(clonedObjects);
-      }
+				if (clonedObjects.type === 'activeSelection') {
+					clonedObjects.canvas = canvas;
+					clonedObjects.forEachObject(function(obj) {
+						canvas.add(obj);
+					0});
+					clonedObjects.setCoords();
 
-      coppiedItems.top += 10;
-      coppiedItems.left += 10;
-      canvas.setActiveObject(clonedObjects);
-      canvas.requestRenderAll();
-    });
-  }};
+				} else {
+					canvas.add(clonedObjects);
+				};
 
-  useEffect(() => {
-    window.addEventListener('keyup', e => {
-      if (
-         e.code == 'KeyC' &&
-         (e.ctrlKey || e.metaKey ) &&
-         canvas != null &&
-         canvas.getActiveObject() != null
-       ) {
-        e.preventDefault
-        _HandleCopy(canvas.getActiveObject())
-      };
-    });
+				coppiedItems.top += 10;
+				coppiedItems.left += 10;
+				canvas.setActiveObject(clonedObjects);
+				canvas.requestRenderAll();
+			});
+		};
+	};
 
-    window.addEventListener('keydown', e => {
-      if (
-          e.code == 'KeyV' &&
-          (e.ctrlKey || e.metaKey ) &&
-          canvas != null &&
-          canvas.getActiveObject() != null
+	useEffect(() => {
+		window.addEventListener('keyup', e => {
+			if (
+				e.code == 'KeyC' &&
+				( e.ctrlKey || e.metaKey ) &&
+				canvas != null &&
+				canvas.getActiveObject() != null
+			) {
+				e.preventDefault
+				_HandleCopy(canvas.getActiveObject());
+			};
+		});
 
-        ) {
-        e.preventDefault
-          _HandlePaste(canvas.getActiveObject())
-        };
-    });
-  }); 
+		window.addEventListener('keydown', e => {
+			if (
+				e.code == 'KeyV' &&
+				(e.ctrlKey || e.metaKey ) &&
+				canvas != null &&
+				canvas.getActiveObject() != null
+
+			) {
+				e.preventDefault
+				_HandlePaste(canvas.getActiveObject());
+			};
+		});
+	}); 
 
 
-  return (
-    <>
-      {/* <Button className="add_button copy_button" onClick={_HandleCopy} title="Copy"></Button> */}
-      {/* <Button className="add_button paste_button" onClick={_HandlePaste} title="Paste"></Button> */}
-    </>
-  )};
+	return (
+		<>
+			{/* <Button className="add_button copy_button" onClick={_HandleCopy} title="Copy"></Button> */}
+			{/* <Button className="add_button paste_button" onClick={_HandlePaste} title="Paste"></Button> */}
+		</>
+	);
+};
 
 export default CopyPaste;

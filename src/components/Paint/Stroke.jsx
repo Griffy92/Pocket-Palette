@@ -20,27 +20,27 @@ const Stroke = ( { canvas, setStrokeColour, setStrokeSize } ) => {
     const setFlCol = (tarFlCol) => {
         if (canvas != null){
             canvas.getActiveObjects().forEach((obj) => {
-            obj.set("fill", tarFlCol)
-            console.log(obj, tarFlCol)
+                obj.set("fill", tarFlCol);
+                console.log(obj, tarFlCol);
             });
-            canvas.renderAll()
+            canvas.renderAll();
         }};
 
 
     const setStrCol = (tarStrCol) => {
         if (canvas != null){
             canvas.getActiveObjects().forEach((obj) => {
-            obj.set("stroke", tarStrCol)
-            console.log(obj, tarStrCol)
+                obj.set("stroke", tarStrCol);
+                console.log(obj, tarStrCol);
             });
-            canvas.renderAll()
+            canvas.renderAll();
         }};
 
     const setStrWdth = (tarStrWdth) => {
-        if (canvas != null){
+        if (canvas != null) {
             canvas.getActiveObjects().forEach((obj) => {
-            obj.set("strokeWidth", tarStrWdth)
-            console.log(obj, tarStrWdth)
+                obj.set("strokeWidth", tarStrWdth)
+                console.log(obj, tarStrWdth)
             });
             canvas.renderAll()
         }};
@@ -60,33 +60,32 @@ const Stroke = ( { canvas, setStrokeColour, setStrokeSize } ) => {
                     horizontal: 'left',
                 }}
             >
-            <Stack 
-                sx={{ p: 2}}>
-            <p>Fill Colour</p>
-            <input type="color" id="color-picker" className="add_button add_colour_select" onChange={(e) =>{setFlCol(e.target.value)}} title="Set Stroke Colour" />
-            <div>
-                <br />
-                <p>Stroke Width</p>
-                <Slider
-                    sx={{ width: 200,
-                        my: 2,
-                        mx: 2 }}
-                    defaultValue={5} 
-                    valueLabelDisplay="auto"
-                    step={1}
-                    min={1}
-                    max={50}
-                    width={500}
-                    // value={value}
-                    onChange={(e) => {setStrokeSize(e.target.value); setStrWdth(e.target.value)}}
-                />
-            </div>
-            <p>Stroke Colour </p>
-            <input type="color" id="color-picker" className="add_button add_colour_select" onChange={(e) => {setStrokeColour(e.target.value); setStrCol(e.target.value)}} title="Set Stroke Colour" />
-            </Stack>
+                <Stack sx={{ p: 2}}>
+                    <p>Fill Colour</p>
+                    <input type="color" id="color-picker" className="add_button add_colour_select" onChange={(e) =>{setFlCol(e.target.value)}} title="Set Stroke Colour" />
+                    <div>
+                        <br />
+                        <p>Stroke Width</p>
+                        <Slider
+                            sx={{ width: 200,
+                                my: 2,
+                                mx: 2 }}
+                            defaultValue={5} 
+                            valueLabelDisplay="auto"
+                            step={1}
+                            min={1}
+                            max={50}
+                            width={500}
+                            // value={value}
+                            onChange={(e) => {setStrokeSize(e.target.value); setStrWdth(e.target.value)}}
+                        />
+                    </div>
+                    <p>Stroke Colour </p>
+                    <input type="color" id="color-picker" className="add_button add_colour_select" onChange={(e) => {setStrokeColour(e.target.value); setStrCol(e.target.value)}} title="Set Stroke Colour" />
+                </Stack>
             </Popover>
         </>
-    )
+    );
 };
 
 export default Stroke;

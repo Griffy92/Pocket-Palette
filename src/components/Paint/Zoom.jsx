@@ -14,7 +14,7 @@ const Zoom = ( props ) => {
     }
 
     if ( canvas !== null ) {
-        canvas.on('mouse:wheel', handleMouseWheel )
+        canvas.on('mouse:wheel', handleMouseWheel );
     }
 
     return (
