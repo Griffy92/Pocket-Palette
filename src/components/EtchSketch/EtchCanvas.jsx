@@ -10,11 +10,11 @@ const EtchCanvas = () => {
 
     const initCanvas = () => { 
         const newCanvas = new fabric.Canvas('etch-canvas', {
-            backgroundColor: 'white',
-            width: 600,
-            height: 300,
+            backgroundColor: 'lightgrey',
+            width: 900,
+            height: 600,
             interactive: false,
-        })
+        });
         return newCanvas;
     };
 
@@ -24,8 +24,13 @@ const EtchCanvas = () => {
 
     return (
         <>
-            <canvas id="etch-canvas" />
-            <Sketching canvas={ canvas }/> 
+            <div className='etch-main'>
+                <canvas id="etch-canvas" />
+                <Sketching canvas={ canvas }/> 
+                <div className='etch-heading'>
+                    <h1>Etch A Canvas</h1>
+                </div>
+            </div>
         </>
     );
 };

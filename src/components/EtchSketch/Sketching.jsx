@@ -1,15 +1,16 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { fabric } from 'fabric';
 
 const Sketching = ( props ) => {
     const { canvas } = props;
-    const lineRef = useRef(new fabric.Line([0, 300, 0, 300], {
+    const originCoords = [0, 600, 0, 600]; // bottom left corner of canvas, compare with init canvas
+    const lineRef = useRef(new fabric.Line(originCoords, {
         stroke: 'black'
     }));
 
     useEffect(() => {
         if (canvas) {
-            const line = new fabric.Line([0, 300, 0, 300], {
+            const line = new fabric.Line(originCoords, {
                 stroke: 'black'
             });
             canvas.add(line);
@@ -145,7 +146,7 @@ const Sketching = ( props ) => {
             canvas.remove(obj);
         });
         canvas.discardActiveObject().renderAll();
-        lineRef.current = new fabric.Line([0, 300, 0, 300], {
+        lineRef.current = new fabric.Line(originCoords, {
             stroke: 'black'
         });
     };
@@ -154,17 +155,24 @@ const Sketching = ( props ) => {
 
     return (
         <>
-            <button onClick={handleUp}>Up</button>
-            <button onClick={handleDown}>Down</button>
-            <button onClick={handleLeft}>Left</button>
-            <button onClick={handleRight}>Right</button>
-            <button onClick={handleNE}>NE</button>
-            <button onClick={handleSE}>SE</button>
-            <button onClick={handleSW}>SW</button>
-            <button onClick={handleNW}>NW</button>
-            <button onClick={handleReset}>Reset</button>
+            <div className='etch-toolbar'>
+                <div className='etch-dial-l'>
+                    <button className="etch-btn-top handle-left etch-btn" onClick={handleLeft}>&#9650;</button>
+                    <button className="etch-btn-btm handle-right etch-btn" onClick={handleRight}>&#9660;</button>
+                </div>
+                <div className='etch-dial-r'>
+                    <button className="etch-btn-top handle-up etch-btn" onClick={handleUp}>&#9650;</button>
+                    <button className="etch-btn-btm handle-down etch-btn" onClick={handleDown}>&#9660;</button>
+                </div>
+            </div>
         </>
     );
 };
+
+{/* <button onClick={handleNE}>NE</button>
+<button onClick={handleSE}>SE</button>
+<button onClick={handleSW}>SW</button>
+<button onClick={handleNW}>NW</button>
+<button onClick={handleReset}>Reset</button> */}
 
 export default Sketching;
