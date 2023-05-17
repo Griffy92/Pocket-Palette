@@ -183,7 +183,7 @@ const Text = ({ canvas }) => {
     return (
         <>
             <ButtonGroup variant="text" style={{display: 'inline'}}>
-            <Button className="fontButton add_text add_button" onClick={ _handleAddText } title="Add Text" style={{ borderColor: "grey" }}></Button>
+            <Button className="fontButton add_text paint_common add_button" onClick={ _handleAddText } title="Add Text" style={{ borderColor: "grey" }}></Button>
             <Button className="add_button add_brush_size" onClick= { _handleClick } title="DropDown" sx={{width: 2, p: 1.5}} style={{minWidth: '10px'}}></Button>
                 <Popover
                     sx={{ width: 500 }}

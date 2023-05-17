@@ -23,7 +23,7 @@ const ImageUpload = ({ canvas }) => {
     return (
         <>
             <input type="file" accept="image/*" ref={fileInput} style={{ display: "none" }} onChange={ _handleFileChange }/>
-            <Button className="add_button upload_button" onClick={() => fileInput.current.click()} title='Upload'></Button>
+            <Button className="add_button paint_common upload_button" onClick={() => fileInput.current.click()} title='Upload'></Button>
         </>
     );
 };

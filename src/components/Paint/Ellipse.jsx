@@ -30,7 +30,7 @@ const Ellipse = ( props ) => {
     
     return (
         <> 
-            <Button className="add_button add_oval" onClick= { _handleAddOval } title="Add Oval"></Button>
+            <Button className="add_button paint_common add_oval" onClick= { _handleAddOval } title="Add Oval"></Button>
         </>
     );
 };

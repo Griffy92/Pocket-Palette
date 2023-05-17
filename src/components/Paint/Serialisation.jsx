@@ -14,7 +14,7 @@ const Serialisation = ( props ) => {
 
     return (
         <>
-            <Button className="add_button save_button" onClick={ _handleSave } title='Save'></Button>
+            <Button className="add_button paint_common save_button" onClick={ _handleSave } title='Save'></Button>
         </>
     )
 };

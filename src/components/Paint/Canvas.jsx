@@ -6,6 +6,7 @@ import ContextMenu from './Context-Menu';
 import { ThemeProvider, createTheme } from '@mui/material';
 import CanvasUpload from './CanvasUpload';
 
+
 const theme = createTheme({
 	palette: {
 		primary: {

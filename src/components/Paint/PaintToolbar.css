@@ -1,0 +1,246 @@
+/* ==================== PAINT TOOLBAR =================== */
+
+.toolbar {
+    width: 100%;
+    height: 50%;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid gray;
+    
+}
+  
+  .add_button {
+    opacity: 1;
+    text-align: center;
+    width: 60px;
+    height: 30px;
+}
+
+  .paint_common {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+/* Toolbar: Rectangle Button (Rectangle.jsx) */
+.add_rect {
+    background-image: url('https://img.icons8.com/?size=512&id=78613&format=png');
+}
+
+/* Toolbar : Triangle Button (Triangle.jsx)*/
+.add_tri {
+  background-image: url('https://img.icons8.com/?size=512&id=11799&format=png');
+}
+
+/* Toolbar : Circle Button (Circle.jsx) */
+.add_circle {
+  background-image: url('https://img.icons8.com/?size=512&id=37601&format=png');
+}
+
+/* Toolbar : Oval Button (Ellipse.jsx) */
+.add_oval {
+  background-image: url('https://img.icons8.com/?size=512&id=42095&format=png');
+}
+
+
+/* Toolbar : Free Draw (Free-Draw.jsx) */
+.add_free_draw {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/266/266146.png');
+}
+
+
+.add_free_draw:focus {
+  background-color: gray;
+}
+
+/* Toolbar : Brush Size (Brush-Custom.jsx) */
+.add_brush_size {
+  background-image: url('https://cdn-icons-png.flaticon.com/128/57/57055.png');
+  background-position: center;
+  background-size: 10px;
+  background-repeat: no-repeat;
+}
+
+.slider-label {
+  margin: 0 auto;
+}
+
+/* Toolbar : Colour Select (Colour-Select.jsx) */
+.add_colour_select {
+  vertical-align: text-top;
+}
+
+
+/* Toolbar: Text (Text.jsx) */ 
+.add_text {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/2087/2087807.png');
+}
+
+/* old code? unable to locate
+.text_options {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/3721/3721901.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+} */
+
+.fontButton {
+  font-weight: 600;
+}
+
+.fontItalics {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.linethrough {
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Toolbar: Delete (Remove-Object.jsx) */
+.delete_button {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/3405/3405244.png');
+}
+
+
+.delete_all_button {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/9899/9899316.png');
+}
+
+
+/* Toolbar: Undo/Redo (Canvas-History.jsx) */
+.undo_button {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/44/44426.png');
+}
+
+
+.redo_button {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/44/44650.png');
+}
+
+
+/* Toolbar: Copy/Paste (Copy-Paste.jsx) old code?
+.copy_button {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/748/748035.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+.paste_button {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/54/54702.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+} */
+
+/* Toolbar Pan Button (Pan.jsx) */
+.pan_button {
+  background-image: url('https://img.icons8.com/?size=512&id=42174&format=png');
+}
+
+
+/* Toolbar Layer Up/Down Button (Layers.jsx) */
+.forward_button {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/3524/3524388.png');
+}
+
+
+.backward_button {
+  background-image: url('https://cdn-icons-png.flaticon.com/128/43/43625.png');
+}
+
+/* Stroke Customisation Button (Stroke.jsx) */
+.add_stroke_custom {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/101/101324.png');
+}
+
+
+/* Active tool */
+.active_tool_icon {
+  background-color: gray;
+}
+
+/* Toolbar Dropdowns Toolbar.jsx */
+.download_button {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/3031/3031707.png');
+}
+
+.upload_button {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/3031/3031708.png');
+}
+
+
+/* this is currently unused - old code?
+.extra_action_button {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/561/561184.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+} */
+
+/* Save / Load Buttons - Serialisation/deserialisation.jsx */
+.save_button {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/9017/9017994.png');
+}
+
+.load_button {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/9017/9017998.png');
+}
+
+/* Group / Ungroup Buttons - Grouping.jsx */
+.group_button {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/9536/9536498.png');
+}
+
+
+.ungroup_button {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/9536/9536919.png');
+}
+
+.button_group_toolbar {
+  border-color: red;
+  color: red;
+  background-color: red;
+}
+
+
+/* ==================== HOVER EFFECT =================== */
+.add_brush_size:hover,
+.add_circle:hover,
+.add_colour_select:hover,
+.add_free_draw:hover,
+.add_oval:hover,
+.add_rect:hover,
+.add_stroke_custom:hover,
+.add_text:hover,
+.add_tri:hover,
+
+.backward_button:hover,
+.copy_button:hover,
+.delete_all_button:hover,
+.delete_button:hover,
+.download_button:hover,
+.extra_action_button:hover,
+
+.forward_button:hover,
+.group_button:hover,
+.load_button:hover,
+.pan_button:hover,
+.paste_button:hover,
+.save_button:hover,
+.text_options:hover,
+.redo_button:hover,
+.undo_button:hover,
+.ungroup_button:hover,
+.upload_button:hover {
+
+  opacity: 0.5;
+  transition: 0.5s;
+}

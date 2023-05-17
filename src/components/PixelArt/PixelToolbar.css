@@ -26,120 +26,92 @@
 
 /*  ==== Undo/Redo Buttons ===  */
 
-/*  Undo Button  */ 
+/*  Undo Button - Undo.jsx  */ 
 .undoBtn {
   background-image: url('/PixelArt/PixelArt_icons_Undo.png');
   background-color: white;
-}
-.undoBtn:hover {
-  background-color: #ddd;
-}
-.undoBtl:disabled {
-  opacity: 0.6;
-  background-color: #3a3a3a;
 }
 
 .redoBtn {
   background-image: url('/PixelArt/PixelArt_icons_Redo.png');
 }
-.redoBtn:hover {
-  background-color: #ddd;
-}
-.redoBtn:disabled {
-  opacity: 0.6;
-  background-color: #3a3a3a;
-}
 
 
 /*  ==== BrushTool Buttons ===  */
 
-/*  Paint  */ 
+/*  Paint - BrushTool.jsx */ 
 .paintBtn {
   background-image: url('/PixelArt/PixelArt_icons_Paint.png');
 }
-.paintBtn:hover {
-  background-color: #ddd;
-}
-.paintBtn:disabled {
-  opacity: 0.6;
-  background-color: #3a3a3a;
-}
 
-
-/*  Eraser  */ 
+/*  Eraser - BrushTool.jsx */ 
 .eraserBtn {
   background-image: url('/PixelArt/PixelArt_icons_Eraser.png');
 }
-.eraserBtn:hover {
 
-  background-color: #ddd;
-}
-.eraserBtn:disabled {
-  opacity: 0.6;
-  background-color: #3a3a3a;
-}
-
-
-/*  Fill  */ 
+/*  Fill  - BrushTool.jsx */ 
 .fillBtn {
   background-image: url('/PixelArt/PixelArt_icons_Fill.png');
-}
-.fillBtn:hover {
-  background-color: #ddd;
-}
-.fillBtn:disabled {
-  opacity: 0.6;
-  background-color: #3a3a3a;
 }
 
 
 /*  ==== Clear Button ===  */
 
-/*  Clear  */ 
+/*  Clear  - Clear.jsx */ 
 .clearBtn {
   background-image: url('/PixelArt/PixelArt_icons_Clear.png');
-}
-.clearBtn:hover {
-  background-color: #ddd;
-}
-.clearBtn:disabled {
-  opacity: 0.6;
-  background-color: #3a3a3a;
 }
 
 
 /*  ==== Download Button ===  */
 
-/*  Download  */ 
+/*  Download  - Download.jsx */ 
 .downloadBtn {
   background-image: url('/PixelArt/PixelArt_icons_Download.png');
-}
-.downloadBtn:hover { 
-  background-color: #ddd;
-} 
-.downloadBtn:disabled {
-  opacity: 0.6;
-  background-color: #3a3a3a;
 }
 
 
 /*  ==== Color Button ===  */
 
-/*  Color button  */ 
+/*  Color button - BrushColor.jsx  */ 
 .colorBtn {
   box-sizing: border-box;
 }
-.colorBtn:hover { 
+
+
+/* ==================== HOVER EFFECT =================== */
+.clearBtn:hover,
+.colorBtn:hover,
+.downloadBtn:hover,
+.eraserBtn:hover,
+.fillBtn:hover,
+.paintBtn:hover,
+.redoBtn:hover,
+.undoBtn:hover {
   background-color: #ddd;
-} 
+}
+
+
+/* ==================== DISABLE EFFECT =================== */
+
+.clearBtn:disabled,
+.downloadBtn:disabled,
+.eraserBtn:disabled,
+.fillBtn:disabled,
+.paintBtn:disabled,
+.redoBtn:disabled, 
+.undoBtn:disabled {
+  opacity: 0.6;
+  background-color: #3a3a3a;
+}
 
 
 /* ==================== PIXEL CANVAS INPUT  =================== */
 
-/*  Div surrounding inputs  */ 
+/*  Div surrounding inputs 
 .canvasInput {
 
-}
+} */
 
 /* Row and Column title  */ 
 .pixelTitle {
@@ -155,3 +127,7 @@
   margin: 0 10px 10px 0;
   width: 107px;
 }
+
+
+
+

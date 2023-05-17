@@ -8,7 +8,7 @@ import BrushColor from "./PixelToolbar/BrushColor";
 import Undo from "./PixelToolbar/Undo";
 import Redo from "./PixelToolbar/Redo";
 
-import './PixelCanvas.css'
+import './PixelToolbar.css'
 
 const PixelToolbar = ( props ) => {
     const { canvas } = props;

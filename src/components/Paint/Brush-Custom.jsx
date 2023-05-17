@@ -48,7 +48,7 @@ const BrushCustom = ( { canvas, setBrushSize } ) => {
                     <input type="color" id="color-picker" className="add_button add_colour_select" onChange={(e) =>{setStrCol(e.target.value)}} title="Set Stroke Colour" />
                     <div>
                         <br />
-                        <span className="slider-label">Brushsize</span>
+                        <span className="slider-label">Brush Size</span>
                         <Slider
                             sx={{ width: 200,
                                 my: 2,

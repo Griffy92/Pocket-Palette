@@ -57,7 +57,7 @@ const Pan = (props) => {
 
     return (
         <>
-            <Button className="add_button pan_button" onClick={ _handleTogglePanMode } title="Pan Mode"></Button>
+            <Button className="add_button paint_common pan_button" onClick={ _handleTogglePanMode } title="Pan Mode"></Button>
         </>
     );
 };

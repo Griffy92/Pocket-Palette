@@ -47,7 +47,7 @@ const Stroke = ( { canvas, setStrokeColour, setStrokeSize } ) => {
 
     return (
         <>
-            <Button className="add_button add_stroke_custom" onClick= { _handleClick } title="Set Brush Size"></Button>
+            <Button className="add_button paint_common add_stroke_custom" onClick= { _handleClick } title="Set Brush Size"></Button>
             <Popover
                 sx={{ width: 500 }}
                 id={id}

@@ -12,7 +12,7 @@ const Deserialisation = ( props ) => {
     };
 
     return (
-        <Button className="add_button load_button" onClick={ _handleLoad } title='Load'></Button>
+        <Button className="add_button paint_common load_button" onClick={ _handleLoad } title='Load'></Button>
     );
 };
 
