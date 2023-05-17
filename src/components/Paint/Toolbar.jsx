@@ -84,7 +84,6 @@ const Toolbar = ( props ) => {
                                 <ButtonGroup variant="contained" aria-label="outlined primary button group" fullWidth={true} sx={{my: 2}}>
                                     <SVGExport canvas={canvas} />
                                     <CanvasDownload canvas={canvas} />
-                                    <CanvasUpload canvas={canvas} />
                                 </ButtonGroup>
                             </Stack>
                         </Popover>
