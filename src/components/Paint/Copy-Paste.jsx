@@ -14,11 +14,19 @@ const CopyPaste = ( props ) => {
 		};
 	};
 
+	const _HandleCut = (ActObj) => {  
+		if (canvas != null) {
+			console.log(ActObj);
+			ActObj.clone( function(cloned) {
+				coppiedItems = cloned;
+			});
+			canvas.remove(canvas.getActiveObject())
+			};
+	};		
+	
 ////////// This removes all objects. Doesn't need selection
 	const _HandlePaste = () => {
-
 		if (canvas != null) {
-			
 			coppiedItems.clone(function(clonedObjects) {
 
 				canvas.discardActiveObject();
@@ -55,8 +63,20 @@ const CopyPaste = ( props ) => {
 				canvas != null &&
 				canvas.getActiveObject() != null
 			) {
-				e.preventDefault
+				e.preventDefault()
 				_HandleCopy(canvas.getActiveObject());
+			};
+		});
+
+		window.addEventListener('keyup', e => {
+			if (
+				e.code == 'KeyX' &&
+				( e.ctrlKey || e.metaKey ) &&
+				canvas != null &&
+				canvas.getActiveObject() != null
+			) {
+				e.preventDefault()
+				_HandleCut(canvas.getActiveObject());
 			};
 		});
 
@@ -64,12 +84,10 @@ const CopyPaste = ( props ) => {
 			if (
 				e.code == 'KeyV' &&
 				(e.ctrlKey || e.metaKey ) &&
-				canvas != null &&
-				canvas.getActiveObject() != null
-
+				canvas != null
 			) {
-				e.preventDefault
-				_HandlePaste(canvas.getActiveObject());
+				e.preventDefault()
+				_HandlePaste();
 			};
 		});
 	}); 
