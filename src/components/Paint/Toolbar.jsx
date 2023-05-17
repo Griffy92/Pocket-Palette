@@ -21,6 +21,7 @@ import SVGExport from './SVGExport';
 import CanvasDownload from './CanvasDownload';
 import ImageUpload from './Image-Upload';
 import Grouping from './Grouping';
+import CanvasUpload  from './CanvasUpload'
 
 const Toolbar = ( props ) => {
     const [ colour, setColour ] = useState("");
@@ -82,6 +83,7 @@ const Toolbar = ( props ) => {
                                 <ButtonGroup variant="contained" aria-label="outlined primary button group" fullWidth={true} sx={{my: 2}}>
                                     <SVGExport canvas={canvas} />
                                     <CanvasDownload canvas={canvas} />
+                                    <CanvasUpload canvas={canvas} />
                                 </ButtonGroup>
                             </Stack>
                         </Popover>
