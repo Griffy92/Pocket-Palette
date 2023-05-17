@@ -3,6 +3,7 @@ import {ThemeSupa} from '@supabase/auth-ui-shared'
 import { useEffect, useState } from "react";
 import { createClient } from '@supabase/supabase-js'
 import { v4 as uuidv4 } from 'uuid';
+import { useNavigate } from 'react-router-dom';
 
 const supabase = createClient (
     "https://yilvmajrrjkkeljiduxi.supabase.co",
@@ -13,6 +14,7 @@ function Works() {
 
 const [userId, setUserId] = useState('');
 const [media, setMedia] = useState([]);
+const navigate = useNavigate()
 
 const getUser = async () => {
 
@@ -64,9 +66,10 @@ const getUser = async () => {
     }
     }
 
-    const signout = async () => {
-    setUserId('');
-    await supabase.auth.signOut();
+    async function signOutUser() {
+        const {error} = await supabase.auth.signOut();
+        console.log(error)
+        navigate("/")
     }
 
     useEffect(() => {
@@ -114,7 +117,7 @@ const getUser = async () => {
         )
         })}
         <div>
-            <button onClick={signout}>Logout</button>
+        <button onClick={() => signOutUser()}> Sign Out </button>
         </div>
     </div>}
 

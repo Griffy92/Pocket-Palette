@@ -4,6 +4,7 @@ import 'fabric-history';
 import Toolbar from './Toolbar';
 import ContextMenu from './Context-Menu';
 import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
+import CanvasUpload from './CanvasUpload';
 
 
 const Canvas = () => {
@@ -36,6 +37,7 @@ const Canvas = () => {
         <> 
             <Toolbar canvas={ canvas } />
             <canvas id="canvas" />
+            <CanvasUpload />
             <ContextMenu canvas={ canvas }/>
         </>
     );
