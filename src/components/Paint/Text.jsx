@@ -199,11 +199,11 @@ const Text = ( props ) => {
                         horizontal: 'left'}}>
                     <Stack sx={{width: 200, p: 2}} spacing={2}>
                         <FormControl  sx={{width: 200}}>
-                            <ButtonGroup variant="contained" aria-label="outlined primary button group" fullWidth={true} sx={{mb: 2}}>
+                            <ButtonGroup variant="contained" fullWidth={true} sx={{mb: 2}}>
                                 <Button className="fontButton" onClick={ _handleToggleBold } title="Bold" >B</Button>
                                 <Button className="fontButton fontItalics" onClick={ _handleToggleItalic } title="Italics">I</Button>
                             </ButtonGroup>
-                            <ButtonGroup variant="contained" aria-label="outlined primary button group" fullWidth={true} sx={{mb: 2}}>
+                            <ButtonGroup variant="contained" fullWidth={true} sx={{mb: 2}}>
                                 <Button className="fontButton fontUnderline" onClick={_handleToggleUnderline} title="Underline"><span className="underline">U</span></Button>
                                 <Button className="fontButton fontLineThrough" onClick={ _handleToggleLineThrough } title="Linethrough"><span className="linethrough">L</span></Button>
                                 <Button className="fontButton shadow" onClick={ _handleToggleShadow } title="Shadow">S</Button>    
