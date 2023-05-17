@@ -3,8 +3,7 @@ import { useState } from 'react'
 import { Popover, Stack, Input, Select, MenuItem, TextField, FormControl, InputLabel, Button, ButtonGroup } from '@mui/material';
 
 
-const Text = ( props ) => {
-    const { canvas } = props;
+const Text = ({ canvas }) => {
 
     /////////////////// This handles the dropdown menu things! //////////////////
     const [ anchor, setAnchor] = useState(null);
@@ -168,7 +167,6 @@ const Text = ( props ) => {
             if (activeInstance.selectionStart !== activeInstance.selectionEnd) {
                 let startIndex = activeInstance.selectionStart;
                 let endIndex = activeInstance.selectionEnd;
-                let styles = activeInstance.getSelectionStyles(startIndex, endIndex);
                 activeInstance.setSelectionStyles({ shadow: presetShadow });
             } else {
                 let shadow = activeInstance.shadow;

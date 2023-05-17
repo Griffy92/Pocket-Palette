@@ -21,6 +21,7 @@ import SVGExport from './SVGExport';
 import CanvasDownload from './CanvasDownload';
 import ImageUpload from './Image-Upload';
 import Grouping from './Grouping';
+import ImageFilter from './Image-Filter';
 
 const Toolbar = ( props ) => {
     const [ colour, setColour ] = useState("");
@@ -44,47 +45,51 @@ const Toolbar = ( props ) => {
 
     return (
         <>
-            <div className="toolbar">
-                <Circle canvas={ canvas } colour={ colour } strokeColour={ strokeColour } strokeSize={ strokeSize } />
-                <Ellipse canvas={ canvas } colour={ colour } strokeColour={ strokeColour } strokeSize={ strokeSize } />
-                <Rectangle canvas={ canvas } colour={ colour } strokeColour={ strokeColour } strokeSize={ strokeSize }/>
-                <Triangle canvas={ canvas } colour={ colour } strokeColour={ strokeColour } strokeSize={ strokeSize }/> 
-                <Stroke canvas={ canvas } setStrokeColour={ setStrokeColour } strokeColour={ strokeColour } setStrokeSize={ setStrokeSize } strokeSize={ strokeSize } />
-                <ButtonGroup variant="text" style={{display: 'inline'}}>
-                    <FreeDraw canvas={ canvas } colour={ colour } brushSize={ brushSize }  />
-                    <BrushCustom canvas={ canvas } setBrushSize={ setBrushSize } brushSize={ brushSize } />
-                </ButtonGroup>
-                <ColourSelect canvas={ canvas } setColour={ setColour } colour={ colour } />
-                <Text canvas={canvas} colour={ colour } />
-                <RemoveObject canvas={ canvas }/>
-                <Pan canvas={ canvas } />
-                <CanvasHistory canvas={ canvas }/>
-                <Zoom canvas={ canvas } />
-                <Layers canvas={ canvas }/>
-                <Serialisation canvas={ canvas } />
-                <Deserialisation canvas={ canvas } />
-                <ImageUpload canvas={ canvas } colour={ colour } />
-                <CopyPaste canvas={canvas} />
-                <Button className="add_button download_button" onClick= { _handleClick } title="Download"></Button>
-                    <Popover
-                        sx={{ width: 500 }}
-                        id={id}
-                        open={open}
-                        anchorEl={anchor}
-                        style={{ maxWidth: 1000}}
-                        onClose={_handleClose}
-                        anchorOrigin={{
-                            vertical: 'top',
-                            horizontal: 'left'}}>
-                        <Stack sx={{ width: 300, p: 2}}>
-                            <p>Please select your preferred format</p>
-                            <ButtonGroup variant="contained" aria-label="outlined primary button group" fullWidth={true} sx={{my: 2}}>
-                                <SVGExport canvas={canvas} />
-                                <CanvasDownload canvas={canvas} />
-                            </ButtonGroup>
-                        </Stack>
-                    </Popover>
-                <Grouping canvas={canvas}/>
+            <div>
+                <div className="toolbar">
+                    <Circle canvas={ canvas } colour={ colour } strokeColour={ strokeColour } strokeSize={ strokeSize } />
+                    <Ellipse canvas={ canvas } colour={ colour } strokeColour={ strokeColour } strokeSize={ strokeSize } />
+                    <Rectangle canvas={ canvas } colour={ colour } strokeColour={ strokeColour } strokeSize={ strokeSize }/>
+                    <Triangle canvas={ canvas } colour={ colour } strokeColour={ strokeColour } strokeSize={ strokeSize }/> 
+                    <Stroke canvas={ canvas } setStrokeColour={ setStrokeColour } strokeColour={ strokeColour } setStrokeSize={ setStrokeSize } strokeSize={ strokeSize } />
+                    <ButtonGroup variant="text" >
+                        <FreeDraw canvas={ canvas } colour={ colour } brushSize={ brushSize }  />
+                        <BrushCustom canvas={ canvas } setBrushSize={ setBrushSize } brushSize={ brushSize } />
+                    </ButtonGroup>
+                    <ColourSelect canvas={ canvas } setColour={ setColour } colour={ colour } />
+                    <Text canvas={canvas} colour={ colour } />
+                    <RemoveObject canvas={ canvas }/>
+                    <Pan canvas={ canvas } />
+                    <CanvasHistory canvas={ canvas }/>
+                    <Zoom canvas={ canvas } />
+                    <Layers canvas={ canvas }/>
+                    <Serialisation canvas={ canvas } />
+                    <Deserialisation canvas={ canvas } />
+                    <ImageUpload canvas={ canvas } colour={ colour } />
+                    <ImageFilter canvas={ canvas } colour={ colour } />
+                    <CopyPaste canvas={canvas} />
+                    <Button className="add_button download_button" onClick= { _handleClick } title="Download"></Button>
+                        <Popover
+                            sx={{ width: 500 }}
+                            id={id}
+                            open={open}
+                            anchorEl={anchor}
+                            style={{ maxWidth: 1000}}
+                            onClose={_handleClose}
+                            anchorOrigin={{
+                                vertical: 'top',
+                                horizontal: 'left'}}>
+                            <Stack sx={{ width: 300, p: 2}}>
+                                <p>Please select your preferred format</p>
+                                <ButtonGroup variant="contained" aria-label="outlined primary button group" fullWidth={true} sx={{my: 2}}>
+                                    <SVGExport canvas={canvas} />
+                                    <CanvasDownload canvas={canvas} />
+                                </ButtonGroup>
+                            </Stack>
+                        </Popover>
+                    <Grouping canvas={canvas}/>
+                </div>
+                <br />
             </div>
             <br />
         </>
