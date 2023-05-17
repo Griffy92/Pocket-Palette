@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* containter that holds the canvas and toolbar */
+.etch-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80vh;
+}
+
+/* etch heading */
+.etch-heading {
+    margin-top: -36em;
+    z-index: 1;
+    font-family: cursive;
+    color: gold;
+}
+
+/* etch canvas */
+#etch-canvas {
+    margin-top: 20px;
+    border: solid red 100px;
+    border-radius: 50px;
+}
+
+/* etch toolbar */
+.etch-toolbar{
+    margin-top: -80px;
+    height: 100px;
+    width: 900px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* etch dials */
+.etch-dial-l, .etch-dial-r {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.etch-dial-l {
+    transform: rotate(-90deg);
+    margin-left: 2px;
+    margin-bottom: 8px;
+}
+
+.etch-dial-r {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+/* etch buttons */
+.etch-btn-top, .etch-btn-btm {
+    width: 100px;
+    height: 50px;
+    color: gold;
+    background-color: white;
+}
+
+.etch-btn-top {
+    border-radius: 12em 12em 0 0;
+}
+
+.etch-btn-btm {
+    border-radius: 0 0 12em 12em;
+}
+
+.etch-btn:hover {
+    background-color: lightgrey;
+}
+
+
+
+
+
+
+
