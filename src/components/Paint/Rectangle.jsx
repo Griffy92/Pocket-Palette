@@ -26,7 +26,7 @@ const Rectangle = ( props ) => {
 
     return (
         <>
-            <Button className="add_button add_rect" onClick={ _handleAddRect } title="Add Rectangle"></Button>
+            <Button className="add_button paint_common add_rect" onClick={ _handleAddRect } title="Add Rectangle"></Button>
         </>
     );
 };

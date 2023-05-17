@@ -43,8 +43,7 @@ const RemoveObject = ( props ) => {
 
 	return (
 		<>
-			<Button className="add_button delete_all_button" onClick={_HandleRemoveAllObjects} title="Reset Canvas"></Button>
-
+			<Button className="add_button paint_common delete_all_button" onClick={_HandleRemoveAllObjects} title="Reset Canvas"></Button>
 		</>
 	);
 };

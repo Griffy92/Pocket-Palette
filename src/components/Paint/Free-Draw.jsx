@@ -49,7 +49,7 @@ const FreeDraw = ( props ) => {
 
     return (
         <>
-            <Button className={`add_button add_free_draw`} onClick={ _handleAddFreeDraw } style={{ borderColor: "grey" }} title="Free Draw"></Button>
+            <Button className={`add_button paint_common add_free_draw`} onClick={ _handleAddFreeDraw } style={{ borderColor: "grey" }} title="Free Draw"></Button>
             {/* <button className="add_button add_free_draw" onClick= { _handleAddFreeEraser } title="Draw"></button> */}
         </>
     );
