@@ -11,6 +11,7 @@ const supabase = createClient (
 
 function Login() {
     const navigate = useNavigate()
+    
     useEffect(() => {
         async function getLogin() {
         supabase.auth.onAuthStateChange(async (event) => {

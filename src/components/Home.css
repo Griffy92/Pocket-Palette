@@ -1,0 +1,64 @@
+/* Let's get creative - heading */
+.creative_heading {
+    display: inline;
+    color: #1947E5;
+    margin-top: -16px;
+
+    /* think of another way to underline */
+    background-color: #FFDA7B;
+    width: 100px;
+    height: 5px;
+}
+
+/* container surrounding choose artboard options */
+.selectContainer {
+    border: 1px solid red;
+    display: flex;
+    column-gap: 43px;
+    justify-content: center;
+    width: 95%;
+}
+
+/* Paint, Pixel and Etch board design */
+.paintSelect, .pixelSelect, .etchSelect {
+    width: 300px;
+    text-align: center;
+    height: 300px;
+    border-radius: 1em;
+    border: 3px solid black;
+    box-shadow:6px 5px black;
+
+    /* box icon - image sizing */
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 68%;
+}
+
+.paintSelect {
+    background-color: white;
+    background-image: url("/Home_choose_art/choose_paint.png");
+    background-position-y: 60px; 
+
+}
+
+.pixelSelect {
+    background-color: #FFCD49;
+    background-image: url("/Home_choose_art/choose_pixel_art.png");
+    background-position-y: 40px; 
+}
+
+
+.etchSelect {
+    background-color: #FF9DC6;
+    /* for some reason i need public for it to work rn, will check again later  */
+    background-image: url("public/Home_choose_art/choose_etch.png");
+    background-position-y: 60px; 
+}
+
+
+
+/* Paint, Pixel, Etch Heading */
+.choose_heading {
+    margin-top: 15px;
+}

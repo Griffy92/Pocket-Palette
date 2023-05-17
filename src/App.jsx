@@ -1,48 +1,63 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
-// COMPONENTS 
-import Login from './components/Login'
-import Success from './components/Success'
-import Canvas from './components/Paint/Canvas'
-import PixelCanvas from './components/PixelArt/PixelCanvas'
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Login from './components/Login';
+import Success from './components/Success';
+import Canvas from './components/Paint/Canvas';
+import PixelCanvas from './components/PixelArt/PixelCanvas';
 import Works from './components/Works';
 import EtchCanvas from './components/EtchSketch/EtchCanvas';
-
+import Home from './components/Home';
 
 function App() {
-	
-	return (
-		<>
-			
+    const [user, setUser] = useState({});
 
-			<BrowserRouter>
-				<nav>
-					<a href="/canvas">Paint  | </a>
-					<a href="/pixelcanvas">Pixel </a>
-					<a href="/works">My Works</a>
-					<a href="/etch">Etch</a>
-				</nav>
+    useEffect(() => {
+        async function getUserData() {
+            await supabase.auth.getUser().then((value) => {
+                if (value.data?.user) {
+                    setUser(value.data.user);
+                }
+            });
+        }
+        getUserData();
+    }, []);
 
-			
-				<Routes>
-					
-					{/* Login / sign up page */}
-					<Route path="/" element={ <Login /> } />
-					<Route path="/success" element={ <Success /> } />
+	// Updates the state of user
+    const _handleSetUser = (userData) => {
+        setUser(userData);
+    };
 
-					{/* Paint and Pixel Board */}
-					<Route path="/canvas" element={ <Canvas /> }></Route>
-					<Route path="/pixelcanvas" element={ <PixelCanvas /> }></Route>
+    return (
+        <BrowserRouter>
+            {Object.keys(user).length !== 0 && (
+                <nav>
+                    <Link to="/home">Home</Link>
+                    <Link to="/canvas">Paint </Link>
+                    <a href="/pixelcanvas">Pixel</a>
+					<Link to="/etch">Etch</Link>
+                    <Link to="/works">My Works</Link>
+                </nav>
+            )}
 
-					{/* Works */}
-					<Route path="/works" element={ <Works /> }></Route>
-					<Route path="/etch" element={ <EtchCanvas/>}></Route>
-				</Routes>
-			</BrowserRouter>
-		</>
-	)
+            <Routes>
+                <Route
+                    path="/"
+                    element={<Login onSetUser={_handleSetUser} />}
+					// Passes the onSetUser function to the Success component
+                />
+                <Route
+                    path="/success"
+                    element={<Success onSetUser={_handleSetUser} />}
+					// Passes the onSetUser function to the Success component
+                />
+                <Route path="/home" element={<Home />} />
+                <Route path="/canvas" element={<Canvas />} />
+                <Route path="/pixelcanvas" element={<PixelCanvas />} />
+                <Route path="/etch" element={<EtchCanvas />} />
+                <Route path="/works" element={<Works />} />
+            </Routes>
+        </BrowserRouter>
+    );
 }
-export default App
 
-// 	{ Object.keys(user).length !== 0 }
+export default App;
