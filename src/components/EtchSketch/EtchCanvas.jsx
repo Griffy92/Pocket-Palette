@@ -4,9 +4,11 @@ import { fabric } from 'fabric';
 import Sketching from './Sketching';
 // css
 import './EtchCanvas.css';
+import 'animate.css'
 
 const EtchCanvas = () => {
     const [ canvas, setCanvas ] = useState(null);
+    const [ count, setCount ] = useState(0);
 
     const initCanvas = () => { 
         const newCanvas = new fabric.Canvas('etch-canvas', {
@@ -18,15 +20,23 @@ const EtchCanvas = () => {
         return newCanvas;
     };
 
+    const incCount = () => {
+        setCount( count => count + 1);
+    };
+
+    const resetCount = () => {
+        setCount(0);
+    };
+
     useEffect( () => {
         setCanvas(initCanvas());
     }, []);
 
     return (
         <>
-            <div className='etch-main'>
+            <div className={ count >= 22 ? 'etch-main animate__animated animate__wobble' : 'etch-main'}>
                 <canvas id="etch-canvas" />
-                <Sketching canvas={ canvas }/> 
+                <Sketching canvas={ canvas } incCount={ incCount } count={ count } resetCount={ resetCount } /> 
                 <div className='etch-heading'>
                     <h1>Etch A Canvas</h1>
                 </div>
