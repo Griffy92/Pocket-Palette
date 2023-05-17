@@ -2,9 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { fabric } from 'fabric';
 
 const Sketching = ( props ) => {
-    const initialCount = 0;
-    const [ count, setCount ] = useState(initialCount);
-    const { canvas } = props;
+    const { canvas, count, incCount, resetCount } = props;
     const originCoords = [0, 600, 0, 600]; // bottom left corner of canvas, compare with init canvas
     const lineRef = useRef(new fabric.Line(originCoords, {
         stroke: 'black'
@@ -56,11 +54,11 @@ const Sketching = ( props ) => {
 
         // keep track of mouse enter and exit and update counter
         const handleMouseEnter = () => {
-            setCount( count => count + 1);
+            incCount();
         };
 
         const handleMouseLeave = () => {
-            setCount( count => count + 1 )
+            incCount();
         };
 
         if ( canvas ) {
@@ -167,11 +165,11 @@ const Sketching = ( props ) => {
         lineRef.current = new fabric.Line(originCoords, {
             stroke: 'black'
         });
+        resetCount();
     };
 
     if ( count >= 25 ) {
         handleReset();
-        setCount(initialCount);
     };
 
     console.log(lineRef)
