@@ -8,7 +8,7 @@ const Download = ( props ) => {
     const { downloadImage } = useDotting( canvas );
 
     return (
-        <button onClick={downloadImage}>Download</button> 
+        <button className="downloadBtn iconBtn" title="Download PNG" onClick={downloadImage}></button> 
     )
 };
 

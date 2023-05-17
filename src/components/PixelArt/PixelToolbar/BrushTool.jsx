@@ -22,13 +22,13 @@ const BrushTool = ( props ) => {
     return (
         <>
             {/* BRUSH */}
-            <button className="paintBtn iconBtn" onClick={() => _handleBrushToolChange(BrushTool.DOT)} disabled={brushTool === BrushTool.DOT} title=""> Paint </button>
+            <button className="paintBtn iconBtn" onClick={() => _handleBrushToolChange(BrushTool.DOT)} disabled={brushTool === BrushTool.DOT} title="Paint"></button>
             
             {/* ERASER */}
-            <button onClick={() => _handleBrushToolChange(BrushTool.ERASER)} disabled={brushTool === BrushTool.ERASER}> Eraser </button>
+            <button className="eraserBtn iconBtn" onClick={() => _handleBrushToolChange(BrushTool.ERASER)} disabled={brushTool === BrushTool.ERASER} title="Eraser"></button>
             
             {/* FILL */}
-            <button onClick={() => _handleBrushToolChange(BrushTool.PAINT_BUCKET)} disabled={brushTool === BrushTool.PAINT_BUCKET}> Fill </button>
+            <button className="fillBtn iconBtn" onClick={() => _handleBrushToolChange(BrushTool.PAINT_BUCKET)} disabled={brushTool === BrushTool.PAINT_BUCKET} title="Fill"></button>
           </>
     )
 }
