@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import { fabric } from 'fabric';
 
 const Sketching = ( props ) => {
+    const initialCount = 0;
+    const [ count, setCount ] = useState(initialCount);
     const { canvas } = props;
     const originCoords = [0, 600, 0, 600]; // bottom left corner of canvas, compare with init canvas
     const lineRef = useRef(new fabric.Line(originCoords, {
@@ -20,6 +22,7 @@ const Sketching = ( props ) => {
     }, [canvas]);
 
     useEffect( () => {
+        // handle drawing lines with keyboard
         const handleKeyDown = (event) => {
             const s = event.shiftKey;
             const e = event.key;
@@ -51,13 +54,28 @@ const Sketching = ( props ) => {
             };
         };
 
+        // keep track of mouse enter and exit and update counter
+        const handleMouseEnter = () => {
+            setCount( count => count + 1);
+        };
+
+        const handleMouseLeave = () => {
+            setCount( count => count + 1 )
+        };
+
         if ( canvas ) {
             window.addEventListener('keydown', handleKeyDown);
-        }
+            canvas.on('mouse:over', handleMouseEnter);
+            canvas.on('mouse:out', handleMouseLeave);
+        };
 
         // clean up
         return () => {
-            window.removeEventListener('keydown', handleKeyDown);
+            if (canvas) {
+                window.removeEventListener('keydown', handleKeyDown);
+                canvas.off('mouse:over', handleMouseEnter);
+                canvas.off('mouse:out', handleMouseLeave);
+            }
         };
     }, [canvas]);
 
@@ -151,7 +169,13 @@ const Sketching = ( props ) => {
         });
     };
 
+    if ( count >= 25 ) {
+        handleReset();
+        setCount(initialCount);
+    };
+
     console.log(lineRef)
+    console.log(count)
 
     return (
         <>
