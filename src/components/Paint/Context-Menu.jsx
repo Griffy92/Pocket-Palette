@@ -51,7 +51,6 @@ const ContextMenu = (props) => {
             <ButtonGroup variant="text" fullWidth={true} sx={{mb: 2}} >
                 <Grouping canvas={ canvas } />
             </ButtonGroup>      
-            
             <hr />
             <p>Please use the following keyboard shortcuts</p>
             <TableContainer >
@@ -90,6 +89,7 @@ const ContextMenu = (props) => {
                     </TableBody>
                 </Table>
             </TableContainer>
+            <p>Holding Shift whilst manipulating shapes allows axis tilt</p>
         </Stack>
       </Menu>
   );
