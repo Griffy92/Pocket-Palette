@@ -195,7 +195,7 @@ const Text = ({ canvas }) => {
                     anchorOrigin={{
                         vertical: 'top',
                         horizontal: 'left'}}>
-                    <Stack sx={{width: 200, p: 2}} spacing={2}>
+                    <Stack sx={{width: 232, p: 2}} spacing={2}>
                         <FormControl  sx={{width: 200}}>
                             <ButtonGroup variant="contained" fullWidth={true} sx={{mb: 2}}>
                                 <Button className="fontButton" onClick={ _handleToggleBold } title="Bold" >B</Button>

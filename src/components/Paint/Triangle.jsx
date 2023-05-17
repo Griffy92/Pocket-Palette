@@ -14,8 +14,8 @@ const Triangle = ( props ) => {
 
     const _handleAddTri = () => {
         const tri = new fabric.Triangle({
-            width: 20,
-            height: 30,
+            width: 60,
+            height: 60,
             fill: fillColour,
             strokeWidth: strokeSize,
             stroke: strokeColour,
