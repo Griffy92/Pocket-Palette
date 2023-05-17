@@ -15,8 +15,8 @@ const Grouping = ( props ) => {
     
     return (
         <>
-            <Button className='add_button group_button' onClick={ _handleGrouping } title="Group Objects"></Button>
-            <Button className='add_button ungroup_button' onClick={ _handleUngrouping } title="Ungroup Objects"></Button>
+            <Button className='add_button group_button' onClick={ _handleGrouping } title="Group Objects" style={{ borderColor: "grey" }}></Button>
+            <Button className='add_button ungroup_button' onClick={ _handleUngrouping } title="Ungroup Objects" style={{ borderColor: "grey" }}></Button>
         </>
     );
 };
