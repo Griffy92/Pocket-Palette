@@ -8,7 +8,6 @@ import PixelCanvas from './components/PixelArt/PixelCanvas'
 import Works from './components/Works';
 
 
-
 function App() {
 	return (
 		<>

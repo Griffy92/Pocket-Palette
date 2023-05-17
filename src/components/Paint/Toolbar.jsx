@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import { Popover, Stack, ButtonGroup, Button } from '@mui/material';
 import Circle from './Circle';
 import Ellipse from './Ellipse';
@@ -91,6 +91,7 @@ const Toolbar = ( props ) => {
                 </div>
                 <br />
             </div>
+            <br />
         </>
     );
 };
