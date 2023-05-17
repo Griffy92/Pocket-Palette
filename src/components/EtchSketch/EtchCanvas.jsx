@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import { fabric } from 'fabric';
+// components
 import Sketching from './Sketching';
+// css
+import './EtchCanvas.css';
 
 const EtchCanvas = () => {
     const [ canvas, setCanvas ] = useState(null);
