@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import { Popover, Stack, ButtonGroup, Button } from '@mui/material';
 import Circle from './Circle';
 import Ellipse from './Ellipse';
@@ -21,6 +21,7 @@ import SVGExport from './SVGExport';
 import CanvasDownload from './CanvasDownload';
 import ImageUpload from './Image-Upload';
 import Grouping from './Grouping';
+import ImageFilter from './Image-Filter';
 
 const Toolbar = ( props ) => {
     const [ colour, setColour ] = useState("");
@@ -65,6 +66,7 @@ const Toolbar = ( props ) => {
                     <Serialisation canvas={ canvas } />
                     <Deserialisation canvas={ canvas } />
                     <ImageUpload canvas={ canvas } colour={ colour } />
+                    <ImageFilter canvas={ canvas } colour={ colour } />
                     <CopyPaste canvas={canvas} />
                     <Button className="add_button download_button" onClick= { _handleClick } title="Download"></Button>
                         <Popover
@@ -89,6 +91,7 @@ const Toolbar = ( props ) => {
                 </div>
                 <br />
             </div>
+            <br />
         </>
     );
 };
