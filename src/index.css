@@ -82,6 +82,7 @@ button:focus-visible {
   background-color: white;
   border-radius: 5px;
   border: 1px solid gray;
+  
 }
 
 .add_button {
@@ -452,13 +453,6 @@ button:focus-visible {
   opacity: 1;
   transition: 0.5s;
 }
-
-.button_group_toolbar {
-  border-color: red;
-  color: red;
-  background-color: red;
-}
-
 
 /* ==================== PIXEL TOOLBAR =================== */
 
