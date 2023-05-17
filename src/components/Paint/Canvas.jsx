@@ -3,9 +3,16 @@ import { fabric } from 'fabric';
 import 'fabric-history';
 import Toolbar from './Toolbar';
 import ContextMenu from './Context-Menu';
-import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
+import { ThemeProvider, createTheme } from '@mui/material';
 import CanvasUpload from './CanvasUpload';
 
+const theme = createTheme({
+	palette: {
+		primary: {
+		  main: "#2a9461"
+		}
+	  }
+});
 
 const Canvas = () => {
     const [ canvas, setCanvas ] = useState(null);
@@ -35,10 +42,12 @@ const Canvas = () => {
 
     return (
         <> 
-            <Toolbar canvas={ canvas } />
-            <canvas id="canvas" />
-            <CanvasUpload />
-            <ContextMenu canvas={ canvas }/>
+            <ThemeProvider theme={theme}>
+                <Toolbar canvas={ canvas } />
+                <canvas id="canvas" />
+                <CanvasUpload />
+                <ContextMenu canvas={ canvas }/>
+            </ThemeProvider>
         </>
     );
 };

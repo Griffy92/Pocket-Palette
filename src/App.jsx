@@ -11,6 +11,7 @@ import EtchCanvas from './components/EtchSketch/EtchCanvas';
 function App() {
 	return (
 		<>
+
 			<BrowserRouter>
 				<nav>
 					<a href="/canvas">Paint  | </a>
