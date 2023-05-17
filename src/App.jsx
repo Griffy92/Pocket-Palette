@@ -7,6 +7,14 @@ import PixelCanvas from './components/PixelArt/PixelCanvas';
 import Works from './components/Works';
 import EtchCanvas from './components/EtchSketch/EtchCanvas';
 import Home from './components/Home';
+import { createClient } from "@supabase/supabase-js"
+import { Auth } from "@supabase/auth-ui-react"
+
+const supabase = createClient (
+    "https://yilvmajrrjkkeljiduxi.supabase.co",
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlpbHZtYWpycmpra2VsamlkdXhpIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQxMDY1NzMsImV4cCI6MTk5OTY4MjU3M30.kACu74ur-SSSo26idj89j46s2TytpXjaf3sMjHulBnM"
+
+)
 
 function App() {
     const [user, setUser] = useState({});
