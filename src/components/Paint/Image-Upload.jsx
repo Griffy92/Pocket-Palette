@@ -13,6 +13,7 @@ const ImageUpload = ({ canvas }) => {
             img.onload = () => {
                 const fabricImg = new fabric.Image(img);
                 canvas.add(fabricImg);
+                canvas.setActiveObject(fabricImg);
             };
             img.src = event.target.result;  
         };
