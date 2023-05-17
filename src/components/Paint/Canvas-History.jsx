@@ -24,7 +24,7 @@ const CanvasHistory = ( props ) => {
 				(e.ctrlKey || e.metaKey ) &&
 				canvas != null
 				) {
-				e.preventDefault
+				e.preventDefault()
 				_handleUndo()
 			};
 		});
@@ -35,7 +35,7 @@ const CanvasHistory = ( props ) => {
 				(e.ctrlKey || e.metaKey ) &&
 				canvas != null
 				) {
-				e.preventDefault
+				e.preventDefault()
 				_handleRedo()
 			};
 		});

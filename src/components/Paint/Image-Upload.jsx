@@ -18,7 +18,7 @@ const ImageUpload = ({ canvas }) => {
         };
         reader.readAsDataURL(file);
     };
-
+      
     return (
         <>
             <input type="file" accept="image/*" ref={fileInput} style={{ display: "none" }} onChange={ _handleFileChange }/>

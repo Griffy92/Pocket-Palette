@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { fabric } from 'fabric';
 import 'fabric-history';
 import Toolbar from './Toolbar';
+import ContextMenu from './Context-Menu';
 import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
 import CanvasUpload from './CanvasUpload';
 
@@ -33,10 +34,11 @@ const Canvas = () => {
     }, []);
 
     return (
-        <>
+        <> 
             <Toolbar canvas={ canvas } />
             <canvas id="canvas" />
             <CanvasUpload />
+            <ContextMenu canvas={ canvas }/>
         </>
     );
 };

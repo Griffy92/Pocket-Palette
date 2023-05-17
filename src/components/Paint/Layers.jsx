@@ -24,8 +24,8 @@ const Layers = ( props ) => {
 
 	return (
 		<>
-			<Button className="add_button forward_button" onClick={_HandleBringForward} title="Send Forward"></Button>
-			<Button className="add_button backward_button" onClick={_HandleSendBackward} title="Send Backward"></Button>
+			<Button className="add_button forward_button" onClick={_HandleBringForward} title="Send Forward" style={{ borderColor: "grey" }}></Button>
+			<Button className="add_button backward_button" onClick={_HandleSendBackward} title="Send Backward" style={{ borderColor: "grey" }}></Button>
 		</>
 	);
 };
