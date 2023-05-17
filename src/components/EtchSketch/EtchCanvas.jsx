@@ -4,7 +4,7 @@ import { fabric } from 'fabric';
 import Sketching from './Sketching';
 // css
 import './EtchCanvas.css';
-import 'animate.css'
+import 'animate.css';
 
 const EtchCanvas = () => {
     const [ canvas, setCanvas ] = useState(null);
