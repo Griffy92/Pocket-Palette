@@ -26,3 +26,4 @@ Pixel Art -
 
 More updates coming soon!
 
+![image](https://github.com/kaarenliangg/project-02/assets/104908963/1d974af1-6130-4755-846f-3522b01898ea)

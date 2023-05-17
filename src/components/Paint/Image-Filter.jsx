@@ -36,11 +36,16 @@ const ImageFilter = ({ canvas }) => {
                 case "invert":
                     filter = new fabric.Image.filters.Invert();
                     break;
+                case "saturation":
+                    filter = new fabric.Image.filters.Saturation({
+                        saturation: 1.3
+                    });
+                    break;
                 case "remove-filter":
                     activeInstance.filters = [];
                     activeInstance.applyFilters();
                     canvas.renderAll();
-                    return;
+                return;
             }
             activeInstance.filters = filter ? [filter] : [];
             activeInstance.applyFilters();
@@ -67,6 +72,7 @@ const ImageFilter = ({ canvas }) => {
                     <MenuItem value="blur">Blur</MenuItem>
                     <MenuItem value="kodachrome">Kodachrome</MenuItem>
                     <MenuItem value="invert">Invert</MenuItem>
+                    <MenuItem value="saturation">Saturation</MenuItem>
                 </Select>
             </FormControl>
         </>
