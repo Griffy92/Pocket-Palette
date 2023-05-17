@@ -9,7 +9,7 @@ const SVGExport = ( props ) => {
         const tempLink = document.createElement('a');
         const dataSVG = canvas.toSVG();
         
-        const blob = new Blob([dataSVG], { type: 'image/svg+xml' })
+        const blob = new Blob([dataSVG], { type: 'image/svg+xml' });
         const url = URL.createObjectURL(blob);
     
         tempLink.setAttribute('href', url);

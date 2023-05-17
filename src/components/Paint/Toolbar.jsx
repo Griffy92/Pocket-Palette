@@ -25,9 +25,9 @@ import ImageFilter from './Image-Filter';
 
 const Toolbar = ( props ) => {
     const [ colour, setColour ] = useState("");
-    const [ strokeColour, setStrokeColour ] = useState("")
+    const [ strokeColour, setStrokeColour ] = useState("");
     const [ brushSize, setBrushSize] = useState(0);
-    const [ strokeSize, setStrokeSize ] = useState("")
+    const [ strokeSize, setStrokeSize ] = useState("");
     const { canvas } = props;
 
     const [ anchor, setAnchor] = useState(null);
@@ -35,9 +35,11 @@ const Toolbar = ( props ) => {
     const _handleClick = (event) => {
         setAnchor(event.currentTarget);
     };
+
     const _handleClose = () => {
         setAnchor(null);
     };
+    
     const open = Boolean(anchor);
     const id = open ? 'simple-popover' : undefined; 
 

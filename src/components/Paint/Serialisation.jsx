@@ -8,7 +8,7 @@ const Serialisation = ( props ) => {
     const _handleSave = () => {
         jsonCanvas = JSON.stringify(canvas); // convert canvas into string
         console.log(jsonCanvas); 
-    }
+    };
 
     // DB code here
 

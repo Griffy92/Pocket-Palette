@@ -6,9 +6,10 @@ const Triangle = ( props ) => {
     
     // This is a little checker to see if a colour has been passed yet (colour default is "")
     // if a colour has not been passed, defaults to whatver colour is nominated below 
-    let fillColour = 'blue'
-    if (colour != ""){
-        fillColour = colour 
+    let fillColour = 'blue';
+
+    if (colour != "") {
+        fillColour = colour;
     };
 
     const _handleAddTri = () => {
@@ -21,15 +22,15 @@ const Triangle = ( props ) => {
             left: 50,
             top: 50
         });
-        canvas.isDrawingMode = false
-        canvas.add(tri).renderAll()
-        }
+        canvas.isDrawingMode = false;
+        canvas.add(tri).renderAll();
+    };
     
     return (
         <>
             <Button className="add_button add_tri" onClick={ _handleAddTri } title="Add Triangle"></Button>
         </>
-    )
+    );
 };
 
 export default Triangle;

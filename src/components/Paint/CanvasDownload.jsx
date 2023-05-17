@@ -1,6 +1,5 @@
 import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
 
-
 const CanvasDownload = ( props ) => {
     const { canvas } = props;
 
@@ -12,14 +11,14 @@ const CanvasDownload = ( props ) => {
             format: format,
         });
         tempLink.setAttribute('href', imgLink);
-        tempLink.setAttribute('download', `canvas.${format}`);
-        tempLink.click();
+        tempLink.setAttribute('download', `canvas.${format}`); // give it download attribute
+        tempLink.click(); // call click on the link
         tempLink.remove(); // remove the created a tag
-    }
+    };
 
     return (
-        fileFormat.map( ( format, index )=> {
-            return <Button key={ index } onClick={ () => _handleCanvasDownload( format) }> {format}  </Button>
+        fileFormat.map( ( format, index ) => {
+            return <Button key={ index } onClick={ () => _handleCanvasDownload( format) }> {format} </Button>
         })
     );
 };

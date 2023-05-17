@@ -6,11 +6,11 @@ import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
 
 const ColourSelect = ( {  canvas, setColour } ) => {
     const setObjectColour = (tarCol) => {
-        if (canvas != null){
+        if (canvas != null) {
             canvas.getActiveObjects().forEach((obj) => {
-            obj.set("fill", tarCol)
+                obj.set("fill", tarCol);
             });
-            canvas.renderAll()
+            canvas.renderAll();
         }};
 
     // const { setColour, colour } = props
@@ -18,7 +18,7 @@ const ColourSelect = ( {  canvas, setColour } ) => {
         <>
             <input type="color" id="color-picker" className="add_button add_colour_select" onChange={(e) => {setColour(e.target.value); setObjectColour(e.target.value)}} title="Set Colour" />
         </>
-    )
+    );
 };
 
 export default ColourSelect;

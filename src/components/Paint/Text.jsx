@@ -39,9 +39,9 @@ const Text = ({ canvas }) => {
                 let styles = activeInstance.getSelectionStyles(startIndex, endIndex);
                 let fontWeightSet = [...new Set(styles.map(style => style.fontWeight))];
                 if (fontWeightSet.includes("bold")) {
-                    activeInstance.setSelectionStyles({ 'fontWeight': 'normal'})
+                    activeInstance.setSelectionStyles({ 'fontWeight': 'normal'});
                 } else {
-                    activeInstance.setSelectionStyles({ 'fontWeight': 'bold'})
+                    activeInstance.setSelectionStyles({ 'fontWeight': 'bold'});
                 }
             } else {
                 if (activeInstance.fontWeight === 'bold') {
@@ -63,20 +63,20 @@ const Text = ({ canvas }) => {
                 let styles = activeInstance.getSelectionStyles(startIndex, endIndex);
                 let fontStyleSet = [...new Set(styles.map(style => style.fontStyle))];
                 if (fontStyleSet.includes("italic")) {
-                    activeInstance.setSelectionStyles({ 'fontStyle': 'normal'})
+                    activeInstance.setSelectionStyles({ 'fontStyle': 'normal'});
                 } else {
-                    activeInstance.setSelectionStyles({ 'fontStyle': 'italic'})
+                    activeInstance.setSelectionStyles({ 'fontStyle': 'italic'});
                 }
             } else {
                 if (activeInstance.fontStyle === 'italic') {
                     activeInstance.fontStyle = 'normal';
                 } else {
                     activeInstance.fontStyle = 'italic';
-                }
-            }
-        }
+                };
+            };
+        };
         canvas.renderAll(); 
-    }
+    };
 
     function _handleToggleUnderline() {
         let activeInstance = canvas.getActiveObject();
@@ -87,20 +87,20 @@ const Text = ({ canvas }) => {
                 let styles = activeInstance.getSelectionStyles(startIndex, endIndex);
                 let underlineSet = [...new Set(styles.map(style => style.underline))];
                 if (underlineSet.includes(true)) {
-                activeInstance.setSelectionStyles({ 'underline': false });
+                    activeInstance.setSelectionStyles({ 'underline': false });
                 } else {
-                activeInstance.setSelectionStyles({ 'underline': true });
-                }
+                    activeInstance.setSelectionStyles({ 'underline': true });
+                };
             } else {
                 if (activeInstance.underline === true) {
-                activeInstance.set('underline', false);
+                    activeInstance.set('underline', false);
                 } else {
-                activeInstance.set('underline', true);
-                }
-            } 
-        }
+                    activeInstance.set('underline', true);
+                };
+            };
+        };
         canvas.renderAll();
-    }
+    };
 
     function _handleToggleLineThrough() {
         let activeInstance = canvas.getActiveObject();
@@ -111,20 +111,20 @@ const Text = ({ canvas }) => {
                 let styles = activeInstance.getSelectionStyles(startIndex, endIndex);
                 let linethroughSet = [...new Set(styles.map(style => style.linethrough))];
                 if (linethroughSet.includes(true)) {
-                activeInstance.setSelectionStyles({ 'linethrough': false });
+                    activeInstance.setSelectionStyles({ 'linethrough': false });
                 } else {
-                activeInstance.setSelectionStyles({ 'linethrough': true });
+                    activeInstance.setSelectionStyles({ 'linethrough': true });
                 }
             } else {
                 if (activeInstance.linethrough === true) {
-                activeInstance.set('linethrough', false);
+                    activeInstance.set('linethrough', false);
                 } else {
-                activeInstance.set('linethrough', true);
-                }
-            } 
-        }
+                    activeInstance.set('linethrough', true);
+                };
+            };
+        };
         canvas.renderAll();
-    }
+    };
       
     function _handleFontSizeChange(event) {
         let activeInstance = canvas.getActiveObject();
@@ -135,10 +135,10 @@ const Text = ({ canvas }) => {
                 activeInstance.setSelectionStyles({ fontSize: event.target.value }, startIndex, endIndex);
             } else {
                 activeInstance.fontSize = event.target.value;
-            }
-        }
+            };
+        };
         canvas.renderAll();
-    }
+    };
 
     function _handleFontFamilyChange(event) {
         let activeInstance = canvas.getActiveObject();
@@ -149,10 +149,10 @@ const Text = ({ canvas }) => {
                 activeInstance.setSelectionStyles({ fontFamily: event.target.value }, startIndex, endIndex);
             } else {
                 activeInstance.fontFamily = event.target.value;
-            }
-        }
+            };
+        };
         canvas.renderAll();
-    }
+    };
 
     function _handleToggleShadow() {
         let activeInstance = canvas.getActiveObject();
