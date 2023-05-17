@@ -9,29 +9,31 @@ const supabase = createClient (
 )
 
 
-function Success() {
+function Success({ onSetUser }) {
     const [user, setUser] = useState({})
     const navigate = useNavigate()
     
-    useEffect (() => {
+    useEffect(() => {
         async function getUserData() {
             await supabase.auth.getUser().then((value) => {
-                // value.data.user
-                if(value.data?.user) {
-                    console.log(value.data.user)
+                if (value.data?.user) {
                     setUser(value.data.user)
+
+                    // passing onSetUser back into App
+                    onSetUser(value.data.user)
                 }
             })
-        
         }
         getUserData()
-    }, [])
+    }, [onSetUser])
+
 
     async function signOutUser() {
         const {error} = await supabase.auth.signOut();
         console.log(error)
         navigate("/")
     }
+
 	return (
         <div>
         {Object.keys(user).length !== 0 ?
