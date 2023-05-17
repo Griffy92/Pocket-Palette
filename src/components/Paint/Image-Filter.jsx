@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { fabric } from "fabric";
-
+import { Popover, Stack, Input, Select, MenuItem, TextField, FormControl, InputLabel, Button, ButtonGroup } from '@mui/material';
 
 const ImageFilter = ({ canvas }) => {
     const [selectedFilter, setSelectedFilter] = useState("");
@@ -53,19 +53,22 @@ const ImageFilter = ({ canvas }) => {
         setSelectedFilter(selectedValue);
         applyFilter(selectedValue);
     };
-
+    // id="imageFilter" label="image-filter-label" labelId="image-filter-label" 
     return (
-        <>
-            <select value={ selectedFilter } onChange={ _handleFilterChange }>
-                <option value="remove-filter">Select Image Filter</option>
-                <option value="brownie">Brownie</option>
-                <option value="vintage">Vintage</option>
-                <option value="polaroid">Polaroid</option>
-                <option value="technicolor">Technicolor</option>
-                <option value="blur">Blur</option>
-                <option value="kodachrome">Kodachrome</option>
-                <option value="invert">Invert</option>
-            </select>
+        <>  
+            <FormControl sx={{width: 130}} variant="standard" style={{opacity: .5}}>
+                <Select value={ selectedFilter } className="fontButton" onChange={ _handleFilterChange } title="Image_Filter" defaultValue={""} displayEmpty={true} >
+                    <MenuItem disabled value="">Image Filter</MenuItem>
+                    <MenuItem value="remove-filter">Remove Filter</MenuItem>
+                    <MenuItem value="brownie">Brownie</MenuItem>
+                    <MenuItem value="vintage">Vintage</MenuItem>
+                    <MenuItem value="polaroid">Polaroid</MenuItem>
+                    <MenuItem value="technicolor">Technicolor</MenuItem>
+                    <MenuItem value="blur">Blur</MenuItem>
+                    <MenuItem value="kodachrome">Kodachrome</MenuItem>
+                    <MenuItem value="invert">Invert</MenuItem>
+                </Select>
+            </FormControl>
         </>
     );
 };

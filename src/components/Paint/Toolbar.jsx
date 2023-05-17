@@ -52,7 +52,7 @@ const Toolbar = ( props ) => {
                     <Rectangle canvas={ canvas } colour={ colour } strokeColour={ strokeColour } strokeSize={ strokeSize }/>
                     <Triangle canvas={ canvas } colour={ colour } strokeColour={ strokeColour } strokeSize={ strokeSize }/> 
                     <Stroke canvas={ canvas } setStrokeColour={ setStrokeColour } strokeColour={ strokeColour } setStrokeSize={ setStrokeSize } strokeSize={ strokeSize } />
-                    <ButtonGroup variant="text" >
+                    <ButtonGroup variant="text" style={{display: "inline"}}>
                         <FreeDraw canvas={ canvas } colour={ colour } brushSize={ brushSize }  />
                         <BrushCustom canvas={ canvas } setBrushSize={ setBrushSize } brushSize={ brushSize } />
                     </ButtonGroup>
