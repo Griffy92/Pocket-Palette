@@ -1,26 +1,157 @@
-.pixel-canvas {
-    margin: 20px;
-  }
-  
-  .board {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr); /* Adjust the number of columns as needed */
-    grid-gap: 0; /* Adjust the gap between cells as needed */
-    margin-top: 10px;
-  }
-  
-  .row {
-    display: flex;
-  }
-  
-  .cell {
-    width: 40px; /* Adjust the width and height of cells as needed */
-    height: 40px;
-    background-color: #f0f0f0; /* Adjust the background color as needed */
-    border: 1px solid #ccc; /* Adjust the border style as needed */
-  }
-  
-  input {
-    width: 50px; /* Adjust the width of the input fields as needed */
-    margin-right: 10px;
-  }
+/* ==================== PIXEL TOOLBAR =================== */
+
+/* All buttons */
+.iconBtn {
+  display: inline-block;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 35px;
+  box-sizing: border-box;
+  background-color: white;
+  border: 1px solid white;
+  margin-right: 5px;
+}
+
+
+/*  ==== All toolbar wrap ===  */
+.pixelTool {
+  margin-bottom: 15px;
+  display: flex;
+  background-color: white;
+  width: 348px;
+}
+
+
+/*  ==== Undo/Redo Buttons ===  */
+
+/*  Undo Button  */ 
+.undoBtn {
+  background-image: url('/PixelArt/PixelArt_icons_Undo.png');
+  background-color: white;
+}
+.undoBtn:hover {
+  background-color: #ddd;
+}
+.undoBtl:disabled {
+  opacity: 0.6;
+  background-color: #3a3a3a;
+}
+
+.redoBtn {
+  background-image: url('/PixelArt/PixelArt_icons_Redo.png');
+}
+.redoBtn:hover {
+  background-color: #ddd;
+}
+.redoBtn:disabled {
+  opacity: 0.6;
+  background-color: #3a3a3a;
+}
+
+
+/*  ==== BrushTool Buttons ===  */
+
+/*  Paint  */ 
+.paintBtn {
+  background-image: url('/PixelArt/PixelArt_icons_Paint.png');
+}
+.paintBtn:hover {
+  background-color: #ddd;
+}
+.paintBtn:disabled {
+  opacity: 0.6;
+  background-color: #3a3a3a;
+}
+
+
+/*  Eraser  */ 
+.eraserBtn {
+  background-image: url('/PixelArt/PixelArt_icons_Eraser.png');
+}
+.eraserBtn:hover {
+
+  background-color: #ddd;
+}
+.eraserBtn:disabled {
+  opacity: 0.6;
+  background-color: #3a3a3a;
+}
+
+
+/*  Fill  */ 
+.fillBtn {
+  background-image: url('/PixelArt/PixelArt_icons_Fill.png');
+}
+.fillBtn:hover {
+  background-color: #ddd;
+}
+.fillBtn:disabled {
+  opacity: 0.6;
+  background-color: #3a3a3a;
+}
+
+
+/*  ==== Clear Button ===  */
+
+/*  Clear  */ 
+.clearBtn {
+  background-image: url('/PixelArt/PixelArt_icons_Clear.png');
+}
+.clearBtn:hover {
+  background-color: #ddd;
+}
+.clearBtn:disabled {
+  opacity: 0.6;
+  background-color: #3a3a3a;
+}
+
+
+/*  ==== Download Button ===  */
+
+/*  Download  */ 
+.downloadBtn {
+  background-image: url('/PixelArt/PixelArt_icons_Download.png');
+}
+.downloadBtn:hover { 
+  background-color: #ddd;
+} 
+.downloadBtn:disabled {
+  opacity: 0.6;
+  background-color: #3a3a3a;
+}
+
+
+/*  ==== Color Button ===  */
+
+/*  Color button  */ 
+.colorBtn {
+  box-sizing: border-box;
+}
+.colorBtn:hover { 
+  background-color: #ddd;
+} 
+
+
+/* ==================== PIXEL CANVAS INPUT  =================== */
+
+/*  Div surrounding inputs  */ 
+.canvasInput {
+
+}
+
+/* Row and Column title  */ 
+.pixelTitle {
+  display: inline-block;
+}
+
+/* Row and Column input */ 
+.pixelInput {
+  border-radius: 5px;
+  display: inline-block;
+  padding: 2px;
+  border: 0.5px solid black;
+  margin: 0 10px 10px 0;
+  width: 107px;
+}

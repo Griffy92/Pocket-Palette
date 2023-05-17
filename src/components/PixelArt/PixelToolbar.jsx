@@ -2,10 +2,13 @@ import React, { useState } from "react";
 
 // COMPONENTS
 import Clear from "./PixelToolbar/Clear";
-import UndoRedo from "./PixelToolbar/UndoRedo";
 import Download from "./PixelToolbar/Download";
 import BrushTool from "./PixelToolbar/BrushTool";
 import BrushColor from "./PixelToolbar/BrushColor";
+import Undo from "./PixelToolbar/Undo";
+import Redo from "./PixelToolbar/Redo";
+
+import './PixelCanvas.css'
 
 const PixelToolbar = ( props ) => {
     const { canvas } = props;
@@ -13,14 +16,17 @@ const PixelToolbar = ( props ) => {
 
     return (
         <>
-            {/* All toolbar imports */}
-            <BrushTool canvas={canvas} />
-            <BrushColor canvas={canvas} color={ color } setColour={ setColor } />
-            <Clear canvas={ canvas } />
-            <UndoRedo canvas={ canvas } />
-            <Download canvas={ canvas } />
+            <div className="pixelTool">
+                {/* All toolbar imports */}
+                <BrushTool canvas={canvas} />
+                <BrushColor canvas={canvas} color={ color } setColour={ setColor } />
+                <Clear canvas={ canvas } />
+                <Download canvas={ canvas } />
+                <Undo canvas={ canvas } /> 
+                <Redo canvas={ canvas } />
+            </div>
         </>
-    )
-}
+    );
+};
 
 export default PixelToolbar;

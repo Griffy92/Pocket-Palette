@@ -12,8 +12,8 @@ const PixelCanvas = () => {
     const ref = useRef(null);
 
     // setting row and column
-    const [row, setRow ] = useState(800);
-    const [column, setColumn] = useState(800);
+    const [row, setRow ] = useState(500);
+    const [column, setColumn] = useState(500);
     
     // handles row and column changes and converts to a number
     const _handleRowChange = (e) => {
@@ -26,41 +26,49 @@ const PixelCanvas = () => {
 
     return (
         <div>
+            <div className="canvasInput">
+                {/*  Row input */}
+                
+                    <label className="pixelTitle" htmlFor="rows">Rows:</label>
+                    <input
+                        className="pixelInput"
+                        id="rows"
+                        type="number"
+                        min="100"
+                        value={row}
+                        onChange={_handleRowChange}
+                    />
+                
 
-            {/*  Row input */}
-            <div>
-                <label htmlFor="rows">Rows:</label>
-                <input
-                    id="rows"
-                    type="number"
-                    min="100"
-                    value={row}
-                    onChange={_handleRowChange}
-                />
+                {/*  Column input */}
+                
+                    <label className="pixelTitle" htmlFor="columns">Columns:</label>
+                    <input
+                        className="pixelInput"
+                        id="columns"
+                        type="number"
+                        min="100"
+                        value={column}
+                        onChange={_handleColumnChange}
+                    />
+                
             </div>
 
-            {/*  Column input */}
-            <div>
-                <label htmlFor="columns">Columns:</label>
-                <input
-                    id="columns"
-                    type="number"
-                    min="100"
-                    value={column}
-                    onChange={_handleColumnChange}
-                />
-            </div>
 
-            {/*  Importing the toolbar */}
-            <PixelToolbar canvas={ ref } />
+
+                {/*  Importing the toolbar */}
+                <PixelToolbar canvas={ ref } />
+ 
+
 
             {/*  Rendering the Board */}
             <Dotting 
                 className="pixel-board"
+                brushTool="DOT"
                 ref={ref} 
                 width={row} 
                 height={column}
-                isGridVisible
+                
             />
 
         </div>

@@ -455,30 +455,10 @@ button:focus-visible {
   transition: 0.5s;
 }
 
-/* ==================== PIXEL TOOLBAR =================== */
-
-/* All buttons */
-.iconBtn {
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-
-/*  ==== Undo/Redo Buttons ===  */
-
-/*  Undo Button  */ 
-.undoBtn {
+.button_group_toolbar {
+  border-color: red;
   color: red;
-}
-.undoBtn:hover {
-  border: 1px solid #888;
-  background-color: #ddd;
+  background-color: red;
 }
 
-/*  ==== BrushTool Buttons ===  */
 
-/*  Paint  */ 
-.paintBtn {
-  background-image: url('/PixelArt/paint-brush.png');
-}

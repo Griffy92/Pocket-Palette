@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+// COMPONENTS 
 import Login from './components/Login'
 import Success from './components/Success'
 import Canvas from './components/Paint/Canvas'
@@ -9,8 +11,10 @@ import EtchCanvas from './components/EtchSketch/EtchCanvas';
 
 
 function App() {
+	
 	return (
 		<>
+			
 
 			<BrowserRouter>
 				<nav>
@@ -22,11 +26,17 @@ function App() {
 
 			
 				<Routes>
-					<Route path="/" element={ <Login/> } />
+					
+					{/* Login / sign up page */}
+					<Route path="/" element={ <Login /> } />
 					<Route path="/success" element={ <Success /> } />
-					<Route path="/canvas" element={ <Canvas/> }></Route>
-					<Route path="/pixelcanvas" element={ <PixelCanvas/> }></Route>
-					<Route path="/works" element={ <Works/> }></Route>
+
+					{/* Paint and Pixel Board */}
+					<Route path="/canvas" element={ <Canvas /> }></Route>
+					<Route path="/pixelcanvas" element={ <PixelCanvas /> }></Route>
+
+					{/* Works */}
+					<Route path="/works" element={ <Works /> }></Route>
 					<Route path="/etch" element={ <EtchCanvas/>}></Route>
 				</Routes>
 			</BrowserRouter>
@@ -34,3 +44,5 @@ function App() {
 	)
 }
 export default App
+
+// 	{ Object.keys(user).length !== 0 }

@@ -14,9 +14,10 @@ const BrushColor = ( props ) => {
     return (
         // select color change
         <input
-          type="color"
-          value={brushColor}
-          onChange={_handleColorChange}
+            className="colorBtn iconBtn"
+            type="color"
+            value={ brushColor }
+            onChange={_handleColorChange}
         />
     )
 }

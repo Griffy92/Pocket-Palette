@@ -9,7 +9,7 @@ const Clear = ( props ) => {
 
     return (
         <>
-            <button onClick={clear}>Clear</button>
+            <button className="clearBtn iconBtn" title="Clear Board" onClick={clear}></button>
         </>
     )
 }
