@@ -8,8 +8,9 @@ const EtchCanvas = () => {
     const initCanvas = () => { 
         const newCanvas = new fabric.Canvas('etch-canvas', {
             backgroundColor: 'white',
-            width: 900,
-            height: 600,
+            width: 600,
+            height: 300,
+            interactive: false,
         })
         return newCanvas;
     };
