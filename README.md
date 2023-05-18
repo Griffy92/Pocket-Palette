@@ -10,12 +10,13 @@
 * Screenshots
 * Room for Improvement
 * License
+* Contributing
 * Contact
 
 ## 📄 General Info
-Pocket Palette is an innovative web-based application that provides a captivating platform for exploring a wide array of artistic concepts, including painting, pixel drawing and Etch A Sketch. Seamlessly blending user interactions with practical artistic expression, Pocket Palette empowers users to unleash their creativity by effortlessly creating, drawing, and manipulating shapes, lines, and a vibrant palette of colors on a virtual canvas. By harnessing the power of cutting-edge web technologies such as Supabase and leveraging JavaScript frameworks like React, Pocket Palette delivers an immersive and feature-rich drawing experience like no other.
+Pocket Palette is a web-based application that offers a platform for exploring artistic concepts like painting, pixel drawing, and Etch A Canvas. With a focus on user interactions and practical artistic expression, Pocket Palette enables users to effortlessly unleash their creativity by creating, drawing, and manipulating shapes, lines, and a diverse palette of colors on a virtual canvas. By utilizing modern web technologies, such as Supabase and JavaScript frameworks like React, Pocket Palette delivers an immersive and feature-rich drawing experience.
 
-This project is a collaborative effort led by Dom, Karen, Riley, Roxanne & Stuart. It is our 3rd project as part of the General Assembly Software Engineering Immersive course. In embarking on this project, we sought to embrace a challenge that would propel our skills and knowledge in the field of web development to new heights.
+This project is a collaborative effort led by Dom, Karen, Riley, Roxanne & Stuart. It is our 3rd project as part of the General Assembly Software Engineering Immersive course. Our aim was to embrace a challenging endeavor that would elevate our skills and knowledge in the field of web development.
 
 ## 🦾 Built With
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
@@ -78,6 +79,15 @@ There are four aspects to Pocket Palette at the moment: Paint, Pixel Art and Etc
 
 ## 🔐 License
 No specific license has been assigned to this project.
+
+## 🌱 Contributing
+Contributions are welcome! If you would like to contribute to this project, please follow these steps:
+
+- Fork the repository.
+- Create a new branch for your feature or bug fix.
+- Make your modifications and commit changes.
+- Push your changes to your forked repository.
+- Submit a pull request explaining your changes.
 
 ## 📧 Contact
 
