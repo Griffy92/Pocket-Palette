@@ -51,7 +51,7 @@ const CanvasUpload = () => {
 
   return (
     <>
-      <Button onClick={handleCanvasUpload}>Upload</Button>
+      <Button variant="contained" onClick={handleCanvasUpload}>Upload</Button>
     </>
   );
 };

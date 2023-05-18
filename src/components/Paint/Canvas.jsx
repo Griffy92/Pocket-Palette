@@ -46,7 +46,6 @@ const Canvas = () => {
             <ThemeProvider theme={theme}>
                 <Toolbar canvas={ canvas } />
                 <canvas id="canvas" />
-                <CanvasUpload />
                 <ContextMenu canvas={ canvas }/>
             </ThemeProvider>
         </>
