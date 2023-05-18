@@ -66,12 +66,13 @@ const Toolbar = ( props ) => {
                     <CanvasHistory canvas={ canvas }/>
                     <Zoom canvas={ canvas } />
                     <Layers canvas={ canvas }/>
+                    <Grouping canvas={canvas}/>
                     <Serialisation canvas={ canvas } />
                     <Deserialisation canvas={ canvas } />
-                    <ImageUpload canvas={ canvas } colour={ colour } />
                     <ImageFilter canvas={ canvas } colour={ colour } />
+                    <ImageUpload canvas={ canvas } colour={ colour } />
                     <CopyPaste canvas={canvas} />
-                    <Button className="add_button paint_common download_button" onClick= { _handleClick } title="Download"></Button>
+                    <Button className="add_button paint_common download_button" onClick= { _handleClick } title="Export"></Button>
                         <Popover
                             sx={{ width: 500 }}
                             id={id}
@@ -94,7 +95,6 @@ const Toolbar = ( props ) => {
                                     <CanvasUpload canvas={canvas}/>
                             </Stack>
                         </Popover>
-                    <Grouping canvas={canvas}/>
                 </div>
                 <br />
             </div>

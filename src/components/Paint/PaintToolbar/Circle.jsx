@@ -19,6 +19,7 @@ const Circle = ( props ) => {
             strokeWidth: strokeSize,
             stroke: strokeColour,
         });
+        
         // console.log(circle); // circle needs radius define
         canvas.isDrawingMode = false;
         canvas.add(circle);
