@@ -203,7 +203,7 @@ const Text = ({ canvas }) => {
                             </ButtonGroup>
                             <ButtonGroup variant="contained" fullWidth={true} sx={{mb: 2}}>
                                 <Button className="fontButton fontUnderline" onClick={_handleToggleUnderline} title="Underline"><span className="underline">U</span></Button>
-                                <Button className="fontButton fontLineThrough" onClick={ _handleToggleLineThrough } title="Linethrough"><span className="linethrough">L</span></Button>
+                                <Button className="fontButton fontLineThrough" onClick={ _handleToggleLineThrough } title="Linethrough"><span className=" linethrough">L</span></Button>
                                 <Button className="fontButton shadow" onClick={ _handleToggleShadow } title="Shadow">S</Button>    
                             </ButtonGroup>
                                 <TextField type="number" min="30" max="100" onChange={ _handleFontSizeChange } title="Font Size" label="Font Size"/>

@@ -10,7 +10,7 @@ import CanvasUpload from './CanvasUpload';
 const theme = createTheme({
 	palette: {
 		primary: {
-		  main: "#2a9461"
+		  main: "#22A2FF"
 		}
 	  }
 });
