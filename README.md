@@ -1,6 +1,8 @@
 # 🧑🏻‍🎨 Pocket Palette
 
-## Unleash your creativity with our lightweight online design platform! Live demo 🪄[here](https://griffy92.github.io/Pocket-Palette/)!
+## Unleash your creativity with our lightweight online design platform! 
+
+Live demo coming soon!
 
 
 ## 📖 Table of Contents
@@ -55,12 +57,12 @@ npm install npm@latest -g
 ### Installation
 You can clone this repository and run it locally on your machine. Use the following command to clone the repository:
 ```
-git clone https://github.com/Griffy92/project-02.git
+git clone https://github.com/Griffy92/Pocket-Palette.git
 ```
 ### Running the Project
 After cloning the repository, navigate to the project directory and install the necessary dependencies. Given that this project uses Vite, you can use the following commands:
 ```
-cd project-02
+cd Pocket-Palette
 npm install
 npm run dev
 ```
@@ -78,13 +80,31 @@ There are four aspects to Pocket Palette at the moment: User Authentication, Pai
   Up, Down, Left, Right, Shift + Up(NE), Shift + Down(SW), Shift + Left(NW), Shift + Right(SE) and Shake to Clear (Wiggle your mouse cursor)
 <br><br>
 ## 📸 Screenshots
+### Login Page
 
+![image](https://raw.githubusercontent.com/Rox-Liu/project-02/main/src/assets/login.png)
+### Home Page
+![image](https://raw.githubusercontent.com/Rox-Liu/project-02/main/src/assets/mainfeature.png)
+### Paint
+#### Draw
+![iamge](https://raw.githubusercontent.com/Rox-Liu/project-02/main/src/assets/Paint-draw.gif)
+#### Text
+![iamge](https://raw.githubusercontent.com/Rox-Liu/project-02/main/src/assets/Paint-text.gif)
+#### Image Filter
+![iamge](https://raw.githubusercontent.com/Rox-Liu/project-02/main/src/assets/Paint-filter.gif)
+### Pixel
+![iamge](https://raw.githubusercontent.com/Rox-Liu/project-02/main/src/assets/Pixel.gif)
+### Etch A Canvas
+![iamge](https://raw.githubusercontent.com/Rox-Liu/project-02/main/src/assets/EtchACanvas.gif)
+### My Gallery
+![iamge](https://raw.githubusercontent.com/Rox-Liu/project-02/main/src/assets/mygallery.png)
 <br><br>
 ## 🚀 Room for improvement
 - Improved UI
 - Fix the unauthorized access to key functionality
 - Incorporate an eraser function into the Paint feature for more versatile editing options
 - Optimize the application to ensure mobile compatibility and a seamless user experience on all devices
+- Edit saved artwork from My Gallery
 <br><br>
 ## 🔐 License
 No specific license has been assigned to this project.
