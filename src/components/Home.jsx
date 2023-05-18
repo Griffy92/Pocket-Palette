@@ -1,13 +1,17 @@
 import './Home.css'
 import 'animate.css';
 
+
+
 function Home() {
     return (
         <>
+        {/* Let's get creative heading */}
         <div className="selectContainer">
         <h2 className="animate__animated animate__fadeInDown">Let's get <span className="creative_heading">creative!</span></h2>
         </div>
 
+        {/* underline for creative! */}
         <div className="selectContainer">
         <div className="creativeUnderline animate__animated 
         animate__fadeInLeft 
@@ -15,22 +19,26 @@ function Home() {
         </div>
 
         <div className="selectContainer">
+            {/* Paint option */}
             <div className="paintSelect">
                 
                 <h3 className="choose_heading">Paint</h3>
-               
+                <a href="/canvas"></a>
             </div>
 
-
+            {/* Pixel option */}
             <div className="pixelSelect">
                 <h3 className="choose_heading">Pixel</h3>
+                <a href="/pixelcanvas"></a>
             </div>
 
+            {/* Etch option */}
             <div className="etchSelect">
                 <h3 className="choose_heading">Etch</h3>
+                <a href="/etch"></a>
             </div>
         </div>
-
+        
 
         </>
     )
