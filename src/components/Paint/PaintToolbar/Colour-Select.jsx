@@ -1,9 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-import { Popover, Stack, ButtonGroup, Button, Slider, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
-
-// import { FabricJSCanvas, useFabricJSEditor } from 'fabricjs-react'
-// import { useState } from "react";
+import { Popover, Stack, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 
 const ColourSelect = ( {  canvas, primaryColour, setPrimaryColour, secondaryColour, setSecondaryColour } ) => {
 
@@ -46,7 +43,6 @@ const ColourSelect = ( {  canvas, primaryColour, setPrimaryColour, secondaryColo
                         vertical: 'top',
                         horizontal: 'left'}}>
                     <Stack sx={{ width: 370}}>
-                    {/* <h4 className='dropdown_menu'>Main Colours</h4> */}
                     <TableContainer >
                         <Table sx={{ minWidth: 300 }} size="small" aria-label="a dense table">
                             <TableHead>

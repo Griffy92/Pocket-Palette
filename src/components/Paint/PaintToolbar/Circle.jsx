@@ -29,7 +29,6 @@ const Circle = ( props ) => {
     };
 
     const _handleAddCircle = () => {
-        console.log("adding circle" + objectFillColour)
         const circle = new fabric.Circle( {
             radius: 50,
             fill: objectFillColour,

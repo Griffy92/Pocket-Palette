@@ -15,9 +15,7 @@ const ContextMenu = (props) => {
             mouseX: event.clientX + 2,
             mouseY: event.clientY - 6,
           }
-        : // repeated contextmenu when it is already open closes it with Chrome 84 on Ubuntu
-          // Other native context menus might behave different.
-          // With this behavior we prevent contextmenu from the backdrop to re-locale existing context menus.
+        : 
           null,
     );
   };
@@ -44,17 +42,20 @@ const ContextMenu = (props) => {
             : undefined
         }
       >
-        <Stack sx={{p: 2}} spacing={2}>
+        <Stack sx={{pt: 2}} spacing={2}>
             <ButtonGroup variant="text" fullWidth={true}  >
                 <Layers canvas={ canvas } />
             </ButtonGroup>
             <ButtonGroup variant="text" fullWidth={true} sx={{mb: 2}} >
                 <Grouping canvas={ canvas } />
             </ButtonGroup>      
-            <hr />
-            <p>Please use the following keyboard shortcuts</p>
             <TableContainer >
                 <Table sx={{ minWidth: 250 }} size="small" aria-label="a dense table">
+                <TableHead>
+                        <TableRow>
+                                <TableCell colSpan={2}>The following keyboard shortcuts are available</TableCell>
+                            </TableRow>
+                    </TableHead>
                     <TableHead>
                         <TableRow>
                                 <TableCell>Command</TableCell>
@@ -86,11 +87,12 @@ const ContextMenu = (props) => {
                             <TableCell>Redo</TableCell>
                             <TableCell>Cmd/Ctl + Y</TableCell>
                         </TableRow>
-                        
+                        <TableRow>
+                            <TableCell colSpan={2}>Holding Shift whilst manipulating shapes allows axis tilt</TableCell>
+                        </TableRow>
                     </TableBody>
                 </Table>
-            </TableContainer>\
-            <p>Holding Shift whilst manipulating shapes allows axis tilt</p>
+            </TableContainer>
         </Stack>
       </Menu>
   );

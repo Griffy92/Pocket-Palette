@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-import { Popover, Stack, ButtonGroup, Button, Slider, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
+import { Popover, Stack, Button, Slider, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 
 
 const FreeDraw = ( { canvas, primaryColour, secondaryColour, setBrushColour, brushColour, setBrushSize, brushSize } ) => {
@@ -14,18 +14,14 @@ const FreeDraw = ( { canvas, primaryColour, secondaryColour, setBrushColour, bru
 
     if ((brushColour == "") && (primaryColour == "#000000")){
         drawBrushColour = defaultBrushColour;
-        console.log('Using Default brush Colour' + drawBrushColour)
     } else if ((brushColour == "") && (primaryColour != "#000000")){
         drawBrushColour = primaryColour;
-        console.log('Using Primary Colour')
     } else if (brushColour != "") {
         drawBrushColour = brushColour;
-        console.log('Using Fill Colour' + drawBrushColour)
     };
 
     if ((drawBrushSize == 0)){
         drawBrushSize = defaultBrushSize;
-        console.log('Using Default brush size of ' + drawBrushSize)
     };
 
     const _handleClick = (event) => {
@@ -42,18 +38,15 @@ const FreeDraw = ( { canvas, primaryColour, secondaryColour, setBrushColour, bru
     const id = open ? 'simple-popover' : undefined;
 
     const _setBrushColour = (tarStrCol) => {
-        console.log(tarStrCol)
         if (canvas != null) {
             canvas.getActiveObjects().forEach((obj) => {
                 obj.set("stroke", tarStrCol);
-                console.log(obj, tarStrCol);
             });
             canvas.renderAll();
         };
     };
     
     const _handleAddFreeDraw = () => {
-        console.log(drawBrushColour + brushSize)
         canvas.freeDrawingBrush.color = drawBrushColour;
         canvas.freeDrawingBrush.width = drawBrushSize;
         canvas.isDrawingMode = !canvas.isDrawingMode;
@@ -68,7 +61,6 @@ const FreeDraw = ( { canvas, primaryColour, secondaryColour, setBrushColour, bru
         if (canvas != null){
             canvas.getActiveObjects().forEach((obj) => {
                 obj.set("fill", tarFlCol);
-                console.log(obj, tarFlCol);
             });
             canvas.renderAll();
         }};
