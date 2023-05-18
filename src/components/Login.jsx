@@ -36,6 +36,7 @@ function Login() {
                 supabaseClient={supabase}
                 appearance={{theme: ThemeSupa}}
                 theme="dark"
+                providers={["email"]}
                 />
                 </div>
 			</div>

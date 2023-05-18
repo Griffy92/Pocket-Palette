@@ -54,8 +54,8 @@ const getUser = async () => {
         limit: 10,
         offset: 0,
         sortBy: {
-        column: 'name', order:
-        'asc'
+        column: 'created_at', 
+        order: 'desc'
         }
     });
 
@@ -89,6 +89,30 @@ const getUser = async () => {
             getMedia();
         }
         }
+    async function downloadMedia(mediaName) {
+        const { data, error } = await supabase
+            .storage
+            .from('Works')
+            .download(userId + "/" + mediaName);
+
+            if (data) {
+              // Create a download link
+            const downloadUrl = URL.createObjectURL(data);
+
+              // Create an anchor element and set its href and download attributes
+            const link = document.createElement("a");
+            link.href = downloadUrl;
+            link.download = mediaName;
+
+            // Simulate a click on the anchor element to trigger the download
+            link.click();
+
+            // Clean up the URL object
+            URL.revokeObjectURL(downloadUrl);
+            } else {
+            console.log(error);
+            }
+        }
 
     return (
     <div>
@@ -111,6 +135,7 @@ const getUser = async () => {
             <div key={i}>
             <img src={`https://yilvmajrrjkkeljiduxi.supabase.co/storage/v1/object/public/Works/${userId}/${media.name}`} />
             <button onClick={() => deleteMedia(media.name)}>Delete Image</button>
+            <button onClick={() => downloadMedia(media.name)}>Download Image</button>
             
             </div>                                                      
         
