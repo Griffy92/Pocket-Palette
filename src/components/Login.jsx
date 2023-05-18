@@ -30,13 +30,14 @@ function Login() {
 	return (
 		<div>
 			<div>   
+                <h1>Welcome to Pocket Palette </h1>
+                <div className="login">
                 <Auth 
                 supabaseClient={supabase}
                 appearance={{theme: ThemeSupa}}
                 theme="dark"
-
                 />
-           
+                </div>
 			</div>
 		</div>
 	)
