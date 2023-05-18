@@ -69,6 +69,10 @@
   background-repeat: no-repeat;
 }
 
+.main_colour_button {
+  background-image: url('https://cdn-icons-png.flaticon.com/128/4369/4369043.png');
+}
+
 .slider-label {
   margin: 0 auto;
 }
@@ -211,10 +215,12 @@
   background-image: url('https://cdn-icons-png.flaticon.com/512/9536/9536919.png');
 }
 
-.button_group_toolbar {
-  border-color: red;
-  color: red;
-  background-color: red;
+p.dropdown_menu {
+  font-size: 12px;
+}
+
+h4.dropdown_menu {
+  text-align: center;
 }
 
 

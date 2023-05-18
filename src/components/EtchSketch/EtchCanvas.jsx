@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { fabric } from 'fabric';
 // components
 import Sketching from './Sketching';
+import ContextMenu from './Context-Menu';
 // css
 import './EtchCanvas.css';
 import 'animate.css'
@@ -40,6 +41,7 @@ const EtchCanvas = () => {
                 <div className='etch-heading'>
                     <h1>Etch A Canvas</h1>
                 </div>
+                <ContextMenu canvas={ canvas }/>
             </div>
         </>
     );

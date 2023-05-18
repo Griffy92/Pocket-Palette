@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
+import { Popover, Stack, ButtonGroup, Button, Slider, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 
-
-const Stroke = ( { canvas, setStrokeColour, setStrokeSize } ) => {
+const Stroke = ( { canvas, setStrokeColour, strokeColour, setStrokeSize, strokeSize, setFillColour, fillColour} ) => {
     // const { canvas, colour } = props
     const [ anchor, setAnchor] = useState(null);
 
@@ -17,7 +16,7 @@ const Stroke = ( { canvas, setStrokeColour, setStrokeSize } ) => {
     const open = Boolean(anchor);
     const id = open ? 'simple-popover' : undefined; //This is the only part of this I don't understand https://mui.com/material-ui/react-popover/
 
-    const setFlCol = (tarFlCol) => {
+    const _setFillColour = (tarFlCol) => {
         if (canvas != null){
             canvas.getActiveObjects().forEach((obj) => {
                 obj.set("fill", tarFlCol);
@@ -26,8 +25,7 @@ const Stroke = ( { canvas, setStrokeColour, setStrokeSize } ) => {
             canvas.renderAll();
         }};
 
-
-    const setStrCol = (tarStrCol) => {
+    const _setStrokeColour = (tarStrCol) => {
         if (canvas != null){
             canvas.getActiveObjects().forEach((obj) => {
                 obj.set("stroke", tarStrCol);
@@ -36,7 +34,7 @@ const Stroke = ( { canvas, setStrokeColour, setStrokeSize } ) => {
             canvas.renderAll();
         }};
 
-    const setStrWdth = (tarStrWdth) => {
+    const _setStrokeSize = (tarStrWdth) => {
         if (canvas != null) {
             canvas.getActiveObjects().forEach((obj) => {
                 obj.set("strokeWidth", tarStrWdth)
@@ -44,6 +42,12 @@ const Stroke = ( { canvas, setStrokeColour, setStrokeSize } ) => {
             });
             canvas.renderAll()
         }};
+
+    const _handleResetShape = () => {
+        setStrokeColour("");
+        setStrokeSize(0)
+        setFillColour("")
+    }
 
     return (
         <>
@@ -60,28 +64,50 @@ const Stroke = ( { canvas, setStrokeColour, setStrokeSize } ) => {
                     horizontal: 'left',
                 }}
             >
-                <Stack sx={{ p: 2}}>
-                    <p>Fill Colour</p>
-                    <input type="color" id="color-picker" className="add_button add_colour_select" onChange={(e) =>{setFlCol(e.target.value)}} title="Set Stroke Colour" />
-                    <div>
-                        <br />
-                        <p>Stroke Width</p>
-                        <Slider
-                            sx={{ width: 200,
-                                my: 2,
-                                mx: 2 }}
-                            defaultValue={5} 
-                            valueLabelDisplay="auto"
-                            step={1}
-                            min={1}
-                            max={50}
-                            width={500}
-                            // value={value}
-                            onChange={(e) => {setStrokeSize(e.target.value); setStrWdth(e.target.value)}}
-                        />
-                    </div>
-                    <p>Stroke Colour </p>
-                    <input type="color" id="color-picker" className="add_button add_colour_select" onChange={(e) => {setStrokeColour(e.target.value); setStrCol(e.target.value)}} title="Set Stroke Colour" />
+                <Stack sx={{ width: 370}}>
+                    <TableContainer >
+                        <Table sx={{ minWidth: 300 }} size="small" aria-label="a dense table">
+                            <TableHead>
+                                <TableRow>
+                                    <TableCell>Fill Colour</TableCell>
+                                    <TableCell>Stroke Colour</TableCell>
+                                </TableRow>
+                            </TableHead>
+                            <TableBody>
+                                <TableRow>
+                                    <TableCell>
+                                        <input type="color" id="color-picker" value={fillColour} className="add_button add_colour_select" onChange={(e) =>{_setFillColour(e.target.value); setFillColour(e.target.value)}} title="Set fill Colour" />
+
+                                    </TableCell>
+                                    <TableCell>
+                                        <input type="color" id="color-picker" value={strokeColour} className="add_button add_colour_select" onChange={(e) => {_setStrokeColour(e.target.value); setStrokeColour(e.target.value)}} title="Set Stroke Colour" />
+                                    </TableCell>
+                                </TableRow>
+                                <TableRow> 
+                                    <TableCell colSpan={2}>
+                                    Stroke Width
+                                        <Slider
+                                            defaultValue={5} 
+                                            valueLabelDisplay="auto"
+                                            step={1}
+                                            min={1}
+                                            max={50}
+                                            width={500}
+                                            // value={value}
+                                            onChange={(e) => {_setStrokeSize(e.target.value); setStrokeSize(e.target.value)}}
+                                        />
+                                    </TableCell>
+                                </TableRow>
+                                <TableRow> 
+                                    <TableCell colSpan={2}> 
+                                    <p className='dropdown_menu'>These colours will be applied to any selected objects, and all future objects.
+                                        This changes will overwrite any specified "Main Colours".</p>
+                                    </TableCell>
+                                </TableRow>
+                            </TableBody>
+                            </Table>
+                        </TableContainer>
+                    <Button fullWidth={true} onClick= { _handleResetShape } title="Main Colours"> Reset to Default </Button>
                 </Stack>
             </Popover>
         </>
