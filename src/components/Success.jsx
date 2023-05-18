@@ -12,7 +12,7 @@ const supabase = createClient (
 
 function Success() {
     const [user, setUser] = useState({})
-    const navigate = useNavigate()
+
     
     useEffect(() => {
         async function getUserData() {
@@ -25,20 +25,13 @@ function Success() {
         getUserData()
     }, [])
 
-
-    // async function signOutUser() {
-    //     const {error} = await supabase.auth.signOut();
-    //     console.log(error)
-    //     navigate("/")
-    // }
-
     return (
         <div>
           {Object.keys(user).length !== 0 ? (
             <div>
-              {/* heading needs work to align */}
+              
+              {/* Renders home page*/}
               <Home />
-
             </div>
           ) : (
             <div>
