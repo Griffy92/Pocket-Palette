@@ -26,7 +26,7 @@ const Canvas = () => {
         // first argument in fabric.Canvas is html canvas ID
         const newCanvas = new fabric.Canvas('canvas', {
             backgroundColor: 'white',
-            width: "100%",
+            width: window.innerWidth,
             height: window.innerHeight - (window.innerHeight * .2), // wait for navbar/toolbar component to deduc height
             // stopContextMenu: true,
         });
