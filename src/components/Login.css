@@ -13,7 +13,7 @@
 
 /* split page; static imagae left */
 .login-image {
-    background-image: url('public/LandingPage/verson_2.png');
+    background-image: url('LandingPage/verson_2.png');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -37,9 +37,6 @@
 
 /* logo */
 .login-logo {
-    /* background-image: url('public/Pocket_palette_logo.png');
-    background-size: cover;
-    background-position: center; */
     height: 12%;
     width: 75%;
     display: flex;

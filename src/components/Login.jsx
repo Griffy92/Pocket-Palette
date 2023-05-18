@@ -36,7 +36,7 @@ function Login() {
                     <h1>WELCOME TO</h1>
                 </div>
                 <div className="login-logo">
-                    <img src="public/Pocket_palette_logo.png" alt="" />
+                    <img src="Pocket_palette_logo.png" alt="" />
                 </div>
                 <Auth 
                 supabaseClient={supabase}

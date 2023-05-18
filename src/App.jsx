@@ -46,12 +46,18 @@ function App() {
         <BrowserRouter>
             {Object.keys(user).length !== 0 && (
                 <nav>
-                    {/* <Link to="/success">Home</Link> */}
-                    <Link to="/canvas">Paint </Link>
-                    <a href="/pixelcanvas">Pixel</a>
-					<Link to="/etch">Etch</Link>
-                    <Link to="/works">My Works</Link>
-					<button onClick={signOutUser}>Sign Out</button> {/* Added sign-out button */}
+                    <div className='nav-logo'>
+                        <Link id="home-nav" to="/success">
+                            <img src="Pocket_palette_logo.png" alt="" />
+                        </Link>
+                    </div>
+                    <div className='nav-optns'>
+                        <Link id="paint-nav" to="/canvas">Paint </Link>
+                        <Link id="pixel-nav" to="/pixelcanvas">Pixel</Link>
+                        <Link id="etch-nav" to="/etch">Etch-a-Sketch</Link>
+                        <Link id="works-nav" to="/works">My Works</Link>
+                        <Link id="signout-nav" onClick={signOutUser}>Sign Out</Link> {/* Added sign-out button */}
+                    </div>
                 </nav>
             )}
 
