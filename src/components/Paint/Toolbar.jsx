@@ -22,6 +22,7 @@ import CanvasDownload from './PaintToolbar/CanvasDownload';
 import ImageUpload from './PaintToolbar/Image-Upload';
 import Grouping from './PaintToolbar/Grouping';
 import ImageFilter from './PaintToolbar/Image-Filter';
+import CanvasUpload from './CanvasUpload';
 
 import './PaintToolbar.css'
 
@@ -82,11 +83,15 @@ const Toolbar = ( props ) => {
                                 vertical: 'top',
                                 horizontal: 'left'}}>
                             <Stack sx={{ width: 300, p: 2}}>
-                                <p>Please select your preferred format</p>
+                                <p>Local Download</p>
                                 <ButtonGroup variant="contained" aria-label="outlined primary button group" fullWidth={true} sx={{my: 2}}>
                                     <SVGExport canvas={canvas} />
                                     <CanvasDownload canvas={canvas} />
                                 </ButtonGroup>
+                            </Stack>
+                            <Stack sx={{ width: 300, p: 2}}>
+                                <p>Upload to Cloud</p>
+                                    <CanvasUpload canvas={canvas}/>
                             </Stack>
                         </Popover>
                     <Grouping canvas={canvas}/>
