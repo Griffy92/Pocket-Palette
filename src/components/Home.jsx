@@ -1,10 +1,18 @@
 import './Home.css'
+import 'animate.css';
 
 function Home() {
     return (
         <>
-        {/* heading needs work to align */}
-        <h2>Let's get <span class="creative_heading">creative!</span></h2>
+        <div className="selectContainer">
+        <h2 className="animate__animated animate__fadeInDown">Let's get <span class="creative_heading">creative!</span></h2>
+        </div>
+
+        <div className="selectContainer">
+        <div className="creativeUnderline animate__animated 
+        animate__fadeInLeft 
+        animate__delay-0.9s"></div>
+        </div>
 
         <div className="selectContainer">
             <div className="paintSelect">

@@ -35,6 +35,13 @@ function App() {
         setUser(userData);
     };
 
+	async function signOutUser() {
+        const { error } = await supabase.auth.signOut();
+        console.log(error);
+        window.location.href = "/"; 
+		// Redirect to login after sign-out
+    }
+
     return (
         <BrowserRouter>
             {Object.keys(user).length !== 0 && (
@@ -44,6 +51,7 @@ function App() {
                     <a href="/pixelcanvas">Pixel</a>
 					<Link to="/etch">Etch</Link>
                     <Link to="/works">My Works</Link>
+					<button onClick={signOutUser}>Sign Out</button> {/* Added sign-out button */}
                 </nav>
             )}
 
