@@ -68,7 +68,7 @@ const ColourSelect = ( {  canvas, primaryColour, setPrimaryColour, secondaryColo
                                 </TableRow>
                                 <TableRow>
                                     <TableCell colSpan={2}> 
-                                    <p className='dropdown_menu'>Text objects will always inherit the primary colour. This can be changed if the text is selected and the colour updated.</p>
+                                    <p className='dropdown_menu'>When placed, text objects will inherit the primary colour and use the secondary as shadow. This can be changed if the text is selected and the colour updated.</p>
                                     </TableCell>
                                 </TableRow>
                             </TableBody>

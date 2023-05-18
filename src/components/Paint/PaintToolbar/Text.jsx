@@ -17,6 +17,10 @@ const Text = ({ canvas, primaryColour, secondaryColour }) => {
     const open = Boolean(anchor);
     const id = open ? 'simple-popover' : undefined; 
 
+    let shadowColour = secondaryColour;
+    if (shadowColour == "#ffffff"){
+        shadowColour = "#000000";
+    };
 
     //////////////////////////// this is the text function //////////////////////////
     function randomId() {
@@ -162,7 +166,8 @@ const Text = ({ canvas, primaryColour, secondaryColour }) => {
                 color: 'rgba(0, 0, 0, 0.5)',
                 offsetX: 1,
                 offsetY: 2,
-                blur: 5
+                blur: 5,
+                color: shadowColour
             });
             if (activeInstance.selectionStart !== activeInstance.selectionEnd) {
                 let startIndex = activeInstance.selectionStart;
