@@ -38,7 +38,7 @@ function App() {
 	async function signOutUser() {
         const { error } = await supabase.auth.signOut();
         console.log(error);
-        window.location.href = "/"; 
+        window.location.href = "/home"; 
 		// Redirect to login after sign-out
     }
 
@@ -46,7 +46,7 @@ function App() {
         <BrowserRouter>
             {Object.keys(user).length !== 0 && (
                 <nav>
-                    <Link to="/success">Home</Link>
+                    {/* <Link to="/success">Home</Link> */}
                     <Link to="/canvas">Paint </Link>
                     <a href="/pixelcanvas">Pixel</a>
 					<Link to="/etch">Etch</Link>
