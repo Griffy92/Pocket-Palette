@@ -34,7 +34,8 @@ const Toolbar = ( props ) => {
     const { canvas } = props;
 
     const [ anchor, setAnchor] = useState(null);
-
+    const [ anchor2, setAnchor2] = useState(null);
+    
     const _handleClick = (event) => {
         setAnchor(event.currentTarget);
     };
@@ -42,9 +43,19 @@ const Toolbar = ( props ) => {
     const _handleClose = () => {
         setAnchor(null);
     };
+
+    const _handleClick2 = (event) => {
+        setAnchor2(event.currentTarget);
+    };
+
+    const _handleClose2 = () => {
+        setAnchor2(null);
+    };
     
     const open = Boolean(anchor);
-    const id = open ? 'simple-popover' : undefined; 
+    const open2 = Boolean(anchor2);
+    const id = open ? 'simple-popover' : undefined;
+    const id2 = open2 ? 'simple-popover' : undefined; 
 
     return (
         <>
@@ -95,10 +106,32 @@ const Toolbar = ( props ) => {
                                     <CanvasUpload canvas={canvas}/>
                             </Stack>
                         </Popover>
+                        <Button className="add_button paint_common download_button" onClick= { _handleClick2 } title="Export"></Button>
+                        <Popover
+                            sx={{ width: 500 }}
+                            id={id2}
+                            open={open2}
+                            anchorEl={anchor2}
+                            style={{ maxWidth: 1000}}
+                            onClose={_handleClose2}
+                            anchorOrigin={{
+                                vertical: 'top',
+                                horizontal: 'left'}}>
+                            <Stack sx={{ width: 300, p: 2}}>
+                                <p>Local Download</p>
+                                <ButtonGroup variant="contained" aria-label="outlined primary button group" fullWidth={true} sx={{my: 2}}>
+                                    <Layers canvas={ canvas }/>
+                                    <Grouping canvas={canvas}/>
+                                </ButtonGroup>
+                            </Stack>
+                            <Stack sx={{ width: 300, p: 2}}>
+                                <p>Upload to Cloud</p>
+                                    <CanvasUpload canvas={canvas}/>
+                            </Stack>
+                        </Popover>
                 </div>
                 <br />
             </div>
-            <br />
         </>
     );
 };
