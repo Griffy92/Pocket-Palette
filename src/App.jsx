@@ -39,7 +39,7 @@ function App() {
         <BrowserRouter>
             {Object.keys(user).length !== 0 && (
                 <nav>
-                    <Link to="/home">Home</Link>
+                    <Link to="/success">Home</Link>
                     <Link to="/canvas">Paint </Link>
                     <a href="/pixelcanvas">Pixel</a>
 					<Link to="/etch">Etch</Link>
