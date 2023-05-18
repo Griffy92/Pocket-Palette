@@ -35,13 +35,13 @@
 
 /*  Undo Button - Undo.jsx  */ 
 .undoBtn {
-  background-image: url('/PixelArt/PixelArt_icons_Undo.png');
+  background-image: url('PixelArt_icons_Undo.png');
   background-color: white;
   margin-left: 3px;
 }
 
 .redoBtn {
-  background-image: url('/PixelArt/PixelArt_icons_Redo.png');
+  background-image: url('PixelArt_icons_Redo.png');
   margin-right: 8px;
   margin-left: 8px;
 }
@@ -51,17 +51,17 @@
 
 /*  Paint - BrushTool.jsx */ 
 .paintBtn {
-  background-image: url('/PixelArt/PixelArt_icons_Paint.png');
+  background-image: url('PixelArt_icons_Paint.png');
 }
 
 /*  Eraser - BrushTool.jsx */ 
 .eraserBtn {
-  background-image: url('/PixelArt/PixelArt_icons_Eraser.png');
+  background-image: url('PixelArt_icons_Eraser.png');
 }
 
 /*  Fill  - BrushTool.jsx */ 
 .fillBtn {
-  background-image: url('/PixelArt/PixelArt_icons_Fill.png');
+  background-image: url('PixelArt_icons_Fill.png');
 }
 
 
@@ -69,7 +69,7 @@
 
 /*  Clear  - Clear.jsx */ 
 .clearBtn {
-  background-image: url('/PixelArt/PixelArt_icons_Clear.png');
+  background-image: url('PixelArt_icons_Clear.png');
 }
 
 
@@ -77,7 +77,7 @@
 
 /*  Download  - Download.jsx */ 
 .downloadBtn {
-  background-image: url('/PixelArt/PixelArt_icons_Download.png');
+  background-image: url('PixelArt_icons_Download.png');
 }
 
 
