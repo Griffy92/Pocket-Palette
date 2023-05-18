@@ -21,7 +21,7 @@ function Login() {
                 };
 
                 if (event === "SIGNED_IN") {
-                    navigate("/success");
+                    navigate("/home");
                 };
             });
         };
@@ -36,7 +36,7 @@ function Login() {
                     <h1>WELCOME TO</h1>
                 </div>
                 <div className="login-logo">
-                    <img src="Pocket_palette_logo.png" alt="" />
+                    <img src="Pocket_palette_logo.png" alt="Pocket Palette logo" />
                 </div>
                 <Auth 
                 supabaseClient={supabase}
