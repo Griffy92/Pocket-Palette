@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 import { useBrush } from "dotting";
-
+import { SketchPicker } from 'react-color'
 
 const BrushColor = ( props ) => {
     const { canvas } = props;
