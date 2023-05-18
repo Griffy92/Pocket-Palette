@@ -26,7 +26,7 @@ function Success({ onSetUser }) {
             })
         }
         getUserData()
-    }, [onSetUser])
+    }, [])
 
 
     // async function signOutUser() {
