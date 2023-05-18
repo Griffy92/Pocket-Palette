@@ -3,11 +3,20 @@
     display: inline;
     color: #1947E5;
     margin-top: -16px;
+    position: relative
 
-    /* think of another way to underline */
+    /* think of another way to underline
     background-color: #FFDA7B;
     width: 100px;
-    height: 5px;
+    height: 5px; */
+}
+
+.creativeUnderline {
+    width: 117px;
+    background-color: rgb(255, 240, 105);
+    height: 10px;
+    margin: -18px -174px 28px -67px;
+    z-index: -1;
 }
 
 /* container surrounding choose artboard options */
@@ -24,7 +33,7 @@
     width: 300px;
     text-align: center;
     height: 300px;
-    border-radius: 1em;
+    border-radius: 0.9em;
     border: 3px solid black;
     box-shadow:6px 5px black;
 
