@@ -1,6 +1,6 @@
 import { fabric } from "fabric";
 import { useState } from 'react'
-import { Popover, Stack, Input, Select, MenuItem, TextField, FormControl, InputLabel, Button, ButtonGroup } from '@mui/material';
+import { Popover, Stack, Select, MenuItem, TextField, FormControl, InputLabel, Button, ButtonGroup } from '@mui/material';
 
 
 const Text = ({ canvas, primaryColour, secondaryColour }) => {

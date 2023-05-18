@@ -6,6 +6,8 @@
     background-color: white;
     border-radius: 5px;
     border: 1px solid gray;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .canvas_class {
