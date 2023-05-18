@@ -1,7 +1,8 @@
-# 🎨 Pocket Palette
+# 🧑🏻‍🎨 Pocket Palette
 
 ## Unleash your creativity with our lightweight online design platform! Live demo 🪄[here](https://Griffy92.github.io/Project-02/)!
-## Table of Contents
+
+## 📖 Table of Contents
 * General Info
 * Built With
 * Getting Started
@@ -11,14 +12,15 @@
 * License
 * Contact
 
-## General Info
+## 📄 General Info
 Pocket Palette is brought to you by Dom, Karen, Riley, Roxanne & Stuart. This is our 3rd project as part of the General Assembly Software Engineering Immersive course. 
-## Built With
+
+## 🦾 Built With
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 
 [![Vite](https://img.shields.io/badge/vite-000000?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev)
 
-[![Supabase](https://img.shields.io/badge/supabase-4A4A55?style=for-the-badge&logo=supabase&logoColor=61DAFB)](https://supabase.com)
+[![Supabase](https://img.shields.io/badge/supabase-4A4A55?style=for-the-badge&logo=supabase&logoColor=4FC08D)](https://supabase.com)
 
 [![FabricJS](https://img.shields.io/badge/Fabric.js-563D7C?style=for-the-badge&logo=fabricdotjs&logoColor=white)](http://fabricjs.com)
 
@@ -28,7 +30,7 @@ Pocket Palette is brought to you by Dom, Karen, Riley, Roxanne & Stuart. This is
 
 [![Dotting](https://img.shields.io/badge/Dotting-DD0031?style=for-the-badge)](https://hunkim98.github.io/dotting/?path=/story/introduction--page)
 
-## Getting Started
+## ⚙️ Getting Started
 ### Prerequisites
 
 Please note that these instructions assume you have Node.js and npm installed on your machine. If not, please install them before proceeding.
@@ -53,7 +55,7 @@ cd project-02
 npm install
 npm run dev
 ```
-## Features
+## 🎨 Features
 
 There are four aspects to Pocket Palette at the moment: Paint, Pixel Art and Etch A Sketch.
 
@@ -66,21 +68,21 @@ There are four aspects to Pocket Palette at the moment: Paint, Pixel Art and Etc
 - ### Etch A Canvas
   Up, Down, Left, Right, Shake to Clear (Wiggle your mouse cursor)
 
-## Screenshots
+## 📸 Screenshots
 
-## Room for improvement
+## 🚀 Room for improvement
 - Improved UI
 
-
-## License
+## 🔐 License
 No specific license has been assigned to this project.
 
-## Contact
+## 📧 Contact
 
-- Dom 
-- Karen
-- Riley
-- Roxanne
-- Stuart
+- Dom -- dominicwong09@gmail.com
+- Karen -- karenliang9546@gmail.com
+- Riley -- riley.mercer4@gmail.com
+- Roxanne -- roxanneliu819@gmail.com
+- Stuart -- stuartcannone@gmail.com
+
 
 ![image](https://github.com/kaarenliangg/project-02/assets/104908963/1d974af1-6130-4755-846f-3522b01898ea)
