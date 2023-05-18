@@ -10,7 +10,7 @@ const supabase = createClient (
 )
 
 
-function Success({ onSetUser }) {
+function Success() {
     const [user, setUser] = useState({})
     const navigate = useNavigate()
     
@@ -18,10 +18,7 @@ function Success({ onSetUser }) {
         async function getUserData() {
             await supabase.auth.getUser().then((value) => {
                 if (value.data?.user) {
-                    setUser(value.data.user)
-
-                    // passing onSetUser back into App
-                    onSetUser(value.data.user)
+                    setUser(value.data.user)      
                 }
             })
         }
