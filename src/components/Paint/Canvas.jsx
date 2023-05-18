@@ -10,9 +10,12 @@ import CanvasUpload from './CanvasUpload';
 const theme = createTheme({
 	palette: {
 		primary: {
-		  main: "#22A2FF"
+		  main: "#22A2FF",
+          contrastText: "#ffffff",
+          borderColor: "#ffffff",
 		}
-	  }
+	  },
+      // Non-Palette cusomisation lives here
 });
 
 const Canvas = () => {
@@ -23,8 +26,8 @@ const Canvas = () => {
         // first argument in fabric.Canvas is html canvas ID
         const newCanvas = new fabric.Canvas('canvas', {
             backgroundColor: 'white',
-            width: window.innerWidth,
-            height: window.innerHeight - 190, // wait for navbar/toolbar component to deduc height
+            width: "100%",
+            height: window.innerHeight - (window.innerHeight * .2), // wait for navbar/toolbar component to deduc height
             // stopContextMenu: true,
         });
 
@@ -32,7 +35,6 @@ const Canvas = () => {
         if (canvas != null) {
             canvas.historyInit();
         };
-
         return newCanvas;
     };
 
@@ -45,7 +47,9 @@ const Canvas = () => {
         <> 
             <ThemeProvider theme={theme}>
                 <Toolbar canvas={ canvas } />
-                <canvas id="canvas" />
+                <div className="canvas_class">
+                    <canvas id="canvas" />
+                </div>
                 <ContextMenu canvas={ canvas }/>
             </ThemeProvider>
         </>

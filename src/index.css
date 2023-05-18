@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+/* <style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+</style> */
 
 :root {
   font-family: 'Poppins', Helvetica, Arial, sans-serif;
@@ -35,6 +37,7 @@ a:hover {
 } */
 
 body {
+  margin: 0 70px 0 70px;
   /*
   display: flex;
   place-items: center;
