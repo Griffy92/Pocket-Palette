@@ -21,6 +21,7 @@
   display: flex;
   background-color: white;
   width: 348px;
+  margin: 0 auto;
 }
 
 
@@ -108,10 +109,10 @@
 
 /* ==================== PIXEL CANVAS INPUT  =================== */
 
-/*  Div surrounding inputs 
-.canvasInput {
 
-} */
+.canvasInput {
+  border: 1px solid red;
+} 
 
 /* Row and Column title  */ 
 .pixelTitle {
@@ -126,4 +127,21 @@
   border: 0.5px solid black;
   margin: 0 10px 10px 0;
   width: 107px;
+}
+
+
+
+/* ==================== PIXEL CANVAS CONTAINER  =================== */
+.pixelContainer {
+  border: 10px solid red;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+element.style {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

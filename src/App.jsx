@@ -30,6 +30,7 @@ function App() {
         getUserData();
     }, []);
 
+    
 	// Updates the state of user
     const _handleSetUser = (userData) => {
         setUser(userData);
