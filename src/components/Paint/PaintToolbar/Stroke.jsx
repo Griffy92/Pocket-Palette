@@ -20,7 +20,6 @@ const Stroke = ( { canvas, setStrokeColour, strokeColour, setStrokeSize, strokeS
         if (canvas != null){
             canvas.getActiveObjects().forEach((obj) => {
                 obj.set("fill", tarFlCol);
-                console.log(obj, tarFlCol);
             });
             canvas.renderAll();
         }};
@@ -29,7 +28,6 @@ const Stroke = ( { canvas, setStrokeColour, strokeColour, setStrokeSize, strokeS
         if (canvas != null){
             canvas.getActiveObjects().forEach((obj) => {
                 obj.set("stroke", tarStrCol);
-                console.log(obj, tarStrCol);
             });
             canvas.renderAll();
         }};
@@ -38,7 +36,6 @@ const Stroke = ( { canvas, setStrokeColour, strokeColour, setStrokeSize, strokeS
         if (canvas != null) {
             canvas.getActiveObjects().forEach((obj) => {
                 obj.set("strokeWidth", tarStrWdth)
-                console.log(obj, tarStrWdth)
             });
             canvas.renderAll()
         }};

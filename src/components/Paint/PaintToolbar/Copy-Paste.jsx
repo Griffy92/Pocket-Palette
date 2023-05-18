@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
+import React, { useEffect } from "react";
 
 const CopyPaste = ( props ) => {
 	const { canvas } = props;
@@ -7,7 +6,6 @@ const CopyPaste = ( props ) => {
 
 	const _HandleCopy = (ActObj) => {  
 		if (canvas != null) {
-			console.log(ActObj);
 			ActObj.clone( function(cloned) {
 				coppiedItems = cloned;
 			});
@@ -16,7 +14,6 @@ const CopyPaste = ( props ) => {
 
 	const _HandleCut = (ActObj) => {  
 		if (canvas != null) {
-			console.log(ActObj);
 			ActObj.clone( function(cloned) {
 				coppiedItems = cloned;
 			});
@@ -28,7 +25,6 @@ const CopyPaste = ( props ) => {
 	const _HandlePaste = () => {
 		if (canvas != null) {
 			coppiedItems.clone(function(clonedObjects) {
-
 				canvas.discardActiveObject();
 				clonedObjects.set( {
 					left: clonedObjects.left + 10,
@@ -42,7 +38,6 @@ const CopyPaste = ( props ) => {
 						canvas.add(obj);
 					0});
 					clonedObjects.setCoords();
-
 				} else {
 					canvas.add(clonedObjects);
 				};

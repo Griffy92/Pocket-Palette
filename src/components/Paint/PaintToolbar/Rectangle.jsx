@@ -1,5 +1,5 @@
 import { fabric } from "fabric";
-import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
+import { Button } from '@mui/material';
 
 const Rectangle = ( props ) => {
     const { canvas, primaryColour, secondaryColour, strokeColour, strokeSize, fillColour } = props; // destructuring props

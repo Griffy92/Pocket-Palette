@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
+import React from "react";
+import { Button } from '@mui/material';
 
 const Layers = ( props ) => {
 	const { canvas } = props;
