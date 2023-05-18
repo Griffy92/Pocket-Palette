@@ -9,10 +9,10 @@
 }
 
 .creativeUnderline {
-    width: 117px;
+    width: 155px;
     background-color: rgb(255, 223, 41);
     height: 10px;
-    margin: -15px -174px 28px -67px;
+    margin: -17px -207px 28px -67px;
     z-index: -1;
 }
 
@@ -35,6 +35,11 @@
     justify-content: center;
     width: 95%;
     margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.headingContainer {
+    margin-top: 50px;
 }
 
 /* Paint, Pixel and Etch board design */
@@ -117,3 +122,6 @@
     margin-top: 15px;
 }
 
+.creativeHeading {
+    font-size: 24pt;
+}
