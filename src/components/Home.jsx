@@ -5,7 +5,7 @@ function Home() {
     return (
         <>
         <div className="selectContainer">
-        <h2 className="animate__animated animate__fadeInDown">Let's get <span class="creative_heading">creative!</span></h2>
+        <h2 className="animate__animated animate__fadeInDown">Let's get <span className="creative_heading">creative!</span></h2>
         </div>
 
         <div className="selectContainer">
