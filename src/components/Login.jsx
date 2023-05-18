@@ -29,9 +29,15 @@ function Login() {
     },[]);
 
 	return (
-		<div className="main-login">
-            <div className='main-image'></div>
-			<div className='main-form'>   
+		<div className="main-login-container">
+            <div className='login-image'></div>
+			<div className='login-form'>
+                <div className='login-welcome'>
+                    <h1>WELCOME TO</h1>
+                </div>
+                <div className="login-logo">
+                    <img src="public/Pocket_palette_logo.png" alt="" />
+                </div>
                 <Auth 
                 supabaseClient={supabase}
                 appearance={{theme: ThemeSupa}}
