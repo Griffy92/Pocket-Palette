@@ -55,8 +55,8 @@ function App() {
                     <div className='nav-optns'>
                         <Link id="paint-nav" to="/canvas">Paint</Link>
                         <Link id="pixel-nav" to="/pixelcanvas">Pixel</Link>
-                        <Link id="etch-nav" to="/etch">Etch-a-Sketch</Link>
-                        <Link id="works-nav" to="/works">My Works</Link>
+                        <Link id="etch-nav" to="/etch">Etch A Canvas</Link>
+                        <Link id="works-nav" to="/works">My Gallery</Link>
                         <Link id="signout-nav" onClick={signOutUser}>Sign Out</Link> {/* Added sign-out button */}
                     </div>
                 </nav>

@@ -7,7 +7,7 @@ function Home() {
     return (
         <>
         {/* Let's get creative heading */}
-        <div className="headingContainer">
+        <div className="selectContainer">
         <h2 className="animate__animated animate__fadeInDown">Let's get <span className="creative_heading">creative!</span></h2>
         </div>
 
