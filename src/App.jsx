@@ -48,7 +48,7 @@ function App() {
                 <nav>
                     <Link to="/success">Home</Link>
                     <Link to="/canvas">Paint </Link>
-                    <a href="/pixelcanvas">Pixel</a>
+                    <Link to="/pixelcanvas">Pixel</Link>
 					<Link to="/etch">Etch</Link>
                     <Link to="/works">My Works</Link>
 					<button onClick={signOutUser}>Sign Out</button> {/* Added sign-out button */}
