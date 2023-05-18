@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { fabric } from 'fabric';
+import CanvasDownload from '../Paint/PaintToolbar/CanvasDownload'
 
 const Sketching = ( props ) => {
     const { canvas, count, incCount, resetCount } = props;
@@ -186,6 +187,9 @@ const Sketching = ( props ) => {
                     <button className="etch-btn-top handle-up etch-btn" onClick={handleUp}>&#9650;</button>
                     <button className="etch-btn-btm handle-down etch-btn" onClick={handleDown}>&#9660;</button>
                 </div>
+            </div>
+            <div className='etch-download'>
+                Download as <CanvasDownload canvas={canvas} />
             </div>
         </>
     );
