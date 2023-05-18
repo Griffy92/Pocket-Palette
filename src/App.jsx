@@ -48,11 +48,11 @@ function App() {
                 <nav>
                     <div className='nav-logo'>
                         <Link id="home-nav" to="/success">
-                            <img src="Pocket_palette_logo.png" alt="" />
+                            <img src="Pocket_palette_logo.png" alt="Pocket palette logo" />
                         </Link>
                     </div>
                     <div className='nav-optns'>
-                        <Link id="paint-nav" to="/canvas">Paint </Link>
+                        <Link id="paint-nav" to="/canvas">Paint</Link>
                         <Link id="pixel-nav" to="/pixelcanvas">Pixel</Link>
                         <Link id="etch-nav" to="/etch">Etch-a-Sketch</Link>
                         <Link id="works-nav" to="/works">My Works</Link>

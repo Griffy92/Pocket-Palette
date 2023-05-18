@@ -10,22 +10,31 @@
 
 .creativeUnderline {
     width: 117px;
-    background-color: rgb(255, 240, 105);
+    background-color: rgb(255, 223, 41);
     height: 10px;
-    margin: -18px -174px 28px -67px;
+    margin: -15px -174px 28px -67px;
     z-index: -1;
 }
 
 
 /* ================ ARTBOARD CONTAINER ================   */
 
-/* container surrounding choose artboard options */
-.selectContainer {
-    border: 1px solid red;
+.headingContainer {
     display: flex;
     column-gap: 43px;
     justify-content: center;
     width: 95%;
+    margin: 0 auto;
+    margin-top: 2%;
+}
+
+/* container surrounding choose artboard options */
+.selectContainer {
+    display: flex;
+    column-gap: 43px;
+    justify-content: center;
+    width: 95%;
+    margin: 0 auto;
 }
 
 /* Paint, Pixel and Etch board design */
@@ -94,7 +103,7 @@
 
 /* LINK (a) */
 
-.paintSelect a 
+.paintSelect a,
 .pixelSelect a,
 .etchSelect a {
     display: grid;
