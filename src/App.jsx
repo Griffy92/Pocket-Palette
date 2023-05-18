@@ -38,7 +38,7 @@ function App() {
 	async function signOutUser() {
         const { error } = await supabase.auth.signOut();
         console.log(error);
-        window.location.href = "/home"; 
+        window.location.href = "/"; 
 		// Redirect to login after sign-out
     }
 
