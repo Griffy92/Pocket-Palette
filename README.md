@@ -1,6 +1,7 @@
 # 🧑🏻‍🎨 Pocket Palette
 
-## Unleash your creativity with our lightweight online design platform! Live demo 🪄[here](https://Griffy92.github.io/Project-02/)!
+## Unleash your creativity with our lightweight online design platform! Live demo 🪄[here](https://griffy92.github.io/Pocket-Palette/)!
+
 
 ## 📖 Table of Contents
 * General Info
@@ -12,12 +13,12 @@
 * License
 * Contributing
 * Contact
-
+<br><br>
 ## 📄 General Info
 Pocket Palette is a web-based application that offers a platform for exploring artistic concepts like painting, pixel drawing, and Etch A Canvas. With a focus on user interactions and practical artistic expression, Pocket Palette enables users to effortlessly unleash their creativity by creating, drawing, and manipulating shapes, lines, and a diverse palette of colors on a virtual canvas. By utilizing modern web technologies, such as Supabase and JavaScript frameworks like React, Pocket Palette delivers an immersive and feature-rich drawing experience.
 
-This project is a collaborative effort led by Dom, Karen, Riley, Roxanne & Stuart. It is our 3rd project as part of the General Assembly Software Engineering Immersive course. Our aim was to embrace a challenging endeavor that would elevate our skills and knowledge in the field of web development.
-
+This project, led by Dom, Karen, Riley, Roxanne, and Stuart, is a collaborative effort representing our third undertaking within the General Assembly Software Engineering Immersive course. With the aim of embracing a challenging endeavor that elevates our skills and knowledge in web development, our diverse team, spanning three different time zones, effectively collaborates to ensure continuous progress on the project.
+<br><br>
 ## 🦾 Built With
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 
@@ -32,6 +33,11 @@ This project is a collaborative effort led by Dom, Karen, Riley, Roxanne & Stuar
 [![Node.js](https://img.shields.io/badge/Node.js-35495E?style=for-the-badge&logo=nodedotjs&logoColor=4FC08D)](https://nodejs.org/en)
 
 [![Dotting](https://img.shields.io/badge/Dotting-DD0031?style=for-the-badge)](https://hunkim98.github.io/dotting/?path=/story/introduction--page)
+
+<p align="center">
+  <img src="https://media.tenor.com/-_Dj5xV0f7kAAAAC/superbass-swag.gif" alt="Alt Text">
+</p>
+<br><br>
 
 ## ⚙️ Getting Started
 ### Prerequisites
@@ -58,8 +64,8 @@ cd project-02
 npm install
 npm run dev
 ```
+<br><br>
 ## 🎨 Features
-
 There are four aspects to Pocket Palette at the moment: User Authentication, Paint, Pixel and Etch A Canvas.
 
 - ### User Authentication
@@ -70,17 +76,19 @@ There are four aspects to Pocket Palette at the moment: User Authentication, Pai
   Pencil, Erase, Fill, Clear, Colour Select, Save, Undo and Redo
 - ### Etch A Canvas
   Up, Down, Left, Right, Shift + Up(NE), Shift + Down(SW), Shift + Left(NW), Shift + Right(SE) and Shake to Clear (Wiggle your mouse cursor)
-
+<br><br>
 ## 📸 Screenshots
 
+<br><br>
 ## 🚀 Room for improvement
 - Improved UI
+- Fix the unauthorized access to key functionality
 - Incorporate an eraser function into the Paint feature for more versatile editing options
 - Optimize the application to ensure mobile compatibility and a seamless user experience on all devices
-
+<br><br>
 ## 🔐 License
 No specific license has been assigned to this project.
-
+<br><br>
 ## 🌱 Contributing
 Contributions are welcome! If you would like to contribute to this project, please follow these steps:
 
@@ -89,7 +97,7 @@ Contributions are welcome! If you would like to contribute to this project, plea
 - Make your modifications and commit changes
 - Push your changes to your forked repository
 - Submit a pull request explaining your changes
-
+<br><br>
 ## 📧 Contact
 
 - Dom -- dominicwong09@gmail.com
@@ -98,5 +106,6 @@ Contributions are welcome! If you would like to contribute to this project, plea
 - Roxanne -- roxanneliu819@gmail.com
 - Stuart -- stuartcannone@gmail.com
 
+<br><br>
 
-![image](https://github.com/kaarenliangg/project-02/assets/104908963/1d974af1-6130-4755-846f-3522b01898ea)
+![image](https://raw.githubusercontent.com/Rox-Liu/project-02/main/public/readme_everyone_v4.png)
