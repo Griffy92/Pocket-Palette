@@ -13,7 +13,9 @@
 * Contact
 
 ## 📄 General Info
-Pocket Palette is brought to you by Dom, Karen, Riley, Roxanne & Stuart. This is our 3rd project as part of the General Assembly Software Engineering Immersive course. 
+Pocket Palette is an innovative web-based application that provides a captivating platform for exploring a wide array of artistic concepts, including painting, pixel drawing and Etch A Sketch. Seamlessly blending user interactions with practical artistic expression, Pocket Palette empowers users to unleash their creativity by effortlessly creating, drawing, and manipulating shapes, lines, and a vibrant palette of colors on a virtual canvas. By harnessing the power of cutting-edge web technologies such as Supabase and leveraging JavaScript frameworks like React, Pocket Palette delivers an immersive and feature-rich drawing experience like no other.
+
+This project is a collaborative effort led by Dom, Karen, Riley, Roxanne & Stuart. It is our 3rd project as part of the General Assembly Software Engineering Immersive course. In embarking on this project, we sought to embrace a challenge that would propel our skills and knowledge in the field of web development to new heights.
 
 ## 🦾 Built With
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
@@ -72,6 +74,7 @@ There are four aspects to Pocket Palette at the moment: Paint, Pixel Art and Etc
 
 ## 🚀 Room for improvement
 - Improved UI
+- Implement the eraser function within the Paint feature. 
 
 ## 🔐 License
 No specific license has been assigned to this project.
