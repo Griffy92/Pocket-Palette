@@ -28,24 +28,28 @@ const Sketching = ( props ) => {
 
             if ( e === 'ArrowLeft' ) {
                 if ( s ) {
+                    event.preventDefault();
                     handleNW();
                 } else {
                     handleLeft();
                 };
             } else if ( e === 'ArrowUp' ) {
                 if ( s ) {
+                    event.preventDefault();
                     handleNE();
                 } else {
                     handleUp();
                 };
             } else if ( e === 'ArrowRight' ) {
                 if ( s ) {
+                    event.preventDefault();
                     handleSE();
                 } else {
                     handleRight();
                 }
             } else if ( e === 'ArrowDown' ) {
                 if ( s ) {
+                    event.preventDefault();
                     handleSW();
                 } else {
                     handleDown();
