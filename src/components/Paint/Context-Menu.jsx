@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Menu, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Stack, Button, ButtonGroup} from '@mui/material';
-import Layers from './Layers';
-import Grouping from "./Grouping";
+import Layers from "./PaintToolbar/Layers";
+import Grouping from "./PaintToolbar/Grouping";
 
 const ContextMenu = (props) => {
   const { canvas } = props;
