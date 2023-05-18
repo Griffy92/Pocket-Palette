@@ -60,22 +60,23 @@ npm run dev
 ```
 ## 🎨 Features
 
-There are four aspects to Pocket Palette at the moment: Paint, Pixel Art and Etch A Sketch.
+There are four aspects to Pocket Palette at the moment: User Authentication, Paint, Pixel and Etch A Canvas.
 
 - ### User Authentication
-  Register, Login, Logout, My Works (Ability to save artwork)
+  Register, Login, Password Reset, Logout, My Gallery (Ability to upload and save or delete artwork)
 - ### Paint
-  Shapes, Drawing, Text, Canvas History, Export SVG/JPEG/PNG, Upload Images, Image Filter 
-- ### Pixel Art 
-  Pencil, Erase, Fill, Clear, Colour Select, Save, Undo, Redo
+  Shapes, Drawing, Text, Reset, Pan Mode, Canvas History, Layers, Group and Ungroup, Save to My Gallery, Image Filter, Upload Image and Export SVG/JPEG/PNG
+- ### Pixel 
+  Pencil, Erase, Fill, Clear, Colour Select, Save, Undo and Redo
 - ### Etch A Canvas
-  Up, Down, Left, Right, Shake to Clear (Wiggle your mouse cursor)
+  Up, Down, Left, Right, Shift + Up(NE), Shift + Down(SW), Shift + Left(NW), Shift + Right(SE) and Shake to Clear (Wiggle your mouse cursor)
 
 ## 📸 Screenshots
 
 ## 🚀 Room for improvement
 - Improved UI
-- Implement the eraser function within the Paint feature. 
+- Incorporate an eraser function into the Paint feature for more versatile editing options
+- Optimize the application to ensure mobile compatibility and a seamless user experience on all devices
 
 ## 🔐 License
 No specific license has been assigned to this project.
@@ -83,11 +84,11 @@ No specific license has been assigned to this project.
 ## 🌱 Contributing
 Contributions are welcome! If you would like to contribute to this project, please follow these steps:
 
-- Fork the repository.
-- Create a new branch for your feature or bug fix.
-- Make your modifications and commit changes.
-- Push your changes to your forked repository.
-- Submit a pull request explaining your changes.
+- Fork the repository
+- Create a new branch for your feature or bug fix
+- Make your modifications and commit changes
+- Push your changes to your forked repository
+- Submit a pull request explaining your changes
 
 ## 📧 Contact
 
