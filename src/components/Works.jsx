@@ -51,7 +51,7 @@ const getUser = async () => {
     async function getMedia() {
 
     const { data, error } = await supabase.storage.from('Works').list(userId + '/', {
-        limit: 10,
+        limit: 20,
         offset: 0,
         sortBy: {
         column: 'created_at', 
@@ -113,7 +113,7 @@ const getUser = async () => {
             console.log(error);
             }
         }
-        return (
+    return (
             <div>
                 {userId === '' ? (
                     <Auth
@@ -124,29 +124,33 @@ const getUser = async () => {
             : 
             (
                 <div>
-                    <input type="file" onChange={(e) => uploadImage(e)} />
+                    
                     <div>
-                        <h1>My Gallery</h1>
+                        <div className="header-container">
+                            <h1>My Gallery</h1>
+                                <label className="file-input">
+                                    Select a file to Upload
+                                <input type="file" onChange={(e) => uploadImage(e)} />
+                                </label>
+                        </div>
                             <div className="grid-container">
                             {media.map((media, i) => (
-                                <div key={i} className="grid-item">
-                                    <img src={`https://yilvmajrrjkkeljiduxi.supabase.co/storage/v1/object/public/Works/${userId}/${media.name}`} />
-                            <div className="button-container">
-                                <button onClick={() => deleteMedia(media.name)}>Delete Image</button>
-                                <button onClick={() => downloadMedia(media.name)}>Download Image</button>
-                            </div>
+                            <div key={i} className="grid-item">
+                                    <img src={`https://yilvmajrrjkkeljiduxi.supabase.co/storage/v1/object/public/Works/${userId}/${media.name}`}
+                                            onClick={() => window.open(`https://yilvmajrrjkkeljiduxi.supabase.co/storage/v1/object/public/Works/${userId}/${media.name}`, '_blank')}/>
+                                <div className="button-container">
+                                <button className="delete-button" onClick={() => deleteMedia(media.name)}>Delete Image</button>
+                                <button className="download-button" onClick={() => downloadMedia(media.name)}>Download Image</button>
+                                </div>
                             </div>
                             ))}
+                            </div>
                     </div>
-                </div>
-                <h2>Upload to your Gallery</h2>
-                <input type="file" onChange={(e) => uploadImage(e)} />
-                </div>
-                
+                </div>  
             )}
             
             </div>
-        );
+    );
 }
 
 
