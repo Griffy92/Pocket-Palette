@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { fabric } from "fabric";
-import { Popover, Stack, ButtonGroup, Button, Slider } from '@mui/material';
+import { Button } from '@mui/material';
 
 const ImageUpload = ({ canvas }) => {
     const fileInput = useRef(null);

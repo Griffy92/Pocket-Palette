@@ -10,13 +10,10 @@ import Text from './PaintToolbar/Text';
 import RemoveObject from './PaintToolbar/Remove-Object';
 import CanvasHistory from './PaintToolbar/Canvas-History';
 import CopyPaste from './PaintToolbar/Copy-Paste';
-// import BrushCustom from './PaintToolbar/Brush-Custom';
 import Pan from './PaintToolbar/Pan';
 import Zoom from './PaintToolbar/Zoom';
 import Layers from './PaintToolbar/Layers';
 import Stroke from './PaintToolbar/Stroke';
-// import Serialisation from './PaintToolbar/Serialisation';
-// import Deserialisation from './PaintToolbar/Deserialisation';
 import SVGExport from './PaintToolbar/SVGExport';
 import CanvasDownload from './PaintToolbar/CanvasDownload';
 import ImageUpload from './PaintToolbar/Image-Upload';
@@ -62,7 +59,6 @@ const Toolbar = ( props ) => {
                     <Stroke canvas={ canvas } setStrokeColour={ setStrokeColour } strokeColour={ strokeColour } setStrokeSize={ setStrokeSize } strokeSize={ strokeSize } setFillColour={ setFillColour } fillColour={ fillColour } />
                     <ButtonGroup variant="text" style={{display: "inline"}}>
                         <FreeDraw canvas={ canvas } primaryColour={ primaryColour } secondaryColour={ secondaryColour } setBrushColour={ setBrushColour } brushColour={ brushColour } setBrushSize={ setBrushSize } brushSize={ brushSize }  />
-                        {/* <BrushCustom canvas={ canvas } s brushSize={ brushSize }  brushColour={ brushColour } /> */}
                     </ButtonGroup>
                     <ColourSelect canvas={ canvas } primaryColour={ primaryColour } setPrimaryColour={ setPrimaryColour } secondaryColour={ secondaryColour } setSecondaryColour={ setSecondaryColour } />
                     <Text canvas={ canvas } primaryColour={ primaryColour } secondaryColour={ secondaryColour } />
@@ -72,8 +68,8 @@ const Toolbar = ( props ) => {
                     <Zoom canvas={ canvas } />
                     <Layers canvas={ canvas }/>
                     <Grouping canvas={canvas}/>
-                    <ImageFilter canvas={ canvas } primaryColour={ primaryColour } secondaryColour={ secondaryColour } />
                     <ImageUpload canvas={ canvas } primaryColour={ primaryColour } secondaryColour={ secondaryColour } />
+                    <ImageFilter canvas={ canvas } primaryColour={ primaryColour } secondaryColour={ secondaryColour } />
                     <CopyPaste canvas={canvas} />
                     <Button className="add_button paint_common download_button" onClick= { _handleClick } title="Export"></Button>
                         <Popover
