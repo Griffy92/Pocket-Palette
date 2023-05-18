@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Menu, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Stack, Button, ButtonGroup} from '@mui/material';
-import Layers from "./PaintToolbar/Layers";
-import Grouping from "./PaintToolbar/Grouping";
 
 const ContextMenu = (props) => {
   const { canvas } = props;
@@ -45,14 +43,6 @@ const ContextMenu = (props) => {
         }
       >
         <Stack sx={{p: 2}} spacing={2}>
-            <ButtonGroup variant="text" fullWidth={true}  >
-                <Layers canvas={ canvas } />
-            </ButtonGroup>
-            <ButtonGroup variant="text" fullWidth={true} sx={{mb: 2}} >
-                <Grouping canvas={ canvas } />
-            </ButtonGroup>      
-            <hr />
-            <p>Please use the following keyboard shortcuts</p>
             <TableContainer >
                 <Table sx={{ minWidth: 250 }} size="small" aria-label="a dense table">
                     <TableHead>
@@ -63,34 +53,46 @@ const ContextMenu = (props) => {
                     </TableHead>
                     <TableBody>
                         <TableRow>
-                            <TableCell>Cut</TableCell>
-                            <TableCell>Cmd/Ctl + X</TableCell>
+                            <TableCell>Move Up</TableCell>
+                            <TableCell>Up Arrow</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell>Copy</TableCell>
-                            <TableCell>Cmd/Ctl + C</TableCell>
+                            <TableCell>Move Down</TableCell>
+                            <TableCell>Down Arrow</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell>Paste</TableCell>
-                            <TableCell>Cmd/Ctl + V</TableCell>
+                            <TableCell>Move Right</TableCell>
+                            <TableCell>Right Arrow</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell>Delete Object</TableCell>
-                            <TableCell>Backspace / Delete</TableCell>
+                            <TableCell>Move Left</TableCell>
+                            <TableCell>Left Arrow</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell>Undo</TableCell>
-                            <TableCell>Cmd/Ctl + Z</TableCell>
+                            <TableCell>Move NE</TableCell>
+                            <TableCell>Shift + Up</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell>Redo</TableCell>
-                            <TableCell>Cmd/Ctl + Y</TableCell>
+                            <TableCell>Move SE</TableCell>
+                            <TableCell>Shift + Right</TableCell>
                         </TableRow>
-                        
+                        <TableRow>
+                            <TableCell>Move SW</TableCell>
+                            <TableCell>Shift + Down</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>Move NW</TableCell>
+                            <TableCell>Shift + Left</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell colSpan={2}>Move across screen repeatedly to reset canvas</TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell colSpan={2}>Drawing starts in the bottom left of the canvas</TableCell>
+                        </TableRow>
                     </TableBody>
                 </Table>
-            </TableContainer>\
-            <p>Holding Shift whilst manipulating shapes allows axis tilt</p>
+            </TableContainer>
         </Stack>
       </Menu>
   );

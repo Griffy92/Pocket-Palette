@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Popover, Stack, Input, Select, MenuItem, TextField, FormControl, InputLabel, Button, ButtonGroup } from '@mui/material';
 
 
-const Text = ({ canvas }) => {
+const Text = ({ canvas, primaryColour, secondaryColour }) => {
 
     /////////////////// This handles the dropdown menu things! //////////////////
     const [ anchor, setAnchor] = useState(null);
@@ -20,15 +20,15 @@ const Text = ({ canvas }) => {
 
     //////////////////////////// this is the text function //////////////////////////
     function randomId() {
-
         return Math.random().toString(36).substring(2, 10);
-    }
+    };
 
     function _handleAddText() {
-        const newText = new fabric.IText("Add text", { left: 100, top: 64, fontFamily: "Arial", id: randomId()});
+        canvas.isDrawingMode = false;
+        const newText = new fabric.IText("Add text", { left: 100, top: 64, fontFamily: "Arial", id: randomId(), fill: primaryColour });
         canvas.add(newText);
         canvas.setActiveObject(newText); // set the new text object as active
-    }  
+    };
 
     function _handleToggleBold() {
         let activeInstance = canvas.getActiveObject();
