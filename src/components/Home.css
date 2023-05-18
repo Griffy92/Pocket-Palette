@@ -63,7 +63,7 @@
 /* paint option  */
 .paintSelect {
     background-color: white;
-    background-image: url("public/choose_paint.png");
+    background-image: url("choose_paint.png");
     background-position-y: 60px; 
 
 }
@@ -71,14 +71,14 @@
 /* pixel option  */
 .pixelSelect {
     background-color: #FFCD49;
-    background-image: url("public/choose_pixel_art.png");
+    background-image: url("choose_pixel_art.png");
     background-position-y: 40px; 
 }
 
 /* etch option  */
 .etchSelect {
     background-color: #FF9DC6;
-    background-image: url("public/choose_etch.png");
+    background-image: url("choose_etch.png");
     background-position-y: 60px; 
 }
 
