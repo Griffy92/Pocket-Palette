@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* container */
+.main-login-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: vh100;
+}
+
+/* split page; static imagae left */
+.login-image {
+    background-image: url('public/LandingPage/verson_2.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+/* split page; form */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #242424;
+}
+
+/* welcome message */
+.login-welcome {
+    color: #BAA1FD;
+    margin-bottom: 1em;
+}
+
+/* logo */
+.login-logo {
+    /* background-image: url('public/Pocket_palette_logo.png');
+    background-size: cover;
+    background-position: center; */
+    height: 12%;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+.login-logo > img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
