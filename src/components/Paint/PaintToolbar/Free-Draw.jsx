@@ -54,7 +54,7 @@ const FreeDraw = ( { canvas, primaryColour, secondaryColour, setBrushColour, bru
 
     const _handleResetBrush = () => {
         setBrushColour("#1947E5");
-        // setSecondaryColour("");
+        setBrushSize(4);
     }
 
     const _setFillColour = (tarFlCol) => {
