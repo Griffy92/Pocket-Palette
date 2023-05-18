@@ -34,25 +34,41 @@ function Success({ onSetUser }) {
         navigate("/")
     }
 
-	return (
+    return (
         <div>
-        {Object.keys(user).length !== 0 ?
-            <div>   
-            <Canvas />
-            <button onClick={() => signOutUser()}> Sign Out </button>
-            </div>
-            
-        :
-
+          {Object.keys(user).length !== 0 ? (
             <div>
-                <h1>User Is Not Logged in</h1>
-
+              {/* heading needs work to align */}
+              <h2>
+                Let's get <span className="creative_heading">creative!</span>
+              </h2>
+      
+              <div className="selectContainer">
+                <div className="paintSelect">
+                  <h3 className="choose_heading">Paint</h3>
+                </div>
+      
+                <div className="pixelSelect">
+                  <h3 className="choose_heading">Pixel</h3>
+                </div>
+      
+                <div className="etchSelect">
+                  <h3 className="choose_heading">Etch</h3>
+                </div>
+      
+                <div>
+                  <button onClick={() => signOutUser()}>Sign Out</button>
+                </div>
+              </div>
             </div>
-		
-        }
+          ) : (
+            <div>
+              <h1>User Is Not Logged in</h1>
+            </div>
+          )}
         </div>
-                
-	)
+      );
+      
 }
 
 export default Success
