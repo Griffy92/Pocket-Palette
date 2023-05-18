@@ -11,17 +11,23 @@
   box-sizing: border-box;
   background-color: white;
   border: 1px solid white;
+  border-radius: 5px;
   margin-right: 5px;
+  margin: 0 auto;
 }
 
 
 /*  ==== All toolbar wrap ===  */
 .pixelTool {
-  margin-bottom: 15px;
   display: flex;
-  background-color: white;
-  width: 348px;
+  background-image: url('https://img.freepik.com/premium-vector/pixel-art-starry-sky-during-sunset-moon-with-clouds-stars-vector-illustrations-eps10-bylayer_148553-721.jpg?w=1380');
+  background-size: contain;
+  background-color: rgb(255, 255, 255);
+  width: 370px;
   margin: 0 auto;
+  padding-top: 8px;
+  border-radius: 10px;
+  border: 0.2px solid rgb(202, 202, 202);
 }
 
 
@@ -31,10 +37,13 @@
 .undoBtn {
   background-image: url('/PixelArt/PixelArt_icons_Undo.png');
   background-color: white;
+  margin-left: 3px;
 }
 
 .redoBtn {
   background-image: url('/PixelArt/PixelArt_icons_Redo.png');
+  margin-right: 8px;
+  margin-left: 8px;
 }
 
 
@@ -103,15 +112,20 @@
 .redoBtn:disabled, 
 .undoBtn:disabled {
   opacity: 0.6;
-  background-color: #3a3a3a;
+  background-color: #d7d7d7;
 }
 
 
 /* ==================== PIXEL CANVAS INPUT  =================== */
 
+input {
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  color: #2b2b2b;
+}
 
 .canvasInput {
-  border: 1px solid red;
+  margin-top: 10px;
+  margin-bottom: 10px;
 } 
 
 /* Row and Column title  */ 
@@ -125,23 +139,29 @@
   display: inline-block;
   padding: 2px;
   border: 0.5px solid black;
-  margin: 0 10px 10px 0;
-  width: 107px;
+  margin: 10px 10px 10px 5px;
+  width: 109px;
 }
 
 
 
 /* ==================== PIXEL CANVAS CONTAINER  =================== */
 .pixelContainer {
-  border: 10px solid red;
   margin: 0 auto;
+  justify-content:center;
+  text-align: center;
+  align-items: center;
+}
+
+.workingContainer {
+  padding-top: 20px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
   text-align: center;
 }
 
-
-element.style {
-  width: 50%;
+canvas {
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
 }
