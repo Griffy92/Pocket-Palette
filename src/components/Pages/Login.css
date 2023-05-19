@@ -13,7 +13,7 @@
 
 /* split page; static imagae left */
 .login-image {
-    background-image: url('../../public/verson_2.png');
+    background-image: url('../../../public/verson_2.png');
     background-size: cover;
     background-position: center;
     height: 100vh;
