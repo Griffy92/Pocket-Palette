@@ -22,6 +22,15 @@ const ColourSelect = ( {  canvas, primaryColour, setPrimaryColour, secondaryColo
             canvas.renderAll();
         }};
 
+    const setSecondColour = (tarCol) => {
+        if (canvas != null) {
+            canvas.getActiveObjects().forEach((obj) => {
+                if (obj.shadow != null){obj.shadow.color = tarCol};
+                if (obj.stroke != null){obj.stroke = tarCol};
+            });
+            canvas.renderAll();
+        }};
+    
     const _handleResetColour = () => {
         setPrimaryColour("#000000");
         setSecondaryColour("#ffffff");
@@ -57,7 +66,7 @@ const ColourSelect = ( {  canvas, primaryColour, setPrimaryColour, secondaryColo
                                         <input type="color" id="primary-color-picker" value={primaryColour} className="add_button add_colour_select" onChange={(e) => {setPrimaryColour(e.target.value); setObjectColour(e.target.value)}} title="Set Primary Colour" />
                                     </TableCell>
                                     <TableCell>
-                                        <input type="color" id="secondary-color-picker" value={secondaryColour} className="add_button add_colour_select" onChange={(e) => {setSecondaryColour(e.target.value)}} title="Set Secondary Colour" />    
+                                        <input type="color" id="secondary-color-picker" value={secondaryColour} className="add_button add_colour_select" onChange={(e) => {setSecondaryColour(e.target.value); setSecondColour(e.target.value)}} title="Set Secondary Colour" />    
                                     </TableCell>
                                 </TableRow>
                                 <TableRow>

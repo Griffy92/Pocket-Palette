@@ -9,6 +9,7 @@ const CopyPaste = ( props ) => {
 			ActObj.clone( function(cloned) {
 				coppiedItems = cloned;
 			});
+			canvas.discardActiveObject()
 		};
 	};
 

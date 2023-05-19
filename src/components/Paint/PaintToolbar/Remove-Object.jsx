@@ -9,9 +9,14 @@ const RemoveObject = ( props ) => {
 		if (canvas != null) {
 			// canvas.remove(canvas.getActiveObject()) <-- This only does selected ojects
 			canvas.getActiveObjects().forEach((obj) => {
-				canvas.remove(obj);
+				// this testing to see if there is text being edited
+				if (obj.__lastIsEditing){
+					return
+				} else {
+					canvas.remove(obj);
+					canvas.discardActiveObject().renderAll();
+				}
 			});
-			canvas.discardActiveObject().renderAll();
 		};
 	};
 
@@ -32,10 +37,9 @@ const RemoveObject = ( props ) => {
 			e.key == 'Backspace'
 			) {
 				if (canvas != null) {
-					canvas.getActiveObjects().forEach((obj) => {
-						canvas.remove(obj)
-					});
-					canvas.discardActiveObject().renderAll()
+					_HandleRemoveObject()
+					// _HandleRemoveObject()
+					canvas.renderAll()
 				};
 			};
 		});
