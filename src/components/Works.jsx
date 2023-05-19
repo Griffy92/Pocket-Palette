@@ -13,7 +13,6 @@ function Works( props ) {
     const [media, setMedia] = useState([]);
     const navigate = useNavigate();
     const { session } = props;
-    const { user } = session; // destructure session
 
     useEffect ( () => {
         if ( !session ) {
@@ -29,7 +28,7 @@ function Works( props ) {
         const { data, error } = await supabase
             .storage
             .from('Works')
-            .upload(user.id + "/" + uuidv4(), file)
+            .upload(session.user.id + "/" + uuidv4(), file)
 
         if (data) {
             getMedia();
@@ -39,7 +38,7 @@ function Works( props ) {
     };
 
     async function getMedia() {
-        const { data, error } = await supabase.storage.from('Works').list(user.id + '/', {
+        const { data, error } = await supabase.storage.from('Works').list(session.user.id + '/', {
             limit: 20,
             offset: 0,
             sortBy: {
@@ -59,7 +58,7 @@ function Works( props ) {
         const { error } = await supabase
             .storage
             .from('Works')
-            .remove([ user.id + "/" + mediaName])
+            .remove([ session.user.id + "/" + mediaName])
         
         if(error) {
             alert(error);
@@ -72,7 +71,7 @@ function Works( props ) {
         const { data, error } = await supabase
             .storage
             .from('Works')
-            .download(user.id + "/" + mediaName);
+            .download(session.user.id + "/" + mediaName);
 
             if (data) {
                 // Create a download link
@@ -106,8 +105,8 @@ function Works( props ) {
                 <div className="grid-container">
                 {media.map((media, i) => (
                 <div key={i} className="grid-item">
-                        <img src={`https://yilvmajrrjkkeljiduxi.supabase.co/storage/v1/object/public/Works/${user.id}/${media.name}`}
-                                onClick={() => window.open(`https://yilvmajrrjkkeljiduxi.supabase.co/storage/v1/object/public/Works/${user.id}/${media.name}`, '_blank')}/>
+                        <img src={`https://yilvmajrrjkkeljiduxi.supabase.co/storage/v1/object/public/Works/${session.user.id}/${media.name}`}
+                                onClick={() => window.open(`https://yilvmajrrjkkeljiduxi.supabase.co/storage/v1/object/public/Works/${session.user.id}/${media.name}`, '_blank')}/>
                     <div className="button-container">
                     <button className="delete-button" onClick={() => deleteMedia(media.name)}>Delete Image</button>
                     <button className="download-button" onClick={() => downloadMedia(media.name)}>Download Image</button>
