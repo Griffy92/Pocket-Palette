@@ -13,7 +13,7 @@ const supabase = createClient (
 function Success() {
     const [user, setUser] = useState({})
 
-    
+
     useEffect(() => {
         async function getUserData() {
             await supabase.auth.getUser().then((value) => {
