@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { fabric } from 'fabric';
+import { useNavigate } from 'react-router-dom'
 // components
 import Sketching from './Sketching';
 import ContextMenu from './Context-Menu';
@@ -7,9 +8,11 @@ import ContextMenu from './Context-Menu';
 import './EtchCanvas.css';
 import 'animate.css'
 
-const EtchCanvas = () => {
+const EtchCanvas = ( props ) => {
     const [ canvas, setCanvas ] = useState(null);
     const [ count, setCount ] = useState(0);
+    const { session } = props;
+    const navigate = useNavigate();
 
     const initCanvas = () => { 
         const newCanvas = new fabric.Canvas('etch-canvas', {
@@ -29,9 +32,13 @@ const EtchCanvas = () => {
         setCount(0);
     };
 
-    useEffect( () => {
-        setCanvas(initCanvas());
-    }, []);
+    useEffect ( () => {
+        if ( !session ) {
+            navigate("/")
+        } else {
+            setCanvas(initCanvas());
+        }
+    }, [session]);
 
     return (
         <>

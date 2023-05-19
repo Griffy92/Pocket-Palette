@@ -8,7 +8,6 @@ import Works from './components/Works';
 import EtchCanvas from './components/EtchSketch/EtchCanvas';
 import Home from './components/Home';
 import { createClient } from "@supabase/supabase-js"
-import { Auth } from "@supabase/auth-ui-react"
 
 const supabase = createClient (
     "https://yilvmajrrjkkeljiduxi.supabase.co",
@@ -33,7 +32,7 @@ function App() {
         console.log(error);
         window.location.href = "/"; 
 		// Redirect to login after sign-out
-    }
+    };
 
     return (
         <BrowserRouter>
@@ -60,9 +59,9 @@ function App() {
                 <Route path="/" element={<Login session={session} />} />
                 {/* <Route path="/success" element={<Success />} /> */}
                 <Route path="/home" element={<Home session={session} />} />
-                <Route path="/canvas" element={<Canvas />} />
-                <Route path="/pixelcanvas" element={<PixelCanvas />} />
-                <Route path="/etch" element={<EtchCanvas />} />
+                <Route path="/canvas" element={<Canvas session={session} />} />
+                <Route path="/pixelcanvas" element={<PixelCanvas session={session} />} />
+                <Route path="/etch" element={<EtchCanvas session={session} />} />
                 <Route path="/works" element={<Works session={session} />} />
             </Routes>
                 

@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react';
 import { fabric } from 'fabric';
+import { ThemeProvider, createTheme } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 import 'fabric-history';
 import Toolbar from './Toolbar';
 import ContextMenu from './Context-Menu';
-import { ThemeProvider, createTheme } from '@mui/material';
-import CanvasUpload from './CanvasUpload';
-
 
 const theme = createTheme({
 	palette: {
@@ -18,8 +17,10 @@ const theme = createTheme({
       // Non-Palette cusomisation lives here
 });
 
-const Canvas = () => {
+const Canvas = ( props ) => {
     const [ canvas, setCanvas ] = useState(null);
+    const { session } = props;
+    const navigate = useNavigate();
 
     // create the canvas object
     const initCanvas = () => { 
@@ -39,9 +40,13 @@ const Canvas = () => {
     };
 
     // render canvas on load
-    useEffect( () => {
-        setCanvas(initCanvas());
-    }, []);
+    useEffect ( () => {
+        if ( !session ) {
+            navigate("/")
+        } else {
+            setCanvas(initCanvas());
+        }
+    }, [session]);
 
     return (
         <> 
