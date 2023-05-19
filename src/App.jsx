@@ -13,28 +13,20 @@ import { Auth } from "@supabase/auth-ui-react"
 const supabase = createClient (
     "https://yilvmajrrjkkeljiduxi.supabase.co",
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlpbHZtYWpycmpra2VsamlkdXhpIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQxMDY1NzMsImV4cCI6MTk5OTY4MjU3M30.kACu74ur-SSSo26idj89j46s2TytpXjaf3sMjHulBnM"
-
 )
 
 function App() {
-    const [user, setUser] = useState({});
+    const [ session, setSession ] = useState(null);
 
-    useEffect(() => {
-        async function getUserData() {
-            await supabase.auth.getUser().then((value) => {
-                if (value.data?.user) {
-                    setUser(value.data.user);
-                }
-            });
-        }
-        getUserData();
-    }, []);
+    useEffect( () => {
+		supabase.auth.getSession().then( ({ data: { session }}) => {
+			setSession(session);
+		});
 
-    
-	// Updates the state of user
-    const _handleSetUser = (userData) => {
-        setUser(userData);
-    };
+		supabase.auth.onAuthStateChange( (_event, session) => {
+			setSession(session)
+		});
+	}, []);
 
 	async function signOutUser() {
         const { error } = await supabase.auth.signOut();
@@ -45,10 +37,10 @@ function App() {
 
     return (
         <BrowserRouter>
-            {Object.keys(user).length !== 0 && (
+            { session ? 
                 <nav>
                     <div className='nav-logo'>
-                        <Link id="home-nav" to="/success">
+                        <Link id="home-nav" to="/home">
                             <img src="Pocket_palette_logo.png" alt="Pocket palette logo" />
                         </Link>
                     </div>
@@ -60,25 +52,20 @@ function App() {
                         <Link id="signout-nav" onClick={signOutUser}>Sign Out</Link> {/* Added sign-out button */}
                     </div>
                 </nav>
-            )}
+                :
+                ""
+            }
 
             <Routes>
-                <Route
-                    path="/"
-                    element={<Login onSetUser={_handleSetUser} />}
-					// Passes the onSetUser function to the Success component
-                />
-                <Route
-                    path="/success"
-                    element={<Success onSetUser={_handleSetUser} />}
-					// Passes the onSetUser function to the Success component
-                />
-                <Route path="/home" element={<Home />} />
+                <Route path="/" element={<Login session={session} />} />
+                {/* <Route path="/success" element={<Success />} /> */}
+                <Route path="/home" element={<Home session={session} />} />
                 <Route path="/canvas" element={<Canvas />} />
                 <Route path="/pixelcanvas" element={<PixelCanvas />} />
                 <Route path="/etch" element={<EtchCanvas />} />
-                <Route path="/works" element={<Works />} />
+                <Route path="/works" element={<Works session={session} />} />
             </Routes>
+                
         </BrowserRouter>
     );
 }
