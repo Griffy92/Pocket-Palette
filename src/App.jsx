@@ -15,10 +15,12 @@ const supabase = createClient (
 
 function App() {
     const [ session, setSession ] = useState(null);
+    const [ loading, setLoading ] = useState(true);
 
     useEffect( () => {
 		supabase.auth.getSession().then( ({ data: { session }}) => {
 			setSession(session);
+            setLoading(false);
 		});
 
 		supabase.auth.onAuthStateChange( (_event, session) => {
@@ -35,33 +37,37 @@ function App() {
 
     return (
         <BrowserRouter>
-            { session ? 
-                <nav>
-                    <div className='nav-logo'>
-                        <Link id="home-nav" to="/home">
-                            <img src="Pocket_palette_logo.png" alt="Pocket palette logo" />
-                        </Link>
-                    </div>
-                    <div className='nav-optns'>
-                        <Link id="paint-nav" to="/canvas">Paint</Link>
-                        <Link id="pixel-nav" to="/pixelcanvas">Pixel</Link>
-                        <Link id="etch-nav" to="/etch">Etch A Canvas</Link>
-                        <Link id="works-nav" to="/works">My Gallery</Link>
-                        <Link id="signout-nav" onClick={signOutUser}>Sign Out</Link> {/* Added sign-out button */}
-                    </div>
-                </nav>
+            { loading ?
+                <div>Loading ... </div> 
                 :
-                ""
-            }
+                <>
+                    { session &&
+                        <nav>
+                            <div className='nav-logo'>
+                                <Link id="home-nav" to="/home">
+                                    <img src="Pocket_palette_logo.png" alt="Pocket palette logo" />
+                                </Link>
+                            </div>
+                            <div className='nav-optns'>
+                                <Link id="paint-nav" to="/canvas">Paint</Link>
+                                <Link id="pixel-nav" to="/pixelcanvas">Pixel</Link>
+                                <Link id="etch-nav" to="/etch">Etch A Canvas</Link>
+                                <Link id="works-nav" to="/works">My Gallery</Link>
+                                <Link id="signout-nav" onClick={signOutUser}>Sign Out</Link> {/* Added sign-out button */}
+                            </div>
+                        </nav>
+                    }
 
-            <Routes>
-                <Route path="/" element={<Login session={session} />} />
-                <Route path="/home" element={<Home session={session} />} />
-                <Route path="/canvas" element={<Canvas session={session} />} />
-                <Route path="/pixelcanvas" element={<PixelCanvas session={session} />} />
-                <Route path="/etch" element={<EtchCanvas session={session} />} />
-                <Route path="/works" element={<Works session={session} />} />
-            </Routes>
+                    <Routes>
+                        <Route path="/" element={<Login session={session} />} />
+                        <Route path="/home" element={<Home session={session} />} />
+                        <Route path="/canvas" element={<Canvas session={session} />} />
+                        <Route path="/pixelcanvas" element={<PixelCanvas session={session} />} />
+                        <Route path="/etch" element={<EtchCanvas session={session} />} />
+                        <Route path="/works" element={<Works session={session} />} />
+                    </Routes>
+                </>
+            }
                 
         </BrowserRouter>
     );
