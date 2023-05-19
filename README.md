@@ -7,6 +7,7 @@ Live demo coming soon!
 
 ## 📖 Table of Contents
 * General Info
+* Planning & Problem Solving
 * Built With
 * Getting Started
 * Features
@@ -21,6 +22,14 @@ Pocket Palette is a web-based application that offers a platform for exploring a
 
 This project, led by Dom, Karen, Riley, Roxanne, and Stuart, is a collaborative effort representing our third undertaking within the General Assembly Software Engineering Immersive course. With the aim of embracing a challenging endeavor that elevates our skills and knowledge in web development, our diverse team, spanning three different time zones, effectively collaborates to ensure continuous progress on the project.
 <br><br>
+## ✏️ Planning & Problem Solving
+![Miro1](https://raw.githubusercontent.com/Rox-Liu/project-02/main/public/readme_assets/Miro/Miro_1.jpg)
+
+![Miro2](https://raw.githubusercontent.com/Rox-Liu/project-02/main/public/readme_assets/Miro/Miro_2.jpg)
+
+![Miro3](https://raw.githubusercontent.com/Rox-Liu/project-02/main/public/readme_assets/Miro/Miro_3.jpg)
+
+![Figma1](https://raw.githubusercontent.com/Rox-Liu/project-02/main/public/readme_assets/Figma/Figma_Page_3.png)
 ## 🦾 Built With
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 
@@ -128,4 +137,4 @@ Contributions are welcome! If you would like to contribute to this project, plea
 
 <br><br>
 
-![image](https://raw.githubusercontent.com/Rox-Liu/project-02/main/public/readme_everyone_v4.png)
+![image](https://raw.githubusercontent.com/Rox-Liu/project-02/main/public/readme_assets/Group%20Image/readme_everyone_v4.png)
