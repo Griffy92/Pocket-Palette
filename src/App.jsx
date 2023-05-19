@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import Login from './components/Login';
-import Success from './components/Success';
+import Login from './components/Pages/Login';
 import Canvas from './components/Paint/Canvas';
 import PixelCanvas from './components/PixelArt/PixelCanvas';
-import Works from './components/Works';
+import Works from './components/Pages/Works';
 import EtchCanvas from './components/EtchSketch/EtchCanvas';
-import Home from './components/Home';
+import Home from './components/Pages/Home';
 import { createClient } from "@supabase/supabase-js"
 
 const supabase = createClient (
@@ -57,7 +56,6 @@ function App() {
 
             <Routes>
                 <Route path="/" element={<Login session={session} />} />
-                {/* <Route path="/success" element={<Success />} /> */}
                 <Route path="/home" element={<Home session={session} />} />
                 <Route path="/canvas" element={<Canvas session={session} />} />
                 <Route path="/pixelcanvas" element={<PixelCanvas session={session} />} />
