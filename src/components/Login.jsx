@@ -10,23 +10,15 @@ const supabase = createClient (
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlpbHZtYWpycmpra2VsamlkdXhpIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQxMDY1NzMsImV4cCI6MTk5OTY4MjU3M30.kACu74ur-SSSo26idj89j46s2TytpXjaf3sMjHulBnM"
 );
 
-function Login() {
+function Login( props ) {
+    const { session } = props
     const navigate = useNavigate();
-    
-    useEffect(() => {
-        async function getLogin() {
-            supabase.auth.onAuthStateChange(async (event) => {
-                if (event !== "SIGNED_OUT") {
-                    navigate("/");
-                };
 
-                if (event === "SIGNED_IN") {
-                    navigate("/home");
-                };
-            });
-        };
-        getLogin();
-    },[]);
+    useEffect( () => {
+        if ( session ) {
+            navigate("/home")
+        }
+    }, [session])
 
 	return (
 		<div className="main-login-container">
@@ -39,10 +31,10 @@ function Login() {
                     <img src="Pocket_palette_logo.png" alt="Pocket Palette logo" />
                 </div>
                 <Auth 
-                supabaseClient={supabase}
-                appearance={{theme: ThemeSupa}}
-                theme="dark"
-                providers={["email"]}
+                    supabaseClient={supabase}
+                    appearance={{theme: ThemeSupa}}
+                    theme="dark"
+                    providers={["email"]}
                 />
 			</div>
 		</div>
