@@ -1,6 +1,6 @@
 import './Home.css'
 import 'animate.css';
-
+import { Link } from 'react-router-dom';
 
 
 function Home() {
@@ -23,19 +23,22 @@ function Home() {
             <div className="paintSelect">
                 
                 <h3 className="choose_heading">Paint</h3>
-                <a href="/canvas"></a>
+                {/* <a href="/canvas"></a> */}
+                <Link to="/canvas"></Link>
             </div>
 
             {/* Pixel option */}
             <div className="pixelSelect">
                 <h3 className="choose_heading">Pixel</h3>
-                <a href="/pixelcanvas"></a>
+                {/* <a href="/pixelcanvas"></a> */}
+                <Link to="/pixelcanvas"></Link>
             </div>
 
             {/* Etch option */}
             <div className="etchSelect">
                 <h3 className="choose_heading">Etch</h3>
-                <a href="/etch"></a>
+                {/* <a href="/etch"></a> */}
+                <Link to="/etch"></Link>
             </div>
         </div>
         
