@@ -1,7 +1,7 @@
 # 🧑🏻‍🎨 Pocket Palette
 
 # Unleash your creativity with our lightweight online design platform! 
-## 🪄 Live demo [here](https://rox-liu.github.io/Project0/)!
+## 🪄 Live demo [here](https://pocket-palette.netlify.app/)!
 
 ## 📖 Table of Contents
 * General Info
