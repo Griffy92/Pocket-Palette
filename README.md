@@ -1,7 +1,10 @@
 # 🧑🏻‍🎨 Pocket Palette
 
 # Unleash your creativity with our lightweight online design platform! 
-## 🪄 Live demo [here](https://pocket-palette.netlify.app/)!
+## 🪄 Live demo
+Click [here](https://pocket-palette.netlify.app/) for live demo. Credentials below: <br>
+Username: test@pocket.com<br>
+Password: chicken
 
 ## 📖 Table of Contents
 * General Info
